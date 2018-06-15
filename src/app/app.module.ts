@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 
 
+import { RecoverPasswordComponent } from './recover-password/recover-password.component';
+import { RegistroMoralComponent } from './registro-moral/registro-moral.component';
+import { DatosRepresentanteRmComponent } from './datos-representante-rm/datos-representante-rm.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { LoginFormComponent } from './login-form/login-form.component';
@@ -18,7 +21,10 @@ const appRoutes: Routes = [
     redirectTo: 'login',
     pathMatch: 'full'
   },
-  { path: 'registro-fisico', component: RegistroFComponent }
+  { path: 'registro-fisico', component: RegistroFComponent },
+  {path: 'Recuperar-password', component: RecoverPasswordComponent},
+  {path: 'Registro-Moral', component: RegistroMoralComponent},
+  {path: 'Representante', component: DatosRepresentanteRmComponent}
 
 ];
 
@@ -27,7 +33,10 @@ const appRoutes: Routes = [
     AppComponent,
     LoginFormComponent,
     RegistroFisicoComponent,
-    RegistroFComponent
+    RegistroFComponent,
+    RecoverPasswordComponent,
+    RegistroMoralComponent,
+    DatosRepresentanteRmComponent
   ],
   imports: [
     RouterModule.forRoot(
