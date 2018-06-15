@@ -13,7 +13,7 @@ import {
   animations: [
     trigger('animationSwitch', [
       transition('void=>*', [
-        style({opacity:0}),
+        style({opacity:0,transform: 'translateY(-5%)'}),
         animate(2000),
       ])
     ])
