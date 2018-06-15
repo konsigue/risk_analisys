@@ -22,11 +22,11 @@
         <div>
           <p class="text-center">
             ¿Aun no tienes cuenta?
-            <a routerLink="/switch"> Registrate </a>
+            <a (click)=" mostrar = !mostrar"> Registrate </a>
             <br>
             <a href="#">¿Olvidaste tu contraseña?</a>
           </p>
-          <router-outlet></router-outlet>
+          <app-registro-fisico *ngIf="mostrar"></app-registro-fisico>
         </div>
         <br>
         <br>

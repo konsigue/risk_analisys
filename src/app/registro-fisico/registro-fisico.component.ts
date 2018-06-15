@@ -10,6 +10,7 @@ export class RegistroFisicoComponent implements OnInit {
 
   constructor() { }
 
+
   ngOnInit() {
   }
 
