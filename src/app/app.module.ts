@@ -1,4 +1,5 @@
 /* Dependencias */
+
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -16,6 +17,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { RegistroFisicoComponent } from './registro-fisico/registro-fisico.component';
 import { RegistroFComponent } from './registro-f/registro-f.component';
 import { DocumentsFinancialStateComponent } from './documents-financial-state/documents-financial-state.component';
+import { FinancialStatementComponent } from './financial-statement/financial-statement.component';
 
 
 const appRoutes: Routes = [
@@ -30,6 +32,7 @@ const appRoutes: Routes = [
   {path: 'Recuperar-password', component: RecoverPasswordComponent},
   {path: 'Registro-Moral', component: RegistroMoralComponent},
   {path: 'Representante', component: DatosRepresentanteRmComponent}
+  { path: 'Estado-Financiero', component: FinancialStatementComponent },
 
 ];
 
@@ -41,8 +44,9 @@ const appRoutes: Routes = [
     RegistroFComponent,
     RecoverPasswordComponent,
     RegistroMoralComponent,
-    DatosRepresentanteRmComponent
+    DatosRepresentanteRmComponent,
     DocumentsFinancialStateComponent,
+    FinancialStatementComponent,
   ],
   imports: [
     RouterModule.forRoot(
