@@ -18,6 +18,7 @@ import { RegistroFisicoComponent } from './registro-fisico/registro-fisico.compo
 import { RegistroFComponent } from './registro-f/registro-f.component';
 import { DocumentsFinancialStateComponent } from './documents-financial-state/documents-financial-state.component';
 import { FinancialStatementComponent } from './financial-statement/financial-statement.component';
+import { FinancialRatiosComponent } from './financial-ratios/financial-ratios.component';
 
 
 const appRoutes: Routes = [
@@ -29,10 +30,11 @@ const appRoutes: Routes = [
     pathMatch: 'full'
   },
   { path: 'registro-fisico', component: RegistroFComponent },
-  {path: 'Recuperar-password', component: RecoverPasswordComponent},
-  {path: 'Registro-Moral', component: RegistroMoralComponent},
-  {path: 'Representante', component: DatosRepresentanteRmComponent}
+  { path: 'Recuperar-password', component: RecoverPasswordComponent },
+  { path: 'Registro-Moral', component: RegistroMoralComponent },
+  { path: 'Representante', component: DatosRepresentanteRmComponent },
   { path: 'Estado-Financiero', component: FinancialStatementComponent },
+  { path: 'Razones-Financieras', component: FinancialRatiosComponent },
 
 ];
 
@@ -47,6 +49,7 @@ const appRoutes: Routes = [
     DatosRepresentanteRmComponent,
     DocumentsFinancialStateComponent,
     FinancialStatementComponent,
+    FinancialRatiosComponent
   ],
   imports: [
     RouterModule.forRoot(
