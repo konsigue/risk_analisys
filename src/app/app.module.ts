@@ -1,14 +1,17 @@
+/* Dependencias */
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppComponent } from './app.component';
 
+/* Components */
 
 import { RecoverPasswordComponent } from './recover-password/recover-password.component';
 import { RegistroMoralComponent } from './registro-moral/registro-moral.component';
 import { DatosRepresentanteRmComponent } from './datos-representante-rm/datos-representante-rm.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppComponent } from './app.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RegistroFisicoComponent } from './registro-fisico/registro-fisico.component';
 import { RegistroFComponent } from './registro-f/registro-f.component';
@@ -17,7 +20,8 @@ import { RegistroFComponent } from './registro-f/registro-f.component';
 const appRoutes: Routes = [
   { path: 'switch', component: RegistroFisicoComponent },
   { path: 'login', component: LoginFormComponent },
-  { path: '',
+  {
+    path: '',
     redirectTo: 'login',
     pathMatch: 'full'
   },
@@ -44,11 +48,12 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     ),
     BrowserModule,
+    AngularFontAwesomeModule,
     FormsModule,
-    [ BrowserModule, BrowserAnimationsModule ]
+    [BrowserModule, BrowserAnimationsModule]
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 
-export class AppModule {}
+export class AppModule { }
