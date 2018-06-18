@@ -59,7 +59,8 @@ const appRoutes: Routes = [
     BrowserModule,
     AngularFontAwesomeModule,
     FormsModule,
-    [BrowserModule, BrowserAnimationsModule]
+    BrowserModule, 
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
