@@ -10,33 +10,33 @@ body{
     background: linear-gradient(90deg, rgb(0, 106, 222), rgb(59, 219, 255));
     color: white;
   }
-  
+
   .kge-btn-principal {
     background-color: #003D7F;
     color: #f8f9fa;
     border: white;
   }
-  
+
   .kge-btn-principal :hover {
     background-color: rgb(89, 169, 255) !important;
     color: #bcdaf8;
     border-color: #dae0e5;
   }
-  
+
   .kge-btn-principal :focus,
   .kge-btn-principal.focus {
     box-shadow: 0 0 0 0.2rem rgb(0, 46, 95);
   }
-  
-  
+
+
   .kge-btn-principal.disabled,
   .kge-btn-principal:disabled {
     color: #212529;
     background-color: #f8f9fa;
     border-color: #f8f9fa;
   }
-  
-  
+
+
   .kge-btn-principal:not(:disabled):not(.disabled):active,
   .kge-btn-principal:not(:disabled):not(.disabled).active,
   .show>.kge-btn-principal.dropdown-toggle {
@@ -44,7 +44,7 @@ body{
     background-color: rgb(0, 123, 255);
     border-color: rgb(0, 46, 95);
   }
-  
+
   .kge-btn-principal:not(:disabled):not(.disabled):active:focus,
   .kge-btn-principalt:not(:disabled):not(.disabled).active:focus,
   .show>.kge-btn-principal.dropdown-toggle:focus {

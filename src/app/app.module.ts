@@ -19,6 +19,9 @@ import { RegistroFComponent } from './registro-f/registro-f.component';
 import { DocumentsFinancialStateComponent } from './documents-financial-state/documents-financial-state.component';
 import { FinancialStatementComponent } from './financial-statement/financial-statement.component';
 import { FinancialRatiosComponent } from './financial-ratios/financial-ratios.component';
+import {CIECComponent}  from "./ciec/ciec.component";
+import {DomicilioComponent}  from "./domicilio/domicilio.component";
+import {TarjetaComponent}  from "./tarjeta/tarjeta.component";
 
 
 const appRoutes: Routes = [
@@ -35,6 +38,9 @@ const appRoutes: Routes = [
   { path: 'Representante', component: DatosRepresentanteRmComponent },
   { path: 'Estado-Financiero', component: FinancialStatementComponent },
   { path: 'Razones-Financieras', component: FinancialRatiosComponent },
+  { path: 'domicilio', component: DomicilioComponent },
+  { path: 'tarjeta', component: TarjetaComponent },
+  { path: 'ciec', component: CIECComponent },
 
 ];
 
@@ -49,7 +55,10 @@ const appRoutes: Routes = [
     DatosRepresentanteRmComponent,
     DocumentsFinancialStateComponent,
     FinancialStatementComponent,
-    FinancialRatiosComponent
+    FinancialRatiosComponent,
+    CIECComponent,
+    DomicilioComponent,
+    TarjetaComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -59,7 +68,7 @@ const appRoutes: Routes = [
     BrowserModule,
     AngularFontAwesomeModule,
     FormsModule,
-    BrowserModule, 
+    BrowserModule,
     BrowserAnimationsModule
   ],
   providers: [],

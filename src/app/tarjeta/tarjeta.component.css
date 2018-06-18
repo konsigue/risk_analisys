@@ -1,0 +1,30 @@
+.row {
+margin: 7px 0;
+}
+
+.columna {
+text-align: center;
+background:none;
+}
+
+input{
+  text-align: center;
+}
+a{
+    color: white;
+}
+
+.login_wrapper {
+    right: 0px;
+    margin: 0px auto;
+    margin-top: 5%;
+    max-width: 350px;
+    position: relative
+}
+
+a:hover{
+    color: white;
+    background: rgb(255,127,0, 0.5);
+    border-radius: 2em;
+    text-decoration: none;
+}
