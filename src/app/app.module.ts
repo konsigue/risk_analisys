@@ -15,6 +15,7 @@ import { DatosRepresentanteRmComponent } from './datos-representante-rm/datos-re
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RegistroFisicoComponent } from './registro-fisico/registro-fisico.component';
 import { RegistroFComponent } from './registro-f/registro-f.component';
+import { DocumentsFinancialStateComponent } from './documents-financial-state/documents-financial-state.component';
 
 
 const appRoutes: Routes = [
@@ -41,6 +42,7 @@ const appRoutes: Routes = [
     RecoverPasswordComponent,
     RegistroMoralComponent,
     DatosRepresentanteRmComponent
+    DocumentsFinancialStateComponent,
   ],
   imports: [
     RouterModule.forRoot(
