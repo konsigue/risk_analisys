@@ -3,7 +3,7 @@ export interface Domicilio {
     State: string,
     Township: string,
     City: string,
-    District: string,
+    Districts: string[],
     ExteriorNumber: number,
     InteriorNumber: number
 }
