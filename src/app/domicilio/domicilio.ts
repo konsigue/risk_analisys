@@ -1,9 +1,9 @@
 export interface Domicilio {
-    ZipCode: number,
-    State: string,
-    County: string,
-    City: string,
-    Districts: string[],
-    ExteriorNumber: number,
-    InteriorNumber: number
+    codigo_postal: number,
+    estado: string,
+    municipio: string,
+    ciudad: string,
+    colonias: string[],
+    numero_exterior: number,
+    numero_interior: number
 }

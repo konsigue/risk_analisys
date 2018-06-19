@@ -9,14 +9,14 @@
       <form>
         <div class="row justify-content-lg-start">
           <div class="columna offset-3 col-3 form-group">
-             <label for="codigo-postal">Código Postal</label>
-             <input [(ngModel)]="zipCode" type="number" class="form-control" name="codigo-postal" placeholder="Código Postal">
-           </div>
-           <div class="columna col-3">
-              <label for="search-zipcode">&nbsp;</label>
-              <button type="button" id="search-zipcode" class="btn btn-md btn-block" 
-                (click)="onSearchClicked()">Buscar</button>
-           </div>
+            <label for="codigo-postal">Código Postal</label>
+            <input [(ngModel)]="zipCode" type="number" class="form-control" name="codigo-postal" placeholder="Código Postal">
+          </div>
+          <div class="columna col-3">
+            <label for="search-zipcode">&nbsp;</label>
+            <button type="button" id="search-zipcode" class="btn btn-md btn-block" 
+              (click)="onSearchClicked()">Buscar</button>
+          </div>
         </div>
         <div class="row justify-content-center">
           <div class="columna col-3 form-group">
@@ -31,21 +31,21 @@
         <div class="row justify-content-center">
           <div class="columna col-3 form-group">
              <label for="codigo-postal">Colonia</label>
-             <input type="text" class="form-control" id="Colonia" placeholder="Colonia" value="{{addres.Districts}}">
+             <input type="text" class="form-control" id="Colonia" placeholder="Colonia" value="{{address.colonias}}">
            </div>
            <div class="columna col-3 form-group">
               <label for="codigo-postal">Municipio o delegación</label>
-              <input type="text" class="form-control" id="municipio" placeholder="Municipio o delegación" value="{{addres.County}}" />
+              <input type="text" class="form-control" id="municipio" placeholder="Municipio o delegación" value="{{address.municipio}}" />
             </div>
         </div>
         <div class="row justify-content-center">
           <div class="columna col-3 form-group">
              <label for="codigo-postal">Ciudad</label>
-             <input type="text" class="form-control" id="Ciudad" placeholder="Ciudad" value="{{addres.City}}"/>
+             <input type="text" class="form-control" id="Ciudad" placeholder="Ciudad" value="{{address.ciudad}}"/>
            </div>
            <div class="columna col-3 form-group">
               <label for="codigo-postal">Estado</label>
-              <input type="text" class="form-control" id="Estado" placeholder="Estado" value="{{addres.State}}"/>
+              <input type="text" class="form-control" id="Estado" placeholder="Estado" value="{{address.estado}}"/>
             </div>
         </div>
         <div class="row justify-content-start">
