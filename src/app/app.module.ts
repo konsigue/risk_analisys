@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 /* Components */
 
@@ -19,9 +20,9 @@ import { RegistroFComponent } from './registro-f/registro-f.component';
 import { DocumentsFinancialStateComponent } from './documents-financial-state/documents-financial-state.component';
 import { FinancialStatementComponent } from './financial-statement/financial-statement.component';
 import { FinancialRatiosComponent } from './financial-ratios/financial-ratios.component';
-import {CIECComponent}  from "./ciec/ciec.component";
-import {DomicilioComponent}  from "./domicilio/domicilio.component";
-import {TarjetaComponent}  from "./tarjeta/tarjeta.component";
+import { CIECComponent}  from "./ciec/ciec.component";
+import { DomicilioComponent}  from "./domicilio/domicilio.component";
+import { TarjetaComponent}  from "./tarjeta/tarjeta.component";
 
 
 const appRoutes: Routes = [
@@ -69,7 +70,8 @@ const appRoutes: Routes = [
     AngularFontAwesomeModule,
     FormsModule,
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
