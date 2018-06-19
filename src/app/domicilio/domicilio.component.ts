@@ -9,12 +9,20 @@ import { Domicilio } from './domicilio';
   providers: [DomicilioService]
 })
 export class DomicilioComponent implements OnInit {
-
-  address: Domicilio;
+  public zipCode: number;
+  public address: Domicilio;
 
   constructor(private domicilioService: DomicilioService) { }
 
   ngOnInit() {
   }
 
+  getAddress(): void {
+    this.domicilioService.getAddress(this.zipCode).subscribe(a => this.address = a);
+  }
+
+  // EVENTS
+  onSearchClicked() {
+    this.getAddress();
+  }
 }

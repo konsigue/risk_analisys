@@ -1,7 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Domicilio } from './domicilio';
+
+const httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/json',
+    })
+};
 
 @Injectable()
 export class DomicilioService {
@@ -16,6 +23,6 @@ export class DomicilioService {
      * @param zipCode number of the user given zipCode
      */
     getAddress(zipCode: number): Observable<Domicilio> {
-        return this.http.get<Domicilio>(this.zipCodeUrl + zipCode);
+        return this.http.get<Domicilio>(this.zipCodeUrl + zipCode, httpOptions);
     }
 }
