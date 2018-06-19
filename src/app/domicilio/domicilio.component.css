@@ -1,16 +1,17 @@
 .row {
-margin: 7px 0;
+    margin: 7px 0;
 }
 
 .columna {
-text-align: center;
-background:none;
+    text-align: center;
+    background:none;
 }
 
-input{
-  text-align: center;
+input {
+    text-align: center;
 }
-a{
+
+a {
     color: white;
 }
 
@@ -22,9 +23,6 @@ a{
     position: relative
 }
 
-a:hover{
-    color: white;
-    background: rgb(255,127,0, 0.5);
-    border-radius: 2em;
-    text-decoration: none;
+.search {
+    color: grey;
 }
