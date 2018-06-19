@@ -30,8 +30,11 @@
         </div>
         <div class="row justify-content-center">
           <div class="columna col-3 form-group">
-             <label for="codigo-postal">Colonia</label>
-             <input type="text" class="form-control" id="Colonia" placeholder="Colonia" value="{{address.colonias}}">
+             <label for="Colonia">Colonia</label>
+             <select class="form-control">
+               <option >Seleccione</option>
+               <option *ngFor="let c of address.colonias" id="Colonia">{{c}}</option>
+             </select>
            </div>
            <div class="columna col-3 form-group">
               <label for="codigo-postal">Municipio o delegación</label>
