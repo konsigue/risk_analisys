@@ -24,6 +24,7 @@ import { CIECComponent}  from "./ciec/ciec.component";
 import { DomicilioComponent}  from "./domicilio/domicilio.component";
 import { TarjetaComponent}  from "./tarjeta/tarjeta.component";
 import { HeaderComponent } from "./header/header.component";
+import { NvarComponent } from './admin/Components/nvar/nvar.component';
 import { HeaderAdminComponent } from './admin/Components/header/header.component';
 import { adminComponent } from './admin/admin.component';
 
