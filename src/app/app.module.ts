@@ -25,6 +25,7 @@ import { DomicilioComponent}  from "./domicilio/domicilio.component";
 import { TarjetaComponent}  from "./tarjeta/tarjeta.component";
 import { HeaderComponent } from "./header/header.component";
 import { NvarComponent } from './admin/Components/nvar/nvar.component';
+import { PageComponent } from './admin/Components/page/page.component';
 import { HeaderAdminComponent } from './admin/Components/header/header.component';
 import { adminComponent } from './admin/admin.component';
 
