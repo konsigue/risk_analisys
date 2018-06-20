@@ -9,12 +9,12 @@
         <div class="row">
           <div class="col-6">
             <a routerLink="/registro-fisico">
-              <button type="button" class="btn btn-info">Persona física</button>
+              <button (click)="onClick(0)" type="button" class="btn btn-info">Persona física</button>
             </a>
           </div>
           <div class="col-6">
-            <a routerLink="/Registro-Moral">
-              <button type="button" class="btn btn-info">Persona moral</button>
+            <a routerLink="/Registro-Moral" >
+              <button (click)="onClick(1)" type="button" class="btn btn-info">Persona moral</button>
             </a>
           </div>
         </div>

@@ -1,0 +1,15 @@
+#logo_login{
+    border-radius: 15%;
+    max-height: 45px;
+}
+
+.registro_container{
+    max-width: 60%;
+}
+.space {
+    margin-right: 5px;
+}
+
+.registro-contacto{
+    color: black;
+}

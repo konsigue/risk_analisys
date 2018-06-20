@@ -23,7 +23,11 @@ import { FinancialRatiosComponent } from './financial-ratios/financial-ratios.co
 import { CIECComponent}  from "./ciec/ciec.component";
 import { DomicilioComponent}  from "./domicilio/domicilio.component";
 import { TarjetaComponent}  from "./tarjeta/tarjeta.component";
+import { ContactosComponent } from './contactos/contactos.component';
 
+/* Serivcios */
+
+import { DataRegisterService } from './data-register.service';
 
 const appRoutes: Routes = [
   { path: 'switch', component: RegistroFisicoComponent },
@@ -42,6 +46,7 @@ const appRoutes: Routes = [
   { path: 'domicilio', component: DomicilioComponent },
   { path: 'tarjeta', component: TarjetaComponent },
   { path: 'ciec', component: CIECComponent },
+  { path: 'contactos', component: ContactosComponent },
 
 ];
 
@@ -59,12 +64,13 @@ const appRoutes: Routes = [
     FinancialRatiosComponent,
     CIECComponent,
     DomicilioComponent,
-    TarjetaComponent
+    TarjetaComponent,
+    ContactosComponent
   ],
   imports: [
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      { enableTracing: false } // <-- debugging purposes only
     ),
     BrowserModule,
     AngularFontAwesomeModule,
@@ -73,7 +79,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [DataRegisterService],
   bootstrap: [AppComponent]
 })
 
