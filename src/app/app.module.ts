@@ -66,7 +66,11 @@ const appRoutes: Routes = [
     CIECComponent,
     DomicilioComponent,
     TarjetaComponent,
-    adminComponent
+    adminComponent,
+    HeaderComponent,
+    HeaderAdminComponent,
+    NvarComponent,
+    PageComponent
   ],
   imports: [
     RouterModule.forRoot(
