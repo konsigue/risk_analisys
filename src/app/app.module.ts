@@ -24,6 +24,7 @@ import { CIECComponent}  from "./ciec/ciec.component";
 import { DomicilioComponent}  from "./domicilio/domicilio.component";
 import { TarjetaComponent}  from "./tarjeta/tarjeta.component";
 import { ContactosComponent } from './contactos/contactos.component';
+import { HeaderComponent } from "./header/header.component";
 
 /* Serivcios */
 
@@ -65,7 +66,8 @@ const appRoutes: Routes = [
     CIECComponent,
     DomicilioComponent,
     TarjetaComponent,
-    ContactosComponent
+    ContactosComponent,
+    HeaderComponent,
   ],
   imports: [
     RouterModule.forRoot(

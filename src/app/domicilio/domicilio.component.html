@@ -1,47 +1,54 @@
     <div class="container fondo">
       <div class="row justify-content-center">
         <div class="columna col-12">
-          <h2>¿Cuál es tu domiclio?</h2>
+          <h2>¿Cuál es su domicilio?</h2>
         <div class="columna col-12">
-          <p>Ingresa la dirección que aparece en tu identificación oficil (INE)</p>
+          <p>Ingresa la dirección que aparece en tu identificación oficial (INE)</p>
         </div>
-        </div>
-      </div>
+        </div> </div>
       <form>
         <div class="row justify-content-lg-start">
           <div class="columna offset-3 col-3 form-group">
-             <label for="codigo-postal">Código Postal</label>
-             <input type="text" class="form-control" id="codigo-postal" placeholder="Código Postal">
-           </div>
+            <label for="codigo-postal">Código Postal</label>
+            <input [(ngModel)]="zipCode" type="text" class="form-control" name="codigo-postal" placeholder="Código Postal">
+          </div>
+          <div class="columna col-3">
+            <label for="search-zipcode">&nbsp;</label>
+            <button type="button" id="search-zipcode" class="btn btn-md btn-block search" 
+              (click)="onSearchClicked()">Buscar</button>
+          </div>
         </div>
         <div class="row justify-content-center">
           <div class="columna col-3 form-group">
              <label for="codigo-postal">Calle y número exterior</label>
-             <input type="text" class="form-control" id="codigo-postal" placeholder="Calle y número exterior">
+             <input type="text" class="form-control" id="calle" placeholder="Calle y número exterior">
            </div>
            <div class="columna col-3 form-group">
-              <label for="codigo-postal">Número interior</label>
-              <input type="text" class="form-control" id="codigo-postal" placeholder="Número interior">
+              <label for="numero-interior">Número interior</label>
+              <input type="text" class="form-control" id="numero-interior" placeholder="Número interior">
             </div>
         </div>
         <div class="row justify-content-center">
           <div class="columna col-3 form-group">
-             <label for="codigo-postal">Colonia</label>
-             <input type="text" class="form-control" id="Colonia" placeholder="Colonia">
+             <label for="Colonia">Colonia</label>
+             <select class="form-control">
+               <option >Seleccione</option>
+               <option *ngFor="let c of address.colonias" id="colonia">{{c}}</option>
+             </select>
            </div>
            <div class="columna col-3 form-group">
-              <label for="codigo-postal">Municipio o delegación</label>
-              <input type="text" class="form-control" id="municipio" placeholder="Municipio o delegación">
+              <label for="municipio">Municipio o delegación</label>
+              <input type="text" class="form-control" id="municipio" placeholder="Municipio o delegación" value="{{address.municipio}}" />
             </div>
         </div>
         <div class="row justify-content-center">
           <div class="columna col-3 form-group">
-             <label for="codigo-postal">Ciudad</label>
-             <input type="text" class="form-control" id="Ciudad" placeholder="Ciudad">
+             <label for="ciudad">Ciudad</label>
+             <input type="text" class="form-control" id="ciudad" placeholder="Ciudad" value="{{address.ciudad}}"/>
            </div>
            <div class="columna col-3 form-group">
-              <label for="codigo-postal">Estado</label>
-              <input type="text" class="form-control" id="Estado" placeholder="Estado">
+              <label for="estado">Estado</label>
+              <input type="text" class="form-control" id="estado" placeholder="Estado" value="{{address.estado}}"/>
             </div>
         </div>
         <div class="row justify-content-start">

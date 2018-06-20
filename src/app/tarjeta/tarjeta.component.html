@@ -13,22 +13,40 @@
 <form>
   <div class="form-group">
     <label for="exampleInputEmail1">¿Eres el titular de una tarjeta de crédito?</label>
-    <div class="row form-group justify-content-around">
-      <button type="button" class="btn btn-success col-4 btn-lg">Si</button> <button type="button" class="btn btn-danger col-4 btn-lg">No</button>
+    <div class="row form-group justify-content-center">
+      <label class="btn btn-secondary" >
+          <input type="radio" (click)="mostrar = !mostrar" aria-controls="targeta" name="options" id="option1" autocomplete="off"> Si
+        </label> &nbsp;&nbsp;
+        <label class="btn btn-secondary" >
+          <input type="radio"  name="options" id="option2"  autocomplete="off"> No
+        </label>
+      </div>
+      <div  *ngIf="mostrar">
+    <label for="exampleInputEmail1" >Últimos dígitos</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="xxxx">
     </div>
-    <label for="exampleInputEmail1">Últimos dígitos</label><input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="xxxx">
   </div>
     <div class="form-group">
         <label for="exampleInputEmail1">¿Tienes un préstamo hipotecario?</label>
         <div >
-          <button type="button" class="btn btn-success col-4 btn-lg">Si</button> <button type="button" class="btn btn-danger col-4 btn-lg">No</button>
-        </div>
+          <label class="btn btn-secondary">
+              <input type="radio"  aria-controls="targeta" name="options" id="option1" autocomplete="off"> Si
+            </label>&nbsp;
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" id="option2"  autocomplete="off"> No
+            </label>
+          </div>
     </div>
     <div class="form-group">
         <label for="exampleInputEmail1">¿Has tenido un crédito automotriz?</label>
         <div>
-          <button type="button" class="btn btn-success col-4 btn-lg">Si</button> <button type="button" class="btn btn-danger col-4 btn-lg">No</button>
-          </div>
+          <label class="btn btn-secondary">
+              <input type="radio"  aria-controls="targeta" name="options" id="option1" autocomplete="off"> Si
+            </label>&nbsp;
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" id="option2"  autocomplete="off"> No
+            </label>
+    </div>
   </div>
 <a routerLink="/ciec">  <button type="button" class="btn btn-primary btn-lg btn-block">Envíar</button></a>
 </form>

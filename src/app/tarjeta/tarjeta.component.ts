@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TarjetaComponent implements OnInit {
 
+  mostrar = true;
+
+
   constructor() { }
 
   ngOnInit() {
