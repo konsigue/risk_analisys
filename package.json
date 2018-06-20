@@ -1,6 +1,6 @@
 {
   "name": "prototipo-angular",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
@@ -9,10 +9,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "ng build --aot --prod"
-  },
-  "engines": {
-    "node": "8.11.3",
-    "npm": "5.6.0"
   },
   "private": true,
   "dependencies": {
@@ -55,5 +51,9 @@
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
     "typescript": "~2.7.2"
+  },
+  "engines": {
+    "node": "8.11.3",
+    "npm": "5.6.0"
   }
 }
