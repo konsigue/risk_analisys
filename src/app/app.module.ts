@@ -24,6 +24,7 @@ import { CIECComponent}  from "./ciec/ciec.component";
 import { DomicilioComponent}  from "./domicilio/domicilio.component";
 import { TarjetaComponent}  from "./tarjeta/tarjeta.component";
 import { HeaderComponent } from "./header/header.component";
+import { adminComponent } from './admin/admin.component';
 
 const appRoutes: Routes = [
   { path: 'switch', component: RegistroFisicoComponent },
@@ -42,6 +43,8 @@ const appRoutes: Routes = [
   { path: 'domicilio', component: DomicilioComponent },
   { path: 'tarjeta', component: TarjetaComponent },
   { path: 'ciec', component: CIECComponent },
+  { path: 'admin', component: adminComponent },
+
 
 ];
 
@@ -60,7 +63,7 @@ const appRoutes: Routes = [
     CIECComponent,
     DomicilioComponent,
     TarjetaComponent,
-    HeaderComponent
+    adminComponent
   ],
   imports: [
     RouterModule.forRoot(
