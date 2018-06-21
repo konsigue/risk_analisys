@@ -24,7 +24,7 @@ export class ContactosComponent implements OnInit {
       });
    }
 
-
+   contactos = CONTACTOS;
 
   tipo(){
     if(this.tipoPersona==0){
