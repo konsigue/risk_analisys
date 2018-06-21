@@ -24,10 +24,10 @@ import { CIECComponent}  from "./ciec/ciec.component";
 import { DomicilioComponent}  from "./domicilio/domicilio.component";
 import { TarjetaComponent}  from "./tarjeta/tarjeta.component";
 import { HeaderComponent } from "./header/header.component";
-import { NvarComponent } from './admin/Components/nvar/nvar.component';
 import { PageComponent } from './admin/Components/page/page.component';
 import { HeaderAdminComponent } from './admin/Components/header/header.component';
 import { adminComponent } from './admin/admin.component';
+import { SideBarComponent } from './admin/Components/Sidebar/sidebar.component';
 
 const appRoutes: Routes = [
   { path: 'switch', component: RegistroFisicoComponent },
@@ -69,7 +69,7 @@ const appRoutes: Routes = [
     adminComponent,
     HeaderComponent,
     HeaderAdminComponent,
-    NvarComponent,
+    SideBarComponent,
     PageComponent
   ],
   imports: [
