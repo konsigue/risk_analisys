@@ -2,10 +2,32 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminInicioComponent } from './Components/admin-inicio/admin-inicio.component';
 import { adminComponent } from './admin.component';
+import { ProvidersComponent } from './Components/providers/providers.component';
 
 const routes: Routes = [
-  {path: '', component: adminComponent},
-  {path: 'Inicio', component: AdminInicioComponent, outlet: "adminRouter"},
+  {
+    path: '',
+    redirectTo: 'admin',
+    pathMatch: 'full'
+  },
+  {
+    path: 'admin', component: adminComponent, children: [
+      { path: '', outlet: 'admin', component: AdminInicioComponent, pathMatch: 'full' },
+      { path: 'inicio', outlet: 'admin', component: AdminInicioComponent, pathMatch: 'full' },
+      { path: 'proveedores', outlet: 'admin', component: ProvidersComponent, pathMatch: 'full' },
+    ]
+  },
+  // {
+  //   path: 'inicio', component: adminComponent, children: [
+  //     { path: '', outlet: 'admin', component: AdminInicioComponent, pathMatch: 'full' },
+  //   ]
+  // },
+  // {
+  //   path: 'proveedores',component: adminComponent, children: [
+  //     { path: '', outlet: 'admin', component: ProvidersComponent, pathMatch: 'full' },
+  //   ]
+  // },
+
 
 ];
 

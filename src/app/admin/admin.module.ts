@@ -8,6 +8,7 @@ import { adminComponent } from './admin.component';
 import { AdminInicioComponent } from './Components/admin-inicio/admin-inicio.component';
 import { SideBarComponent } from './Components/Sidebar/sidebar.component';
 import { HeaderAdminComponent } from './Components/header/header.component';
+import { ProvidersComponent } from './Components/providers/providers.component';
 
 
 @NgModule({
@@ -15,7 +16,13 @@ import { HeaderAdminComponent } from './Components/header/header.component';
     CommonModule,
     AdminRoutingModule,
   ],
-  declarations: [AdminInicioComponent,adminComponent,SideBarComponent, HeaderAdminComponent],
+  declarations: [
+    AdminInicioComponent,
+    adminComponent,
+    SideBarComponent,
+    HeaderAdminComponent,
+    ProvidersComponent
+  ],
   providers: [],
   bootstrap: [adminComponent]
 })

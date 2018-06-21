@@ -45,8 +45,9 @@ const appRoutes: Routes = [
   { path: 'ciec', component: CIECComponent },
   // { path: 'admin', component: adminComponent },
   {
-    path: 'admin', 
-    loadChildren : './admin/admin.module#AdminModule' }
+    path: 'admin',
+    loadChildren: './admin/admin.module#AdminModule'
+  }
 
 
 ];
