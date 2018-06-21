@@ -25,6 +25,7 @@ import { DomicilioComponent}  from "./domicilio/domicilio.component";
 import { TarjetaComponent}  from "./tarjeta/tarjeta.component";
 import { ContactosComponent } from './contactos/contactos.component';
 import { HeaderComponent } from "./header/header.component";
+import { RegistroAccionistasComponent } from './registro-accionistas/registro-accionistas.component';
 
 /* Serivcios */
 
@@ -48,6 +49,7 @@ const appRoutes: Routes = [
   { path: 'tarjeta', component: TarjetaComponent },
   { path: 'ciec', component: CIECComponent },
   { path: 'contactos', component: ContactosComponent },
+  { path: 'accionistas', component: RegistroAccionistasComponent },
 
 ];
 
@@ -68,6 +70,7 @@ const appRoutes: Routes = [
     TarjetaComponent,
     ContactosComponent,
     HeaderComponent,
+    RegistroAccionistasComponent,
   ],
   imports: [
     RouterModule.forRoot(
