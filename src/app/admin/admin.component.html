@@ -1,1 +1,18 @@
-<app-page></app-page>
+<!-- Admin html component -->
+<div>
+  <div class="row" style="margin-right: 0;padding-right:0 !important;padding-left:0px !important" id="body-row">
+    <!-- Admin-sidebar-->
+    <app-admin-sidebar class="sidebar-container"></app-admin-sidebar>
+    <div class="col" style=" padding-left: 0px;margin-right: 0;padding-right:0 !important;">
+        <app-admin-header></app-admin-header>
+        <div class="p-3">
+          <!-- Admin pages -->
+          <router-outlet name="adminRouter"></router-outlet>
+          <h1>
+            Bienvenido!!
+          </h1>
+          <h3>Esta es la primera vesion del dashboard para administradores Konsigue</h3>
+        </div>
+      </div>
+  </div>
+</div>

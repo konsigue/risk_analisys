@@ -20,14 +20,10 @@ import { RegistroFComponent } from './registro-f/registro-f.component';
 import { DocumentsFinancialStateComponent } from './documents-financial-state/documents-financial-state.component';
 import { FinancialStatementComponent } from './financial-statement/financial-statement.component';
 import { FinancialRatiosComponent } from './financial-ratios/financial-ratios.component';
-import { CIECComponent}  from "./ciec/ciec.component";
-import { DomicilioComponent}  from "./domicilio/domicilio.component";
-import { TarjetaComponent}  from "./tarjeta/tarjeta.component";
+import { CIECComponent } from "./ciec/ciec.component";
+import { DomicilioComponent } from "./domicilio/domicilio.component";
+import { TarjetaComponent } from "./tarjeta/tarjeta.component";
 import { HeaderComponent } from "./header/header.component";
-import { PageComponent } from './admin/Components/page/page.component';
-import { HeaderAdminComponent } from './admin/Components/header/header.component';
-import { adminComponent } from './admin/admin.component';
-import { SideBarComponent } from './admin/Components/Sidebar/sidebar.component';
 
 const appRoutes: Routes = [
   { path: 'switch', component: RegistroFisicoComponent },
@@ -37,6 +33,7 @@ const appRoutes: Routes = [
     redirectTo: 'login',
     pathMatch: 'full'
   },
+  
   { path: 'registro-fisico', component: RegistroFComponent },
   { path: 'Recuperar-password', component: RecoverPasswordComponent },
   { path: 'Registro-Moral', component: RegistroMoralComponent },
@@ -46,7 +43,10 @@ const appRoutes: Routes = [
   { path: 'domicilio', component: DomicilioComponent },
   { path: 'tarjeta', component: TarjetaComponent },
   { path: 'ciec', component: CIECComponent },
-  { path: 'admin', component: adminComponent },
+  // { path: 'admin', component: adminComponent },
+  {
+    path: 'admin', 
+    loadChildren : './admin/admin.module#AdminModule' }
 
 
 ];
@@ -66,11 +66,7 @@ const appRoutes: Routes = [
     CIECComponent,
     DomicilioComponent,
     TarjetaComponent,
-    adminComponent,
     HeaderComponent,
-    HeaderAdminComponent,
-    SideBarComponent,
-    PageComponent
   ],
   imports: [
     RouterModule.forRoot(
