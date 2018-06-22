@@ -6,6 +6,7 @@ import {
   style
 } from '@angular/animations';
 
+
 @Component({
   selector: 'app-registro-f',
   templateUrl: './registro-f.component.html',

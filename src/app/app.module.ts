@@ -20,10 +20,16 @@ import { RegistroFComponent } from './registro-f/registro-f.component';
 import { DocumentsFinancialStateComponent } from './documents-financial-state/documents-financial-state.component';
 import { FinancialStatementComponent } from './financial-statement/financial-statement.component';
 import { FinancialRatiosComponent } from './financial-ratios/financial-ratios.component';
-import { CIECComponent } from "./ciec/ciec.component";
-import { DomicilioComponent } from "./domicilio/domicilio.component";
-import { TarjetaComponent } from "./tarjeta/tarjeta.component";
+import { CIECComponent}  from "./ciec/ciec.component";
+import { DomicilioComponent}  from "./domicilio/domicilio.component";
+import { TarjetaComponent}  from "./tarjeta/tarjeta.component";
+import { ContactosComponent } from './contactos/contactos.component';
 import { HeaderComponent } from "./header/header.component";
+import { RegistroAccionistasComponent } from './registro-accionistas/registro-accionistas.component';
+
+/* Serivcios */
+
+import { DataRegisterService } from './data-register.service';
 
 const appRoutes: Routes = [
   { path: 'switch', component: RegistroFisicoComponent },
@@ -43,12 +49,14 @@ const appRoutes: Routes = [
   { path: 'domicilio', component: DomicilioComponent },
   { path: 'tarjeta', component: TarjetaComponent },
   { path: 'ciec', component: CIECComponent },
+
   // { path: 'admin', component: adminComponent },
   {
     path: 'admin',
     loadChildren: './admin/admin.module#AdminModule'
-  }
-
+  },
+  { path: 'contactos', component: ContactosComponent },
+  { path: 'accionistas', component: RegistroAccionistasComponent },
 
 ];
 
@@ -67,12 +75,14 @@ const appRoutes: Routes = [
     CIECComponent,
     DomicilioComponent,
     TarjetaComponent,
+    ContactosComponent,
     HeaderComponent,
+    RegistroAccionistasComponent,
   ],
   imports: [
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      { enableTracing: false } // <-- debugging purposes only
     ),
     BrowserModule,
     AngularFontAwesomeModule,
@@ -81,7 +91,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [DataRegisterService],
   bootstrap: [AppComponent]
 })
 

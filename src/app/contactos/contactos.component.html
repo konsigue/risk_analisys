@@ -1,0 +1,94 @@
+<div class="container registro_container">
+  <br>
+  <br>
+  <div class="row justify-content-center">
+    <img src="assets/img/logo-blanco.png" width=170px; alt="" id="logo_login">
+  </div>
+  <br>
+  <br>
+  <div class="row justify-content-center">
+    <h2> Contactos</h2>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-8">
+      <div class="row">
+        <label class="space">Correo electrónico del contacto:
+          <input placeholder="Email">
+        </label>
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+            Agregar contacto
+        </button>
+      </div>
+    </div>
+    <div class="col-4"></div>
+  </div>
+  <br>
+  <div class="row justify-content-center">
+      <table class="table">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Nombre del contacto</th>
+              <th scope="col">Puesto</th>
+              <th scope="col">Correo electrónico</th>
+              <th scope="col">Telefono oficina</th>
+              <th scope="col">Telefono móvil</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let contacto of contactos" >
+              <td>{{contacto.name}}</td>
+              <td>{{contacto.puesto}}</td>
+              <td>{{contacto.email}}</td>
+              <td>{{contacto.telefono+' ext'+contacto.extension}}</td>
+              <td>{{contacto.movil}}</td>
+            </tr>
+          </tbody>
+        </table>
+  </div>
+  <div class="row justify-content-center">
+    <button (click)="tipo()" class="btn btn-primary">Continuar</button>  
+  </div>
+  
+  <div class="modal fade registro-contacto" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Agrega un contacto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        <label class="space">Nombre(s):
+            <input placeholder="Nombre(s)">
+          </label>
+          <label class="space">Apellido Paterno:
+            <input placeholder="Apellido Paterno">
+          </label>
+          <label class="space">Apellido Materno:
+            <input placeholder="Apellido Materno">
+          </label>
+          <label class="space">Puesto:
+            <input placeholder="Email">
+          </label>
+          <label class="space">Correo electrónico:
+            <input placeholder="Correo electrónico">
+          </label>
+          <label class="space">Telefono de oficina:
+            <input placeholder="Telefono de oficina">
+          </label>
+          <label class="space">Extension:
+            <input placeholder="Extension">
+          </label>
+          <label class="space">Telefono móvil:
+            <input placeholder="Telefono móvil">
+          </label>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Agregar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
