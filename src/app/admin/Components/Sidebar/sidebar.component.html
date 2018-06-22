@@ -12,14 +12,14 @@
         </a>
         <!-- Submenu content -->
         <div id='submenu2' class="collapse sidebar-submenu">
-          <a href="#" class="list-group-item list-group-item-action bg-k-primary text-white">
+          <!-- <a href="#" class="list-group-item list-group-item-action bg-k-primary text-white">
             <span class="menu-collapsed">Configuración</span>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action bg-k-primary text-white">
+          </a> -->
+          <a [routerLink]="['../../login']"  class="list-group-item list-group-item-action bg-k-primary text-white">
             <span class="menu-collapsed">Cerrar sesión</span>
           </a>
         </div>
-        <a class="nav-link active">
+        <a class="nav-link active" [routerLink]="[{ outlets: {'admin': ['inicio']}} ]" >
           <i class="fa fa-home feather feather-layers"></i>
           Inicio
           <span class="sr-only">(current)</span>
@@ -29,18 +29,12 @@
         <small>Menu principal</small>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" [routerLink]="[{ outlets: {'admin': ['inicio']}} ]">
-          <i class="fa fa-file feather feather-layers"></i>
-          Inicio
-        </a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" [routerLink]="[{ outlets: {'admin': ['proveedores']}} ]">
           <i class="fa fa-file feather feather-layers"></i>
           Empresas
         </a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="">
           <i class="fa fa-user feather feather-layers"></i>
           Usuarios
@@ -51,7 +45,7 @@
           <i class="fa fa-signal feather feather-layers"></i>
           Reportes
         </a>
-      </li>
+      </li> -->
     </ul>
   </div>
 </div>
