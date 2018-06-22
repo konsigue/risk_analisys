@@ -39,6 +39,7 @@ const appRoutes: Routes = [
     redirectTo: 'login',
     pathMatch: 'full'
   },
+  
   { path: 'registro-fisico', component: RegistroFComponent },
   { path: 'Recuperar-password', component: RecoverPasswordComponent },
   { path: 'Registro-Moral', component: RegistroMoralComponent },
@@ -48,6 +49,12 @@ const appRoutes: Routes = [
   { path: 'domicilio', component: DomicilioComponent },
   { path: 'tarjeta', component: TarjetaComponent },
   { path: 'ciec', component: CIECComponent },
+
+  // { path: 'admin', component: adminComponent },
+  {
+    path: 'admin',
+    loadChildren: './admin/admin.module#AdminModule'
+  },
   { path: 'contactos', component: ContactosComponent },
   { path: 'accionistas', component: RegistroAccionistasComponent },
 
