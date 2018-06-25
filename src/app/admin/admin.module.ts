@@ -9,6 +9,7 @@ import { AdminInicioComponent } from './Components/admin-inicio/admin-inicio.com
 import { SideBarComponent } from './Components/Sidebar/sidebar.component';
 import { HeaderAdminComponent } from './Components/header/header.component';
 import { ProvidersComponent } from './Components/providers/providers.component';
+import { SupplierAnalysisComponent } from './Components/supplier-analysis/supplier-analysis.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ProvidersComponent } from './Components/providers/providers.component';
     adminComponent,
     SideBarComponent,
     HeaderAdminComponent,
-    ProvidersComponent
+    ProvidersComponent,
+    SupplierAnalysisComponent
   ],
   providers: [],
   bootstrap: [adminComponent]
