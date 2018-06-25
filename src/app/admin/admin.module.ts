@@ -11,6 +11,7 @@ import { HeaderAdminComponent } from './Components/header/header.component';
 import { ProvidersComponent } from './Components/providers/providers.component';
 import { ProviderResumeComponent } from './Components/provider/provider-resume/provider-resume.component';
 import { ProviderDomicileComponent } from './Components/provider/provider-domicile/provider-domicile.component';
+import { ProviderGeneralInfoComponent } from './Components/provider/provider-general-info/provider-general-info.component';
 
 
 @NgModule({
@@ -23,9 +24,11 @@ import { ProviderDomicileComponent } from './Components/provider/provider-domici
     adminComponent,
     SideBarComponent,
     HeaderAdminComponent,
-    ProvidersComponent
+    ProvidersComponent,
     ProviderResumeComponent,
     ProviderDomicileComponent,
+    ProviderGeneralInfoComponent,
+    
   ],
   providers: [],
   bootstrap: [adminComponent]
