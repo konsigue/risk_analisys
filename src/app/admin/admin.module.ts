@@ -9,6 +9,7 @@ import { AdminInicioComponent } from './Components/admin-inicio/admin-inicio.com
 import { SideBarComponent } from './Components/Sidebar/sidebar.component';
 import { HeaderAdminComponent } from './Components/header/header.component';
 import { ProvidersComponent } from './Components/providers/providers.component';
+import { ProviderResumeComponent } from './Components/provider/provider-resume/provider-resume.component';
 import { ProviderDomicileComponent } from './Components/provider/provider-domicile/provider-domicile.component';
 
 
@@ -23,6 +24,7 @@ import { ProviderDomicileComponent } from './Components/provider/provider-domici
     SideBarComponent,
     HeaderAdminComponent,
     ProvidersComponent
+    ProviderResumeComponent,
     ProviderDomicileComponent,
   ],
   providers: [],
