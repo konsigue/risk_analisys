@@ -19,8 +19,10 @@
             <span class="menu-collapsed">Cerrar sesión</span>
           </a>
         </div>
-        <!--<a class="nav-link active" [routerLink]="[{ outlets: {'admin': ['inicio']}} ]" > -->
-        <a class="nav-link active" [routerLink]="['../inicio']" >
+        <!--
+          <a class="nav-link active" [routerLink]="[{ outlets: {'admin': ['inicio']}} ]" > 
+        -->
+        <a class="nav-link active" (click)="onChangeRouter('inicio')" >
           <i class="fa fa-home feather feather-layers"></i>
           Inicio
           <span class="sr-only">(current)</span>
@@ -30,7 +32,7 @@
         <small>Menu principal</small>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['../proveedores']">
+        <a class="nav-link" (click)="onChangeRouter('proveedores')">
           <i class="fa fa-file feather feather-layers"></i>
           Empresas
         </a>
