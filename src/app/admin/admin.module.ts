@@ -10,6 +10,7 @@ import { SideBarComponent } from './Components/Sidebar/sidebar.component';
 import { HeaderAdminComponent } from './Components/header/header.component';
 import { ProvidersComponent } from './Components/providers/providers.component';
 import { SupplierAnalysisComponent } from './Components/supplier-analysis/supplier-analysis.component';
+import { MenuProvidersComponent } from './Components/menu-providers/menu-providers.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { SupplierAnalysisComponent } from './Components/supplier-analysis/suppli
     SideBarComponent,
     HeaderAdminComponent,
     ProvidersComponent,
-    SupplierAnalysisComponent
+    SupplierAnalysisComponent,
+    MenuProvidersComponent
   ],
   providers: [],
   bootstrap: [adminComponent]
