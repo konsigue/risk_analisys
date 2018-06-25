@@ -22,7 +22,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'proveedores/:id/analisis', component: adminComponent, children: [
+    path: 'proveedores/:name/analisis', component: adminComponent, children: [
       { path: '', outlet: 'admin', component: SupplierAnalysisComponent, pathMatch: 'full' }
     ]
   }
