@@ -11,11 +11,15 @@ import { MenuSuppliersComponent } from './menu-suppliers/menu-suppliers.componen
 import { SupplierAnalysisComponent } from './supplier-analysis/supplier-analysis.component';
 import { ShareholdersSuppliersComponent } from './shareholders-suppliers/shareholders-suppliers.component';
 import { ContactsSuppliersComponent } from './contacts-suppliers/contacts-suppliers.component';
+import { AdminRoutingModule } from '../admin.routing';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   imports: [
     CommonModule,
+    AdminRoutingModule,
+    FormsModule
   ],
   declarations: [
       SupplierListComponent,

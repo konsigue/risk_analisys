@@ -27,7 +27,6 @@ export class LoginFormComponent implements OnInit {
 
   constructor() { }
 
-
   mostrar= false;
 
   ngOnInit() {

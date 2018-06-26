@@ -1,32 +1,31 @@
 <p>
-  supplier-list works!
-  <br>
-  <a name="" id="" class="btn btn-info" routerLink="../../resumen" role="button">Empresa 1</a>
+    <a name="" id="" class="btn btn-info" routerLink="../../resumen" role="button">Empresa 1</a>
 </p>
 
-<ul class="nav nav-pills mb-5 d-flex justify-content-between" id="pills-tab" role="tablist">
-    <li class="card bg-info  mb-3 nav-item ">
-        <a class="navprimary active card-body bg-info" id="pills-analizadas-tab" data-toggle="pill" href="#pills-analizadas" role="tab" aria-controls="pills-analizadas" aria-selected="true">
+<ul class="nav nav-pills mb-5 justify-content-between" id="pills-tab" role="tablist">
+    <li class="card bg-link  mb-3 nav-item ">
+        <a class="nav-link  card-body bg-link" id="pills-analizadas-tab" data-toggle="pill" href="#pills-analizadas" role="tab" aria-controls="pills-analizadas" aria-selected="true">
             <h4 class="card-title ">Analizadas</h4>
         </a>
     </li>
-    <li class="card bg-secondary mb-3 nav-item">
-        <a class="nav-link card-body bg-secondary" id="pills-autorizadas-tab" data-toggle="pill" href="#pills-autorizadas" role="tab" aria-controls="pills-autorizadas" aria-selected="false">
+    <li class="card bg-link mb-3 nav-item">
+        <a class="nav-link card-body bg-link" id="pills-autorizadas-tab" data-toggle="pill" href="#pills-autorizadas" role="tab" aria-controls="pills-autorizadas" aria-selected="false">
             <h4 class="card-title">Autorizadas</h4>
         </a>
     </li>
-    <li class="card bg-success mb-3 nav-item">
-        <a class="nav-link bg-success" id="pills-pre-autorizadas-tab" data-toggle="pill" href="#pills-pre-autorizadas" role="tab" aria-controls="pills-pre-autorizadas" aria-selected="false">
+    <li class="card bg-link mb-3 nav-item">
+        <a class="nav-link bg-link" id="pills-pre-autorizadas-tab" data-toggle="pill" href="#pills-pre-autorizadas" role="tab" aria-controls="pills-pre-autorizadas" aria-selected="false">
             <h4 class="card-title ">Pre-autorizadas</h4>
         </a>
     </li>
-    <li class="card bg-danger mb-3 nav-item">
-        <a class="nav-link card-body bg-danger" id="pills-proceso-tab" data-toggle="pill" href="#pills-proceso" role="tab" aria-controls="pills-proceso" aria-selected="false">
+    <li class="card bg-link mb-3 nav-item">
+        <a class="nav-link card-body bg-link" id="pills-proceso-tab" data-toggle="pill" href="#pills-proceso" role="tab" aria-controls="pills-proceso" aria-selected="false">
             <h4 class="card-title ">En Proceso</h4>
         </a>
     </li>
-    <li class="card bg-warning mb-3 nav-item">
-        <a class="nav-link card-body bg-warning" id="pills-rechazadas-tab" data-toggle="pill" href="#pills-rechazadas" role="tab" aria-controls="pills-rechazadas" aria-selected="false">
+    <li class="card bg-link mb-3 nav-item">
+        <a class="nav-link card-body bg-link" id="pills-rechazadas-tab" data-toggle="pill" href="#pills-rechazadas" role="tab" aria-controls="pills-rechazadas" aria-selected="false">
+
             <h4 class="card-title ">Rechazadas</h4>
         </a>
     </li>
@@ -36,17 +35,21 @@
         <thead class=" thead-dark ">
             <tr>
                 <th scope="col ">Analizadas</th>
-                <th scope="col ">First</th>
-                <th scope="col ">Last</th>
-                <th scope="col ">Handle</th>
+                <th scope="col ">Nombre de la empresa</th>
+                <th scope="col ">Giro comercial</th>
+                <th scope="col ">Opciones</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <th scope="row ">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td>Empresa 1</td>
+                <td>Servicios de TI</td>
+                <td>
+                    <a name="" id="" class="btn btn-info" routerLink="../resumen" role="button">
+              Ver detalles
+            </a>
+                </td>
             </tr>
             <tr>
                 <th scope="row ">2</th>
@@ -182,4 +185,3 @@
             </tr>
         </tbody>
     </table>
-<

@@ -15,6 +15,7 @@ import { AdminModule } from './admin/admin.module';
 import { LoginFormComponent } from './login/login-form/login-form.component';
 import { PersonTypeComponent } from './login/person-type/person-type.component';
 
+
 /* Services */
 import { DataRegisterService } from './data-register.service';
 
