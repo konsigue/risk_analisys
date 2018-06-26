@@ -9,7 +9,7 @@ import { Domicilio } from './domicilio';
 })
 export class DomicilioComponent implements OnInit {
   private zipCodeUrl = "https://api-codigos-postales.herokuapp.com/v2/codigo_postal/"
-  public zipCode: number;
+  public zipCode: string;
   public address: Domicilio;
 
   constructor(private http: HttpClient) { }
