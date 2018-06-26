@@ -20,22 +20,22 @@ import { RegistroAccionistasComponent } from './registro-accionistas/registro-ac
 
 const routes: Routes = [
   {
-      path: '/registro/',
-      redirectTo: '/login',
+      path: 'registro/',
+      redirectTo: 'login',
     pathMatch: 'full'
   },
-  { path: '/registro/switch', component: RegistroFisicoComponent },
-  { path: '/registro/registro-fisico', component: RegistroFComponent },
-  { path: '/registro/Recuperar-password', component: RecoverPasswordComponent },
-  { path: '/registro/Registro-Moral', component: RegistroMoralComponent },
-  { path: '/registro/Representante', component: DatosRepresentanteRmComponent },
-  { path: '/registro/Estado-Financiero', component: FinancialStatementComponent },
-  { path: '/registro/Razones-Financieras', component: FinancialRatiosComponent },
-  { path: '/registro/domicilio', component: DomicilioComponent },
-  { path: '/registro/tarjeta', component: TarjetaComponent },
-  { path: '/registro/ciec', component: CIECComponent },
-  { path: '/registro/contactos', component: ContactosComponent },
-  { path: '/registro/accionistas', component: RegistroAccionistasComponent },
+  { path: 'registro/switch', component: RegistroFisicoComponent },
+  { path: 'registro/registro-fisico', component: RegistroFComponent },
+  { path: 'registro/Recuperar-password', component: RecoverPasswordComponent },
+  { path: 'registro/Registro-Moral', component: RegistroMoralComponent },
+  { path: 'registro/Representante', component: DatosRepresentanteRmComponent },
+  { path: 'registro/Estado-Financiero', component: FinancialStatementComponent },
+  { path: 'registro/Razones-Financieras', component: FinancialRatiosComponent },
+  { path: 'registro/domicilio', component: DomicilioComponent },
+  { path: 'registro/tarjeta', component: TarjetaComponent },
+  { path: 'registro/ciec', component: CIECComponent },
+  { path: 'registro/contactos', component: ContactosComponent },
+  { path: 'registro/accionistas', component: RegistroAccionistasComponent },
 ];
 
 @NgModule({
