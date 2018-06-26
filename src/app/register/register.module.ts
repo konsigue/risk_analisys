@@ -5,11 +5,9 @@ import { CommonModule } from '@angular/common';
 import { RegisterRoutingModule } from './register.routing';
 
 /* Components */
-import { LoginFormComponent } from '../login-form/login-form.component';
 import { RecoverPasswordComponent } from './recover-password/recover-password.component';
 import { RegistroMoralComponent } from './registro-moral/registro-moral.component';
 import { DatosRepresentanteRmComponent } from './datos-representante-rm/datos-representante-rm.component';
-import { RegistroFisicoComponent } from './registro-fisico/registro-fisico.component';
 import { RegistroFComponent } from './registro-f/registro-f.component';
 import { DocumentsFinancialStateComponent } from './documents-financial-state/documents-financial-state.component';
 import { FinancialStatementComponent } from './financial-statement/financial-statement.component';
@@ -29,8 +27,6 @@ import { RegistroAccionistasComponent } from './registro-accionistas/registro-ac
         CommonModule,
     ],
     declarations: [
-        LoginFormComponent,
-        RegistroFisicoComponent,
         RegistroFComponent,
         RecoverPasswordComponent,
         RegistroMoralComponent,
