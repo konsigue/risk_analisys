@@ -1,0 +1,16 @@
+.card {
+    max-width: 12rem;
+    max-height: 6rem;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+ul {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white!important;
+}
