@@ -6,8 +6,8 @@ import { AdminRoutingModule } from './admin.routing';
 /* Components */
 import { adminComponent } from './admin.component';
 import { AdminInicioComponent } from './Components/admin-inicio/admin-inicio.component';
-import { SideBarComponent } from './Components/Sidebar/sidebar.component';
-import { HeaderAdminComponent } from './Components/header/header.component';
+import { SideBarComponent } from './common/sidebar/sidebar.component';
+import { HeaderAdminComponent } from './common/header/header.component';
 import { ProvidersComponent } from './Components/providers/providers.component';
 import { ProviderResumeComponent } from './Components/provider/provider-resume/provider-resume.component';
 import { ProviderDomicileComponent } from './Components/provider/provider-domicile/provider-domicile.component';
