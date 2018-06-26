@@ -23,6 +23,7 @@ import { FinancialRatiosComponent } from './financial-ratios/financial-ratios.co
 import { CIECComponent}  from "./ciec/ciec.component";
 import { DomicilioComponent}  from "./domicilio/domicilio.component";
 import { TarjetaComponent}  from "./tarjeta/tarjeta.component";
+import { ListProvComponent } from './list-prov/list-prov.component';
 
 
 const appRoutes: Routes = [
@@ -42,6 +43,8 @@ const appRoutes: Routes = [
   { path: 'domicilio', component: DomicilioComponent },
   { path: 'tarjeta', component: TarjetaComponent },
   { path: 'ciec', component: CIECComponent },
+  { path: 'list-prov', component: ListProvComponent},
+
 
 ];
 
@@ -59,7 +62,8 @@ const appRoutes: Routes = [
     FinancialRatiosComponent,
     CIECComponent,
     DomicilioComponent,
-    TarjetaComponent
+    TarjetaComponent,
+    ListProvComponent
   ],
   imports: [
     RouterModule.forRoot(
