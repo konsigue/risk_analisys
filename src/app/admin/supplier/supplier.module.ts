@@ -9,11 +9,15 @@ import { SupplierSummaryComponent } from './supplier-summary/supplier-summary.co
 import { SupplierDomicileComponent } from './supplier-domicile/supplier-domicile.component';
 import { MenuSuppliersComponent } from './menu-suppliers/menu-suppliers.component';
 import { SupplierAnalysisComponent } from './supplier-analysis/supplier-analysis.component';
+import { AdminRoutingModule } from '../admin.routing';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   imports: [
     CommonModule,
+    AdminRoutingModule,
+    FormsModule
   ],
   declarations: [
       SupplierListComponent,
