@@ -1,5 +1,6 @@
 /* Modules */
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 /* Components */
 import { SupplierListComponent } from './supplier-list.component';
@@ -7,15 +8,21 @@ import { SupplierGeneralInfoComponent } from './supplier-general-info/supplier-g
 import { SupplierSummaryComponent } from './supplier-summary/supplier-summary.component';
 import { SupplierDomicileComponent } from './supplier-domicile/supplier-domicile.component';
 import { MenuSuppliersComponent } from './menu-suppliers/menu-suppliers.component';
+import { SupplierAnalysisComponent } from './supplier-analysis/supplier-analysis.component';
 
 
 @NgModule({
-    declarations: [
-        SupplierListComponent,
-        SupplierSummaryComponent,
-        SupplierDomicileComponent,
-        SupplierGeneralInfoComponent,
-        MenuSuppliersComponent
-    ]
+  imports: [
+    CommonModule,
+  ],
+  declarations: [
+      SupplierListComponent,
+      SupplierSummaryComponent,
+      SupplierDomicileComponent,
+      SupplierGeneralInfoComponent,
+      SupplierAnalysisComponent,
+      MenuSuppliersComponent
+  ],
+  bootstrap: [SupplierListComponent]
 })
 export class SupplierModule { }
