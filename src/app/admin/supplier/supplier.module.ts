@@ -1,5 +1,6 @@
 /* Modules */
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 /* Components */
 import { SupplierListComponent } from './supplier-list.component';
@@ -10,13 +11,16 @@ import { MenuSuppliersComponent } from './menu-suppliers/menu-suppliers.componen
 
 
 @NgModule({
-    declarations: [
-        SupplierListComponent,
-        SupplierSummaryComponent,
-        SupplierDomicileComponent,
-        SupplierGeneralInfoComponent,
-        MenuSuppliersComponent
-    ],
-    bootstrap: [SupplierListComponent]
+  imports: [
+    CommonModule,
+  ],
+  declarations: [
+      SupplierListComponent,
+      SupplierSummaryComponent,
+      SupplierDomicileComponent,
+      SupplierGeneralInfoComponent,
+      MenuSuppliersComponent
+  ],
+  bootstrap: [SupplierListComponent]
 })
 export class SupplierModule { }
