@@ -18,7 +18,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { RegistroFisicoComponent } from './registro-fisico/registro-fisico.component';
 import { RegistroFComponent } from './registro-f/registro-f.component';
 import { DocumentsFinancialStateComponent } from './register/documents-financial-state/documents-financial-state.component';
-import { FinancialStatementComponent } from './financial-statement/financial-statement.component';
+import { FinancialStatementComponent } from './register/financial-statement/financial-statement.component';
 import { FinancialRatiosComponent } from './register/financial-ratios/financial-ratios.component';
 import { CIECComponent}  from "./register/ciec/ciec.component";
 import { DomicilioComponent}  from "./register/domicilio/domicilio.component";
