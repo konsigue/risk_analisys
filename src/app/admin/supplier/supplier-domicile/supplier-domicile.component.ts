@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Domicilio } from '../../../../domicilio/domicilio';
 
 @Component({
-  selector: 'app-provider-domicile',
-  templateUrl: './provider-domicile.component.html',
-  styleUrls: ['./provider-domicile.component.css']
+  selector: 'supplier-domicile',
+  templateUrl: './supplier-domicile.component.html',
+  styleUrls: ['./supplier-domicile.component.css']
 })
-export class ProviderDomicileComponent implements OnInit {
+export class SupplierDomicileComponent implements OnInit {
   private zipCodeUrl = "https://api-codigos-postales.herokuapp.com/v2/codigo_postal/"
   public zipCode: string;
   public address: Domicilio;

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProviderDomicileComponent } from './provider-domicile.component';
+import { SupplierDomicileComponent } from './supplier-domicile.component';
 
 describe('ProviderDomicileComponent', () => {
-  let component: ProviderDomicileComponent;
-  let fixture: ComponentFixture<ProviderDomicileComponent>;
+  let component: SupplierDomicileComponent;
+  let fixture: ComponentFixture<SupplierDomicileComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProviderDomicileComponent ]
+      declarations: [ SupplierDomicileComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProviderDomicileComponent);
+    fixture = TestBed.createComponent(SupplierDomicileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
