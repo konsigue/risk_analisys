@@ -6,11 +6,7 @@ import { SupplierListComponent } from './supplier/supplier-list.component';
 import { SupplierSummaryComponent } from './supplier/supplier-summary/supplier-summary.component';
 
 const routes: Routes = [
-  {
-    path: '../admin/',
-    redirectTo: 'admin/inicio',
-    pathMatch: 'full'
-  },
+  
   {
     path: 'inicio', component: AdminComponent, children: [
       { path: '', outlet: 'admin', component: AdminHomeComponent, pathMatch: 'full' }

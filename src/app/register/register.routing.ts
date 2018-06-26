@@ -19,11 +19,7 @@ import { RegistroAccionistasComponent } from './registro-accionistas/registro-ac
 
 
 const routes: Routes = [
-  {
-      path: 'registro/',
-      redirectTo: 'login',
-    pathMatch: 'full'
-  },
+  
   { path: 'registro/switch', component: RegistroFisicoComponent },
   { path: 'registro/registro-fisico', component: RegistroFComponent },
   { path: 'registro/Recuperar-password', component: RecoverPasswordComponent },

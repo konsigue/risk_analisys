@@ -28,9 +28,9 @@ export class ContactosComponent implements OnInit {
 
   tipo(){
     if(this.tipoPersona==0){
-      this.router.navigate(['tarjeta']);
+      this.router.navigate(['registro/tarjeta']);
     }else if(this.tipoPersona==1){
-      this.router.navigate(['ciec']);
+      this.router.navigate(['registro/ciec']);
     }
   }
 

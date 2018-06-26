@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginFormComponent } from './login-form/login-form.component'
-import { AdminModule } from './admin/admin.module'
+import { LoginFormComponent } from './login-form/login-form.component';
 
 const appRoutes: Routes = [
   {
@@ -12,8 +11,14 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginFormComponent },
   {
     path: 'admin',
-    loadChildren: './admin/admin.module#AdminModule'
+    redirectTo: 'admin/inicio',
+    pathMatch: 'full'
   },
+  {
+    path: 'registro',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
