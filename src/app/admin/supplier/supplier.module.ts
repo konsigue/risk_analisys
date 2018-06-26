@@ -3,19 +3,19 @@ import { NgModule } from '@angular/core';
 
 /* Components */
 import { SupplierListComponent } from './supplier-list.component';
-//import { ProviderResumeComponent } from './Components/provider/provider-resume/provider-resume.component';
-//import { ProviderDomicileComponent } from './Components/provider/provider-domicile/provider-domicile.component';
-//import { ProviderGeneralInfoComponent } from './Components/provider/provider-general-info/provider-general-info.component';
-//import { MenuProvidersComponent } from './Components/menu-providers/menu-providers.component';
+import { SupplierGeneralInfoComponent } from './supplier-general-info/supplier-general-info.component';
+import { SupplierSummaryComponent } from './supplier-summary/supplier-summary.component';
+import { SupplierDomicileComponent } from './supplier-domicile/supplier-domicile.component';
+import { MenuSuppliersComponent } from './menu-suppliers/menu-suppliers.component';
 
 
 @NgModule({
     declarations: [
         SupplierListComponent,
-        //ProviderResumeComponent,
-        //ProviderDomicileComponent,
-        //ProviderGeneralInfoComponent,
-        //MenuProvidersComponent
+        SupplierSummaryComponent,
+        SupplierDomicileComponent,
+        SupplierGeneralInfoComponent,
+        MenuSuppliersComponent
     ]
 })
 export class SupplierModule { }

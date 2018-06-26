@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './admin.component';
 import { AdminHomeComponent } from './home/admin-home/admin-home.component';
 import { SupplierListComponent } from './supplier/supplier-list.component';
-import { ProviderResumeComponent } from './Components/provider/provider-resume/provider-resume.component';
+import { SupplierSummaryComponent } from './supplier/supplier-summary/supplier-summary.component';
 
 const routes: Routes = [
   {
@@ -23,7 +23,7 @@ const routes: Routes = [
  },
  {
   path: 'resumen', component: AdminComponent, children: [
-    { path: '', outlet: 'admin', component: ProviderResumeComponent, pathMatch: 'full' },
+    { path: '', outlet: 'admin', component: SupplierSummaryComponent, pathMatch: 'full' },
   ]
 }
 ];

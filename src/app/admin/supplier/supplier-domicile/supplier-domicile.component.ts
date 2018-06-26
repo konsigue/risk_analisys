@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Domicilio } from '../../../../domicilio/domicilio';
+//import { Domicilio } from '../../../../domicilio/domicilio';
 
 @Component({
   selector: 'supplier-domicile',
@@ -9,7 +9,8 @@ import { Domicilio } from '../../../../domicilio/domicilio';
 export class SupplierDomicileComponent implements OnInit {
   private zipCodeUrl = "https://api-codigos-postales.herokuapp.com/v2/codigo_postal/"
   public zipCode: string;
-  public address: Domicilio;
+    //public address: Domicilio;
+  public address;
 
 
   constructor() { }

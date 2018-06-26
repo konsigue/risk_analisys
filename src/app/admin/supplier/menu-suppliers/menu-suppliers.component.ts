@@ -8,9 +8,9 @@ import {
 } from '@angular/animations';
 
 @Component({
-  selector: 'app-menu-providers',
-  templateUrl: './menu-providers.component.html',
-  styleUrls: ['./menu-providers.component.css'],
+  selector: 'menu-suppliers',
+  templateUrl: './menu-suppliers.component.html',
+  styleUrls: ['./menu-suppliers.component.css'],
   animations: [
     trigger('clicked', [
       state('inactive', style({
@@ -28,7 +28,7 @@ import {
     ]),
   ],
 })
-export class MenuProvidersComponent implements OnInit {
+export class MenuSuppliersComponent implements OnInit {
 
   constructor() { 
     this.states[0]='active';

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProviderResumeComponent } from './provider-resume.component';
+import { MenuSuppliersComponent } from './menu-suppliers.component';
 
-describe('ProviderResumeComponent', () => {
-  let component: ProviderResumeComponent;
-  let fixture: ComponentFixture<ProviderResumeComponent>;
+describe('MenuSupplierComponent', () => {
+  let component: MenuSuppliersComponent;
+  let fixture: ComponentFixture<MenuSuppliersComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProviderResumeComponent ]
+      declarations: [ MenuSuppliersComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProviderResumeComponent);
+    fixture = TestBed.createComponent(MenuSuppliersComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
