@@ -1,0 +1,31 @@
+/* ***************************************************
+    Created on : 20/06/2018, 15:12:06 PM
+    Author     : Rodrigo R. Rubio Haro
+    Company    : Konsigue
+****************************************************/
+
+/******************************************************************
+Navbar, Header:
+******************************************************************/
+
+.navbar {
+  background-color: #003D7F !important;
+}
+
+.logo-header-container {
+  padding-left: 20%;
+}
+
+.logo {
+  width: 170px;
+}
+
+.nav-link {
+  color: white !important;
+  padding-left: 20px;
+}
+.nav-link:hover {
+  background-color: #006ADE;
+  color: white !important;
+  padding-left: 20px;
+}

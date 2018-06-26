@@ -1,25 +1,37 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AdminInicioComponent } from './Components/admin-inicio/admin-inicio.component';
-import { adminComponent } from './admin.component';
-import { ProvidersComponent } from './Components/providers/providers.component';
+import { AdminComponent } from './admin.component';
+import { AdminHomeComponent } from './home/admin-home/admin-home.component';
+import { SupplierListComponent } from './supplier/supplier-list.component';
+import { SupplierSummaryComponent } from './supplier/supplier-summary/supplier-summary.component';
+import { SupplierAnalysisComponent } from './supplier/supplier-analysis/supplier-analysis.component';
 
 const routes: Routes = [
   {
-    path: '../admin/',
+    path: 'admin',
     redirectTo: 'admin/inicio',
     pathMatch: 'full'
   },
   {
-    path: 'inicio', component: adminComponent, children: [
-      { path: '', outlet: 'admin', component: AdminInicioComponent, pathMatch: 'full' }
+    path: 'admin/inicio', component: AdminComponent, children: [
+      { path: '', outlet: 'admin', component: AdminHomeComponent, pathMatch: 'full' }
     ]
   },
- {
-   path: 'proveedores', component: adminComponent, children: [
-     { path: '', outlet: 'admin', component: ProvidersComponent, pathMatch: 'full' },
-   ]
- },
+  {
+    path: 'admin/proveedores', component: AdminComponent, children: [
+      { path: '', outlet: 'admin', component: SupplierListComponent, pathMatch: 'full' },
+    ]
+  },
+  {
+    path: 'admin/resumen', component: AdminComponent, children: [
+      { path: '', outlet: 'admin', component: SupplierSummaryComponent, pathMatch: 'full' },
+    ]
+  },
+  {
+    path: 'admin/proveedores/:name/analisis', component: AdminComponent, children: [
+      { path: '', outlet: 'admin', component: SupplierAnalysisComponent, pathMatch: 'full' }
+    ]
+  }
 ];
 
 @NgModule({
