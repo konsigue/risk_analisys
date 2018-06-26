@@ -20,10 +20,10 @@ import { RegistroFComponent } from './registro-f/registro-f.component';
 import { DocumentsFinancialStateComponent } from './documents-financial-state/documents-financial-state.component';
 import { FinancialStatementComponent } from './financial-statement/financial-statement.component';
 import { FinancialRatiosComponent } from './financial-ratios/financial-ratios.component';
-import { CIECComponent}  from "./ciec/ciec.component";
+import { CIECComponent}  from "./register/ciec/ciec.component";
 import { DomicilioComponent}  from "./domicilio/domicilio.component";
 import { TarjetaComponent}  from "./tarjeta/tarjeta.component";
-import { ContactosComponent } from './contactos/contactos.component';
+import { ContactosComponent } from './register/contacts/contactos.component';
 import { HeaderComponent } from "./header/header.component";
 import { RegistroAccionistasComponent } from './registro-accionistas/registro-accionistas.component';
 
