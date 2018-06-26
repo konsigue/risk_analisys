@@ -1,0 +1,14 @@
+li a{
+    margin: 5px;
+}
+
+ul{
+    background: #fff;
+}
+
+
+.separator {
+    border-top: 1px solid #D8D8D8;
+    margin-top: 10px;
+    padding-top: 10px
+}

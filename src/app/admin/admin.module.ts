@@ -2,30 +2,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminRoutingModule } from './admin.routing';
+import { SupplierModule } from './supplier/supplier.module';
 
 /* Components */
-import { adminComponent } from './admin.component';
-import { AdminInicioComponent } from './Components/admin-inicio/admin-inicio.component';
-import { SideBarComponent } from './Components/Sidebar/sidebar.component';
-import { HeaderAdminComponent } from './Components/header/header.component';
-import { ProvidersComponent } from './Components/providers/providers.component';
-import { MenuProvidersComponent } from './Components/menu-providers/menu-providers.component';
+import { AdminComponent } from './admin.component';
+import { SideBarComponent } from './common/sidebar/sidebar.component';
+import { HeaderAdminComponent } from './common/header/header.component';
+import { AdminHomeComponent } from './home/admin-home/admin-home.component';
 
 
 @NgModule({
   imports: [
     CommonModule,
     AdminRoutingModule,
+    SupplierModule
   ],
   declarations: [
-    AdminInicioComponent,
-    adminComponent,
+    AdminComponent,
     SideBarComponent,
     HeaderAdminComponent,
-    ProvidersComponent,
-    MenuProvidersComponent
+    AdminHomeComponent
   ],
   providers: [],
-  bootstrap: [adminComponent]
+  bootstrap: [AdminComponent]
 })
 export class AdminModule { }

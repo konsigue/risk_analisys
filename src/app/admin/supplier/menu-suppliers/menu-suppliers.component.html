@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-expand-md navbar-dark">
+  <div class="navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav nav-pills nav-fill mr-auto">
+        <li class="nav-item">
+          <a class="nav-link active" [@clicked]="states[0].state" (click)="toggleState(0)" >Resumen</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" [@clicked]="states[1].state" (click)="toggleState(1)" >Contactos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" [@clicked]="states[2].state" (click)="toggleState(2)">Representante legal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" [@clicked]="states[3].state" (click)="toggleState(3)">Razones financieras</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" [@clicked]="states[4].state" (click)="toggleState(4)">Estados financieras</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" [@clicked]="states[5].state" (click)="toggleState(5)">Accionistas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" [@clicked]="states[6].state" (click)="toggleState(6)">Documentos</a>
+        </li>
+    </ul>
+  </div>
+</nav>
+<div class="separator"></div>
+<app-shareholders-suppliers *ngIf="states[5].mostrar"></app-shareholders-suppliers>
+<app-contacts-suppliers *ngIf="states[1].mostrar"></app-contacts-suppliers>
