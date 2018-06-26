@@ -7,7 +7,6 @@ import { SupplierListComponent } from './supplier-list.component';
 import { SupplierGeneralInfoComponent } from './supplier-general-info/supplier-general-info.component';
 import { SupplierSummaryComponent } from './supplier-summary/supplier-summary.component';
 import { SupplierDomicileComponent } from './supplier-domicile/supplier-domicile.component';
-import { MenuSuppliersComponent } from './menu-suppliers/menu-suppliers.component';
 import { SupplierAnalysisComponent } from './supplier-analysis/supplier-analysis.component';
 import { AdminRoutingModule } from '../admin.routing';
 import { FormsModule } from '@angular/forms';
@@ -25,7 +24,6 @@ import { FormsModule } from '@angular/forms';
       SupplierDomicileComponent,
       SupplierGeneralInfoComponent,
       SupplierAnalysisComponent,
-      MenuSuppliersComponent
   ],
   bootstrap: [SupplierListComponent]
 })
