@@ -14,7 +14,7 @@ import { DataRegisterService } from '../../data-register.service';
   animations: [
     trigger('animationSwitch', [
       transition('void=>*', [
-        style({opacity:0,transform: 'translateY(-15%)'}),
+        style({opacity: 0, transform: 'translateY(-15%)'}),
         animate(1000),
       ])
     ])
@@ -25,14 +25,14 @@ export class RegistroFisicoComponent implements OnInit {
 
   constructor(private _dataRegisterService: DataRegisterService) { }
 
-  state='inactive';
-  n:number;
+  state = 'inactive';
+  n: number;
 
   toggleState() {
     this.state = this.state === 'active' ? 'inactive' : 'active';
   }
 
-  onClick(tipo){
+  onClick(tipo) {
     console.log(tipo);
     this._dataRegisterService.saveData(tipo);
   }
