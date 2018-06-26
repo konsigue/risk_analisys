@@ -9,11 +9,13 @@ const appRoutes: Routes = [
     pathMatch: 'full'
   },
   { path: 'login', component: LoginFormComponent },
+  /*
   {
     path: 'admin',
     redirectTo: 'admin/inicio',
     pathMatch: 'full'
   },
+  */
   {
     path: 'registro',
     redirectTo: 'login',

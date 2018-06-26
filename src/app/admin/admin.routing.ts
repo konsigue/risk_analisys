@@ -6,22 +6,26 @@ import { SupplierListComponent } from './supplier/supplier-list.component';
 import { SupplierSummaryComponent } from './supplier/supplier-summary/supplier-summary.component';
 
 const routes: Routes = [
-  
   {
-    path: 'inicio', component: AdminComponent, children: [
+    path: 'admin',
+    redirectTo: 'admin/inicio',
+    pathMatch: 'full'
+  },
+  {
+    path: 'admin/inicio', component: AdminComponent, children: [
       { path: '', outlet: 'admin', component: AdminHomeComponent, pathMatch: 'full' }
     ]
   },
- {
-   path: 'proveedores', component: AdminComponent, children: [
-     { path: '', outlet: 'admin', component: SupplierListComponent, pathMatch: 'full' },
-   ]
- },
- {
-  path: 'resumen', component: AdminComponent, children: [
-    { path: '', outlet: 'admin', component: SupplierSummaryComponent, pathMatch: 'full' },
-  ]
-}
+  {
+    path: 'admin/proveedores', component: AdminComponent, children: [
+      { path: '', outlet: 'admin', component: SupplierListComponent, pathMatch: 'full' },
+    ]
+  },
+  {
+    path: 'admin/resumen', component: AdminComponent, children: [
+      { path: '', outlet: 'admin', component: SupplierSummaryComponent, pathMatch: 'full' },
+    ]
+  }
 ];
 
 @NgModule({
