@@ -13,11 +13,13 @@ Navbar, Header:
 }
 
 .logo-header-container {
+  right: 0px;
   padding-left: 20%;
 }
 
 .logo {
-  width: 170px;
+  
+  width: 90px;
 }
 
 .nav-link {
