@@ -5,7 +5,7 @@ import {
   animate,
   style
 } from '@angular/animations';
-import { DataRegisterService } from '../data-register.service';
+import { DataRegisterService } from '../../data-register.service';
 
 @Component({
   selector: 'app-registro-fisico',
