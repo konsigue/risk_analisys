@@ -4,10 +4,10 @@ import { CommonModule } from '@angular/common';
 import { AdminRoutingModule } from './admin.routing';
 
 /* Components */
-import { adminComponent } from './admin.component';
-import { AdminInicioComponent } from './Components/admin-inicio/admin-inicio.component';
+import { AdminComponent } from './admin.component';
 import { SideBarComponent } from './common/sidebar/sidebar.component';
 import { HeaderAdminComponent } from './common/header/header.component';
+import { AdminInicioComponent } from './Components/admin-inicio/admin-inicio.component';
 import { ProvidersComponent } from './Components/providers/providers.component';
 import { ProviderResumeComponent } from './Components/provider/provider-resume/provider-resume.component';
 import { ProviderDomicileComponent } from './Components/provider/provider-domicile/provider-domicile.component';
@@ -21,8 +21,8 @@ import { MenuProvidersComponent } from './Components/menu-providers/menu-provide
     AdminRoutingModule,
   ],
   declarations: [
+    AdminComponent,
     AdminInicioComponent,
-    adminComponent,
     SideBarComponent,
     HeaderAdminComponent,
     ProvidersComponent,
@@ -32,6 +32,6 @@ import { MenuProvidersComponent } from './Components/menu-providers/menu-provide
     MenuProvidersComponent
   ],
   providers: [],
-  bootstrap: [adminComponent]
+  bootstrap: [AdminComponent]
 })
 export class AdminModule { }

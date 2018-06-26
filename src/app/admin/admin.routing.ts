@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AdminComponent } from './admin.component';
 import { AdminInicioComponent } from './Components/admin-inicio/admin-inicio.component';
-import { adminComponent } from './admin.component';
 import { ProvidersComponent } from './Components/providers/providers.component';
 import { ProviderResumeComponent } from './Components/provider/provider-resume/provider-resume.component';
 
@@ -12,17 +12,17 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'inicio', component: adminComponent, children: [
+    path: 'inicio', component: AdminComponent, children: [
       { path: '', outlet: 'admin', component: AdminInicioComponent, pathMatch: 'full' }
     ]
   },
  {
-   path: 'proveedores', component: adminComponent, children: [
+   path: 'proveedores', component: AdminComponent, children: [
      { path: '', outlet: 'admin', component: ProvidersComponent, pathMatch: 'full' },
    ]
  },
  {
-  path: 'resumen', component: adminComponent, children: [
+  path: 'resumen', component: AdminComponent, children: [
     { path: '', outlet: 'admin', component: ProviderResumeComponent, pathMatch: 'full' },
   ]
 }
