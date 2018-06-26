@@ -7,3 +7,14 @@
 <div class="row justify-content-center">
   <menu-suppliers></menu-suppliers>
 </div>
+
+<h4>Status fiscal</h4>
+<div class="card">
+  <div class="card-body">
+    <ul class="nav nav-pills nav-fill">
+      <li class="nav-item">Declaraciones presentadas {{fiscalStatus.PresentedDeclarations}} %</li>
+      <li class="nav-item">Presentadas en tiempo {{fiscalStatus.OnTime}} %</li>
+      <li class="nav-item">Declaraciones con Pago {{fiscalStatus.WithPayment}} %</li>
+    </ul>
+  </div>
+</div>
