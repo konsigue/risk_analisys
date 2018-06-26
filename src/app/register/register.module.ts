@@ -1,5 +1,7 @@
 /* Modules */
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { RegisterRoutingModule } from './register.routing';
 
 /* Components */
@@ -22,7 +24,9 @@ import { RegistroAccionistasComponent } from './registro-accionistas/registro-ac
 
 @NgModule({
     imports: [
-        RegisterRoutingModule
+        RegisterRoutingModule,
+        FormsModule,
+        CommonModule,
     ],
     declarations: [
         LoginFormComponent,
