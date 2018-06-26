@@ -24,7 +24,7 @@ import { CIECComponent}  from "./register/ciec/ciec.component";
 import { DomicilioComponent}  from "./register/domicilio/domicilio.component";
 import { TarjetaComponent}  from "./tarjeta/tarjeta.component";
 import { ContactosComponent } from './register/contacts/contactos.component';
-import { HeaderComponent } from "./header/header.component";
+import { HeaderComponent } from "./register/header/header.component";
 import { RegistroAccionistasComponent } from './registro-accionistas/registro-accionistas.component';
 
 /* Serivcios */
