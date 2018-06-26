@@ -4,5 +4,11 @@ li a{
 
 ul{
     background: #fff;
-    box-shadow: 3px 3px 2px gray;
+}
+
+
+.separator {
+    border-top: 1px solid #D8D8D8;
+    margin-top: 10px;
+    padding-top: 10px
 }

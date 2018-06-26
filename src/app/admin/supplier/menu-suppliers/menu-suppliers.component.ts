@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Item } from './menu-item'
 import {
   trigger,
   transition,
@@ -31,11 +32,11 @@ import {
 export class MenuSuppliersComponent implements OnInit {
 
   constructor() { 
-    this.states[0]='active';
+    this.states[0]= new Item('active', true);
     //console.log(this.states[0]);
     for(let i = 1;i<7;i++) { 
       //console.log(i);
-      this.states[i] = 'inactive';
+      this.states[i]= new Item('inactive', false);
       //console.log(this.states[i]);
    }
   }
@@ -46,11 +47,13 @@ export class MenuSuppliersComponent implements OnInit {
 
   toggleState(n:number) {
     //console.log(n);
-    this.states[n]='active';
+    this.states[n].state='active';
+    this.states[n].mostrar=true;
     //console.log(this.states[n]);
     for(let i = 0;i<8;i++) {
       if(i!=n){
-        this.states[i] = 'inactive';
+        this.states[i].state = 'inactive';
+        this.states[i].mostrar=false;
       }
       //console.log(this.states[i]);
    }

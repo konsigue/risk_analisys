@@ -25,7 +25,6 @@ import {
       transition('inactive => active', animate('100ms ease-in')),
       transition('active => inactive', animate('100ms ease-out'))
     ]),
-  ] 
 })
 export class TarjetaComponent implements OnInit {
 
@@ -37,7 +36,7 @@ export class TarjetaComponent implements OnInit {
   mostrar= false
 
   toggleState(n:number) {
-    console.log(this.state)
+    //console.log(this.state)
     if(n==1){
       this.state = 'active';
       this.mostrar=true;

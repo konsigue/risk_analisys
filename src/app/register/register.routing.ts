@@ -4,19 +4,19 @@ import { Routes, RouterModule } from '@angular/router';
 import { RecoverPasswordComponent } from './recover-password/recover-password.component';
 import { RegistroMoralComponent } from './registro-moral/registro-moral.component';
 import { DatosRepresentanteRmComponent } from './datos-representante-rm/datos-representante-rm.component';
-import { RegistroFisicoComponent } from '../login/registro-fisico/registro-fisico.component';
+import { PersonTypeComponent } from '../login/person-type/person-type.component';
 import { RegistroFComponent } from './registro-f/registro-f.component';
 import { FinancialStatementComponent } from './financial-statement/financial-statement.component';
 import { FinancialRatiosComponent } from './financial-ratios/financial-ratios.component';
-import { CIECComponent} from './ciec/ciec.component';
-import { DomicilioComponent} from './domicilio/domicilio.component';
-import { TarjetaComponent} from './tarjeta/tarjeta.component';
+import { CIECComponent}  from "./ciec/ciec.component";
+import { DomicilioComponent}  from "./domicilio/domicilio.component";
+import { TarjetaComponent}  from "./tarjeta/tarjeta.component";
 import { ContactosComponent } from './contacts/contactos.component';
 import { RegistroAccionistasComponent } from './registro-accionistas/registro-accionistas.component';
 
 
 const routes: Routes = [
-  { path: 'registro/switch', component: RegistroFisicoComponent },
+  { path: 'registro/switch', component: PersonTypeComponent },
   { path: 'registro/registro-fisico', component: RegistroFComponent },
   { path: 'registro/Recuperar-password', component: RecoverPasswordComponent },
   { path: 'registro/Registro-Moral', component: RegistroMoralComponent },
