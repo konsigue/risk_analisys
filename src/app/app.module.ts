@@ -7,9 +7,9 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AppRoutingModule } from './app.routing'
-import { RegisterModule } from './register/register.module'
-import { AdminModule } from './admin/admin.module'
+import { AppRoutingModule } from './app.routing';
+import { RegisterModule } from './register/register.module';
+import { AdminModule } from './admin/admin.module';
 
 
 /* Services */
