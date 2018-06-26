@@ -7,6 +7,15 @@
 /******************************************************************
 Navbar, Header:
 ******************************************************************/
-.navbar{
-    background-color: #003D7F !important;
+
+.navbar {
+  background-color: #003D7F !important;
+}
+
+.logo-header-container {
+  padding-left: 20%;
+}
+
+.logo {
+  width: 170px;
 }
