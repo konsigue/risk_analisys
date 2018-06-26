@@ -16,6 +16,7 @@ import { MenuSuppliersComponent } from './menu-suppliers/menu-suppliers.componen
         SupplierDomicileComponent,
         SupplierGeneralInfoComponent,
         MenuSuppliersComponent
-    ]
+    ],
+    bootstrap: [SupplierListComponent]
 })
 export class SupplierModule { }

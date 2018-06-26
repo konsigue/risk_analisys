@@ -1,5 +1,6 @@
 /* Modules */
 import { NgModule } from '@angular/core';
+import { RegisterRoutingModule } from './register.routing';
 
 /* Components */
 import { LoginFormComponent } from '../login-form/login-form.component';
