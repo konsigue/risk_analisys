@@ -1,8 +1,9 @@
-li a{
+li a {
     margin: 5px;
 }
 
-ul{
+ul {
     background: #fff;
     box-shadow: 3px 3px 2px gray;
+    margin: 10px;
 }
