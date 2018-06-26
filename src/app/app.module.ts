@@ -21,7 +21,7 @@ import { DocumentsFinancialStateComponent } from './register/documents-financial
 import { FinancialStatementComponent } from './financial-statement/financial-statement.component';
 import { FinancialRatiosComponent } from './financial-ratios/financial-ratios.component';
 import { CIECComponent}  from "./register/ciec/ciec.component";
-import { DomicilioComponent}  from "./domicilio/domicilio.component";
+import { DomicilioComponent}  from "./register/domicilio/domicilio.component";
 import { TarjetaComponent}  from "./tarjeta/tarjeta.component";
 import { ContactosComponent } from './register/contacts/contactos.component';
 import { HeaderComponent } from "./header/header.component";
