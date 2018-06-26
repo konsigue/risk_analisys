@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RecoverPasswordComponent } from './recover-password/recover-password.component';
 import { RegistroMoralComponent } from './registro-moral/registro-moral.component';
-import { DatosRepresentanteRmComponent } from './datos-representante-rm/datos-representante-rm.component';
+import { DatosRepresentanteRmComponent } from './register/datos-representante-rm/datos-representante-rm.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RegistroFisicoComponent } from './registro-fisico/registro-fisico.component';
 import { RegistroFComponent } from './registro-f/registro-f.component';
