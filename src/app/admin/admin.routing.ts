@@ -19,7 +19,7 @@ const routes: Routes = [
    path: 'proveedores', component: adminComponent, children: [
      { path: '', outlet: 'admin', component: ProvidersComponent, pathMatch: 'full' },
    ]
- }
+ },
 ];
 
 @NgModule({
