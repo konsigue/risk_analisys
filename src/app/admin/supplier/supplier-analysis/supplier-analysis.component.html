@@ -6,7 +6,7 @@
 
 <menu-suppliers></menu-suppliers>
 
-<h4>Status fiscal</h4>
+<h4>Estatus fiscal</h4>
 <div class="card">
   <div class="card-body">
     <ul class="nav nav-pills nav-fill">
@@ -14,5 +14,50 @@
       <li class="nav-item">Presentadas en tiempo <b>{{fiscalStatus.OnTime}} %</b></li>
       <li class="nav-item">Declaraciones con Pago <b>{{fiscalStatus.WithPayment}} %</b></li>
     </ul>
+  </div>
+</div>
+
+<h4>Situaci&#243;n financiera</h4>
+<div class="card">
+  <div class="card-body">
+    <div class="table-data-types">
+      <ul>
+        <li>Liquidez inmediata</li>
+        <li>Liquidez mediata</li>
+        <li>Apalancamiento financiero</li>
+        <li>Activos totales</li>
+        <li>Ventas totales</li>
+        <li>Uafirda</li>
+      </ul>
+    </div>
+    <div class="justify-content-center">
+      <table class="table">
+          <thead class="thead-light">
+            <tr>
+              <th *ngFor="let situation of financialSituation" scope="col">{{situation.Name}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td *ngFor="let situation of financialSituation">{{situation.InmediateLiquidity}}</td>
+            </tr>
+            <tr>
+              <td *ngFor="let situation of financialSituation">{{situation.MediateLiquidity}}</td>
+            </tr>
+            <tr>
+              <td *ngFor="let situation of financialSituation">{{situation.FinancialAppeceament}}</td>
+            </tr>
+            <tr>
+              <td *ngFor="let situation of financialSituation">{{situation.TotalActives}}</td>
+            </tr>
+            <tr>
+              <td *ngFor="let situation of financialSituation">{{situation.TotalSales}}</td>
+            </tr>
+            <tr>
+              <td *ngFor="let situation of financialSituation">{{situation.Uafirda}}</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
   </div>
 </div>
