@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Domicilio } from '../../../register/domicilio/domicilio';
 
 @Component({
@@ -11,7 +12,7 @@ export class SupplierDomicileComponent implements OnInit {
   public zipCode: string;
   public address: Domicilio;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
     this.address = {
@@ -23,5 +24,25 @@ export class SupplierDomicileComponent implements OnInit {
       estado: "",
       codigo_postal: 0
     };
+  }
+
+  getAddress(): void {
+    this.http.get<Domicilio>(this.zipCodeUrl + this.zipCode)
+      .subscribe((data) => {
+        this.address = {
+          ciudad : data.ciudad,
+          municipio : data.municipio,
+          colonias : data.colonias,
+          estado : data.estado,
+          codigo_postal : data.codigo_postal,
+          numero_exterior : 0,
+          numero_interior : 0
+        };
+      });
+  }
+
+  // EVENTS
+  onSearchClicked() {
+    this.getAddress();
   }
 }
