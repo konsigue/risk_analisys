@@ -21,7 +21,7 @@ import { AdminHomeComponent } from './home/admin-home/admin-home.component';
     AdminComponent,
     SideBarComponent,
     HeaderAdminComponent,
-    AdminHomeComponent
+    AdminHomeComponent,
   ],
   providers: [],
   bootstrap: [AdminComponent]
