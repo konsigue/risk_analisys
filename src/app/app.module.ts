@@ -13,7 +13,8 @@ import { AdminModule } from './admin/admin.module';
 
 /* Components */
 import { LoginFormComponent } from './login/login-form/login-form.component';
-import { RegistroFisicoComponent } from './login/registro-fisico/registro-fisico.component';
+import { PersonTypeComponent } from './login/person-type/person-type.component';
+
 
 /* Services */
 import { DataRegisterService } from './data-register.service';
@@ -22,7 +23,7 @@ import { DataRegisterService } from './data-register.service';
   declarations: [
     AppComponent,
     LoginFormComponent,
-    RegistroFisicoComponent
+    PersonTypeComponent
   ],
   imports: [
     BrowserModule,

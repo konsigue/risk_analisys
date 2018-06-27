@@ -9,12 +9,14 @@ import { SupplierSummaryComponent } from './supplier-summary/supplier-summary.co
 import { SupplierDomicileComponent } from './supplier-domicile/supplier-domicile.component';
 import { MenuSuppliersComponent } from './menu-suppliers/menu-suppliers.component';
 import { SupplierAnalysisComponent } from './supplier-analysis/supplier-analysis.component';
+import { ShareholdersSuppliersComponent } from './shareholders-suppliers/shareholders-suppliers.component';
+import { ContactsSuppliersComponent } from './contacts-suppliers/contacts-suppliers.component';
 import { AdminRoutingModule } from '../admin.routing';
 import { FormsModule } from '@angular/forms';
+import { RpSuppliersComponent } from './rp-suppliers/rp-suppliers.component';
+import { DocumentsSuppliersComponent } from './documents-suppliers/documents-suppliers.component';
 import { FinancialReasonsComponent } from './financial-reasons/financial-reasons.component';
 import { FinancialStatementsComponent } from './financial-statements/financial-statements.component';
-
-
 
 @NgModule({
   imports: [
@@ -29,6 +31,10 @@ import { FinancialStatementsComponent } from './financial-statements/financial-s
       SupplierGeneralInfoComponent,
       SupplierAnalysisComponent,
       MenuSuppliersComponent,
+      ShareholdersSuppliersComponent,
+      ContactsSuppliersComponent,
+      RpSuppliersComponent,
+      DocumentsSuppliersComponent,
       FinancialReasonsComponent,
       FinancialStatementsComponent,
   ],

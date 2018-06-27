@@ -1,6 +1,5 @@
 body{
-    background:linear-gradient(90deg,
-    rgb(0,106,222), rgb(59,219,255));
+    background:linear-gradient(90deg, rgb(0, 106, 222), rgb(59, 219, 255));
     color:white;
 }
 

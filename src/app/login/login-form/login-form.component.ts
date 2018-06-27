@@ -15,7 +15,7 @@ import {
   animations: [
     trigger('fadeIn', [
       transition('void=>*', [
-        style({opacity: 0 }),
+        style({opacity:0}),
         animate(2000),
       ])
     ])
@@ -27,8 +27,7 @@ export class LoginFormComponent implements OnInit {
 
   constructor() { }
 
-
-  mostrar = false;
+  mostrar= false;
 
   ngOnInit() {
   }
