@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AdminRoutingModule } from './admin.routing';
 import { SupplierModule } from './supplier/supplier.module';
 
+
 /* Components */
 import { AdminComponent } from './admin.component';
 import { SideBarComponent } from './common/sidebar/sidebar.component';
@@ -15,7 +16,8 @@ import { AdminHomeComponent } from './home/admin-home/admin-home.component';
   imports: [
     CommonModule,
     AdminRoutingModule,
-    SupplierModule
+    SupplierModule,
+    AdminHomeComponent
   ],
   declarations: [
     AdminComponent,

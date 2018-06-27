@@ -15,8 +15,7 @@ const httpOptions = {
 
 @Injectable()
 export class DomicilioService {
-    zipCodeUrl = "https://api-codigos-postales.herokuapp.com/v2/codigo_postal/"
-    
+    zipCodeUrl = 'https://api-codigos-postales.herokuapp.com/v2/codigo_postal/';
     constructor(private http: HttpClient) {
 
     }
@@ -29,3 +28,4 @@ export class DomicilioService {
         return this.http.get<Domicilio>(this.zipCodeUrl + zipCode, httpOptions);
     }
 }
+
