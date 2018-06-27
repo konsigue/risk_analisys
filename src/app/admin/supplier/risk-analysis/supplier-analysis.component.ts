@@ -1,21 +1,46 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import {
+  trigger,
+  transition,
+  animate,
+  style,
+  state
+} from '@angular/animations';
+
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { FiscalStatusModel } from '../models/FiscalStatusModel';
 import { FinancialSituationModel } from '../models/FinancialSituationModel';
 
 @Component({
   selector: 'app-supplier-analysis',
   templateUrl: './supplier-analysis.component.html',
-  styleUrls: ['./supplier-analysis.component.css']
+  styleUrls: ['./supplier-analysis.component.css'],
+  animations: [
+    trigger('clicked', [
+      state('inactive', style({
+        backgroundColor: '#fff',
+        color: '#000000',
+        transform: 'scale(1)'
+      })),
+      state('active',   style({
+        backgroundColor: '#006ADE',
+        color: '#fff',
+        transform: 'scale(1.1)'
+      })),
+      transition('inactive => active', animate('100ms ease-in')),
+      transition('active => inactive', animate('100ms ease-out'))
+    ]),
+  ]
 })
 export class SupplierAnalysisComponent implements OnInit {
-  public supplier: string
+  public supplierName: string
   public fiscalStatus: FiscalStatusModel
   public financialSituation: FinancialSituationModel[]
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private router: Router, private route: ActivatedRoute) {
     this.fiscalStatus = new FiscalStatusModel()
-    this.financialSituation = Array(4);
+    this.financialSituation = new Array(4)
+
     this.financialSituation = [
       { 
         Name: "2016", InmediateLiquidity: "1.88", MediateLiquidity: "2.07", 
@@ -42,8 +67,12 @@ export class SupplierAnalysisComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
-      this.supplier = params.get('name')
+      this.supplierName = params.get('name')
     });
+  }
+
+  onNavChange(e: string) {
+    this.router.navigate(['admin/proveedores/' + this.supplierName + '/' + e], { replaceUrl : true });
   }
 
 }

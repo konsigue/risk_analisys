@@ -1,12 +1,32 @@
 <div class="supplier-title">
-  <h2>{{supplier}}</h2>
+  <h2>{{supplierName}}</h2>
 
   <button class="top-action btn btn-primary">Informaci&#243;n</button>
 </div>
-<br>
+
+<!--
 <div class="row justify-content-center">
   <menu-suppliers></menu-suppliers>
 </div>
+-->
+
+<ul class="nav nav-pills nav-fill">
+  <li class="nav-item">
+    <a class="nav-link active" (click)="onNavChange('estatus')">Estatus financiero</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" (click)="onNavChange('facturacion')">Facturaci&#243;n</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" (click)="onNavChange('analisis')">An&#225;lisis financiero</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" (click)="onNavChange('negocios')">Negocios</a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link active" (click)="onNavChange('compliance')">Compliance</a>
+  </li>
+</ul>
 
 <h4>Estatus fiscal</h4>
 <div class="card">
