@@ -1,8 +1,9 @@
 export class FinancialSituationModel {
-    public InmediateLiquidity: number
-    public MediateLiquidity: number
-    public FinancialAppeceament: number
-    public TotalActives: number
-    public TotalSales: number
-    public Uafirda: number
+    public Name: string
+    public InmediateLiquidity: string
+    public MediateLiquidity: string
+    public FinancialAppeceament: string
+    public TotalActives: string
+    public TotalSales: string
+    public Uafirda: string
 }
