@@ -50,7 +50,7 @@ export class MenuSuppliersComponent implements OnInit {
     this.states[n].state='active';
     this.states[n].mostrar=true;
     //console.log(this.states[n]);
-    for(let i = 0;i<8;i++) {
+    for(let i = 0;i<7;i++) {
       if(i!=n){
         this.states[i].state = 'inactive';
         this.states[i].mostrar=false;

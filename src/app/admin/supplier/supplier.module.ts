@@ -14,6 +14,7 @@ import { ContactsSuppliersComponent } from './contacts-suppliers/contacts-suppli
 import { AdminRoutingModule } from '../admin.routing';
 import { FormsModule } from '@angular/forms';
 import { RpSuppliersComponent } from './rp-suppliers/rp-suppliers.component';
+import { DocumentsSuppliersComponent } from './documents-suppliers/documents-suppliers.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { RpSuppliersComponent } from './rp-suppliers/rp-suppliers.component';
       MenuSuppliersComponent,
       ShareholdersSuppliersComponent,
       ContactsSuppliersComponent,
-      RpSuppliersComponent
+      RpSuppliersComponent,
+      DocumentsSuppliersComponent
   ],
   bootstrap: [SupplierListComponent]
 })
