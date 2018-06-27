@@ -1,473 +1,464 @@
-<div class="mt-3">
-    <div class="card text-white bg-k-primary">
-        <img class="card-img-top" src="holder.js/100px180/" alt="">
-        <div class="card-body">
-            <h4 class="card-title d-flex " data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                Estados Financieros
-                <i class="fa fa-chevron-down justify-content-end"></i>
-            </h4>
-            <div class="card-text">
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                    <div class="card-body">
-                        <div class="p-4">
-                            <div class="row justify-content-center">
+<div class="card-body">
+    <div class="p-4">
+        <div class="row justify-content-center">
 
-                                <div class="col-md-12">
-                                    <div>
-                                        <h1 class="h1">
-                                            Documentos para Estado Financiero
-                                        </h1>
-                                        <div class="row">
-                                            <div class="col-md-12 col-sm-12">
-                                                <div class="datatable-responsive">
-                                                    <table class="table table-striped jambo_table bulk_action">
-                                                        <thead>
-                                                            <tr class="headings">
-                                                                <th class="column-title">Documento </th>
-                                                                <th class="column-title">Observaciones</th>
-                                                                <th class="column-title">Estado </th>
-                                                                <th class="column-title">Validar </th>
-                                                                <th class="column-title">Opciones </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr class="even pointer">
-                                                                <td class=" ">Declaración anual 2016</td>
-                                                                <td>
-                                                                    <input type="text" name="Observacion" value="">
-                                                                    <!--
-                                                            <textbox id="message" required="required" class="form-control" name="message" data-parsley-trigger="keyup" data-parsley-minlength="10"
-                                                              data-parsley-maxlength="100" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
-                                                              data-parsley-validation-threshold="10"></textbox>-->
-                                                                </td>
-                                                                <td>
-                                                                    Por validar
-                                                                </td>
-                                                                <td>
-                                                                    <button type="button" aria-label="validar" class="btn border btn-round btn-light">
-                                                    Validar
-                                                    <i class="fa fa-check-square"></i>
-                                                  </button>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="btn-group " role="group" aria-label="Opciones">
-                                                                        <button type="button" aria-label="download" class="btn border btn-round btn-light">
-                                                      <i class="fa fa-download"></i>
-                                                    </button>
-                                                                        <button type="button" aria-label="see" class="btn border btn-round btn-light">
-                                                      <i class="fa fa-eye"></i>
-                                                    </button>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="even pointer">
-                                                                <td class=" ">Declaración anual 2015</td>
-                                                                <td>
-                                                                    <input type="text" name="Observacion" value="">
-                                                                    <!--
-                                          <textbox id="message" required="required" class="form-control" name="message" data-parsley-trigger="keyup" data-parsley-minlength="10"
-                                                              data-parsley-maxlength="100" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
-                                                              data-parsley-validation-threshold="10"></textbox>
-                                                            -->
-
-                                                                </td>
-                                                                <td>
-                                                                    Por validar
-                                                                </td>
-                                                                <td>
-                                                                    <button type="button" aria-label="validar" class="btn border btn-round btn-light">
-                                                    Validar
-                                                    <i class="fa fa-check-square"></i>
-                                                  </button>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="btn-group " role="group" aria-label="Opciones">
-                                                                        <button type="button" aria-label="download" class="btn border btn-round btn-light">
-                                                      <i class="fa fa-download"></i>
-                                                    </button>
-                                                                        <button type="button" aria-label="see" class="btn border btn-round btn-light">
-                                                      <i class="fa fa-eye"></i>
-                                                    </button>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="col-sm-12">
-                                    <h1 class="h1">
-                                        Estados Financieros
-                                    </h1>
-                                    <hr>
-                                </div>
-
-                                <div class="col-md-12 col-sm-12">
-                                    <form id="demo-form2" data-parsley-validate>
-                                        <div class="row">
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <div class="form-group ">
-                                                    <label class="control-label" for="last-name">Desde ejercicio:</label>
-                                                    <select class="form-control">
-                                      <option>2010</option>
-                                      <option>2011</option>
-                                      <option>2012</option>
-                                      <option>2013</option>
-                                      <option>2014</option>
-                                      <option>2015</option>
-                                      <option>2016</option>
-                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <div class="form-group ">
-                                                    <label class="control-label" for="last-name">Hasta ejercicio:</label>
-                                                    <select class="form-control">
-                                      <option>2010</option>
-                                      <option>2011</option>
-                                      <option>2012</option>
-                                      <option>2013</option>
-                                      <option>2014</option>
-                                      <option>2015</option>
-                                      <option>2016</option>
-                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                                <div class="form-group">
-                                                    <button class="btn btn-success" type="button">Buscar
-                                      <i class="fa fa-search"></i>
-                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-
-                                    <div>
-                                        <table class="table table-striped datatable-responsive">
-                                            <thead>
-                                                <tr class="headings">
-                                                    <th class="column-title">Descripción </th>
-                                                    <th class="column-title">Parcial hasta </th>
-                                                    <th class="column-title">Ejercicio 2016: </th>
-                                                    <th class="column-title">Ejercicio 2015: </th>
-                                                    <th class="column-title">Ejercicio 2014: </th>
-                                                    <th class="column-title">Ejercicio 2013: </th>
-                                                    <th class="column-title">Ejercicio 2012: </th>
-                                                    <th class="column-title">Ejercicio 2011: </th>
-                                                    <th class="column-title">Ejercicio 2010: </th>
-                                                </tr>
-                                            </thead>
-
-                                            <tbody>
-                                                <tr class="even pointer">
-                                                    <td>Ventas netas</td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                </tr>
-                                                <tr class="even pointer">
-                                                    <td>Costo de ventas</td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                </tr>
-                                                <tr class="even pointer">
-                                                    <td>Utilidad de ventas</td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                </tr>
-                                                <tr class="even pointer">
-                                                    <td>Gasto de administración y ventas</td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                </tr>
-                                                <tr class="even pointer">
-                                                    <td>Depreciación y amortización</td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                </tr>
-                                                <tr class="even pointer">
-                                                    <td>Utilidad de operación</td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                </tr>
-                                                <tr class="even pointer">
-                                                    <td>Gastos financieros</td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                </tr>
-                                                <tr class="even pointer">
-                                                    <td>Productos financieros</td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                </tr>
-                                                <tr class="even pointer">
-                                                    <td>Utilidad antes de impuestos</td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                </tr>
-                                                <tr class="even pointer">
-                                                    <td>Impuestos</td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="btn-group" role="group" aria-label="Botones guardar, descargar y cancelar">
-                                        <button type="button" class="btn btn-round btn-primary">Guardar
-                                <i class="fa fa-floppy-o"></i>
+            <div class="col-md-12">
+                <div>
+                    <h1 class="h1">
+                        Documentos para Estado Financiero
+                    </h1>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="datatable-responsive">
+                                <table class="table table-striped jambo_table bulk_action">
+                                    <thead>
+                                        <tr class="headings">
+                                            <th class="column-title">Documento </th>
+                                            <th class="column-title">Observaciones</th>
+                                            <th class="column-title">Estado </th>
+                                            <th class="column-title">Validar </th>
+                                            <th class="column-title">Opciones </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="even pointer">
+                                            <td class=" ">Declaración anual 2016</td>
+                                            <td>
+                                                <input type="text" name="Observacion" value="">
+                                                <!--
+                                        <textbox id="message" required="required" class="form-control" name="message" data-parsley-trigger="keyup" data-parsley-minlength="10"
+                                          data-parsley-maxlength="100" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
+                                          data-parsley-validation-threshold="10"></textbox>-->
+                                            </td>
+                                            <td>
+                                                Por validar
+                                            </td>
+                                            <td>
+                                                <button type="button" aria-label="validar" class="btn border btn-round btn-light">
+                                Validar
+                                <i class="fa fa-check-square"></i>
                               </button>
-                                        <button type="button" class="btn btn-round btn-danger">Descartar cambios
-                                <i class="fa fa-ban"></i>
+                                            </td>
+                                            <td>
+                                                <div class="btn-group " role="group" aria-label="Opciones">
+                                                    <button type="button" aria-label="download" class="btn border btn-round btn-light">
+                                  <i class="fa fa-download"></i>
+                                </button>
+                                                    <button type="button" aria-label="see" class="btn border btn-round btn-light">
+                                  <i class="fa fa-eye"></i>
+                                </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class=" ">Declaración anual 2015</td>
+                                            <td>
+                                                <input type="text" name="Observacion" value="">
+                                                <!--
+                      <textbox id="message" required="required" class="form-control" name="message" data-parsley-trigger="keyup" data-parsley-minlength="10"
+                                          data-parsley-maxlength="100" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
+                                          data-parsley-validation-threshold="10"></textbox>
+                                        -->
+
+                                            </td>
+                                            <td>
+                                                Por validar
+                                            </td>
+                                            <td>
+                                                <button type="button" aria-label="validar" class="btn border btn-round btn-light">
+                                Validar
+                                <i class="fa fa-check-square"></i>
                               </button>
-                                        <button type="button" class="btn btn-round btn-light">Descargar
-                                <i class="fa fa-download"></i>
-                              </button>
-                                        <button routerLink="/accionistas" class="btn btn-round btn-secondary">Continuar
-                                <i class="fa fa-"></i>
-                              </button>
-                                    </div>
-                                    <!--
-                        <div class="row">
-                                <div class="col-md-6">
-                                  <button type="button" class="btn btn-round btn-primary">Guardar
-                                    <i class="fa fa-floppy-o"></i>
-                                  </button>
-                                </div>
-                                <div class="col-md-6">
-                                  <button type="button" class="btn btn-round btn-default">Descargar
-                                    <i class="fa fa-download"></i>
-                                  </button>
-                                </div>
-                              </div>
-                      -->
-                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="btn-group " role="group" aria-label="Opciones">
+                                                    <button type="button" aria-label="download" class="btn border btn-round btn-light">
+                                  <i class="fa fa-download"></i>
+                                </button>
+                                                    <button type="button" aria-label="see" class="btn border btn-round btn-light">
+                                  <i class="fa fa-eye"></i>
+                                </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="col-sm-12">
+                <h1 class="h1">
+                    Estados Financieros
+                </h1>
+                <hr>
+            </div>
+
+            <div class="col-md-12 col-sm-12">
+                <form id="demo-form2" data-parsley-validate>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group ">
+                                <label class="control-label" for="last-name">Desde ejercicio:</label>
+                                <select class="form-control">
+                  <option>2010</option>
+                  <option>2011</option>
+                  <option>2012</option>
+                  <option>2013</option>
+                  <option>2014</option>
+                  <option>2015</option>
+                  <option>2016</option>
+                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group ">
+                                <label class="control-label" for="last-name">Hasta ejercicio:</label>
+                                <select class="form-control">
+                  <option>2010</option>
+                  <option>2011</option>
+                  <option>2012</option>
+                  <option>2013</option>
+                  <option>2014</option>
+                  <option>2015</option>
+                  <option>2016</option>
+                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <button class="btn btn-success" type="button">Buscar
+                  <i class="fa fa-search"></i>
+                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div>
+                    <table class="table table-striped datatable-responsive">
+                        <thead>
+                            <tr class="headings">
+                                <th class="column-title">Descripción </th>
+                                <th class="column-title">Parcial hasta </th>
+                                <th class="column-title">Ejercicio 2016: </th>
+                                <th class="column-title">Ejercicio 2015: </th>
+                                <th class="column-title">Ejercicio 2014: </th>
+                                <th class="column-title">Ejercicio 2013: </th>
+                                <th class="column-title">Ejercicio 2012: </th>
+                                <th class="column-title">Ejercicio 2011: </th>
+                                <th class="column-title">Ejercicio 2010: </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="even pointer">
+                                <td>Ventas netas</td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                            </tr>
+                            <tr class="even pointer">
+                                <td>Costo de ventas</td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                            </tr>
+                            <tr class="even pointer">
+                                <td>Utilidad de ventas</td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                            </tr>
+                            <tr class="even pointer">
+                                <td>Gasto de administración y ventas</td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                            </tr>
+                            <tr class="even pointer">
+                                <td>Depreciación y amortización</td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                            </tr>
+                            <tr class="even pointer">
+                                <td>Utilidad de operación</td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                            </tr>
+                            <tr class="even pointer">
+                                <td>Gastos financieros</td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                            </tr>
+                            <tr class="even pointer">
+                                <td>Productos financieros</td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                            </tr>
+                            <tr class="even pointer">
+                                <td>Utilidad antes de impuestos</td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                            </tr>
+                            <tr class="even pointer">
+                                <td>Impuestos</td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="0.00">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="btn-group" role="group" aria-label="Botones guardar, descargar y cancelar">
+                    <button type="button" class="btn btn-round btn-primary">Guardar
+            <i class="fa fa-floppy-o"></i>
+          </button>
+                    <button type="button" class="btn btn-round btn-danger">Descartar cambios
+            <i class="fa fa-ban"></i>
+          </button>
+                    <button type="button" class="btn btn-round btn-light">Descargar
+            <i class="fa fa-download"></i>
+          </button>
+                    <button routerLink="/accionistas" class="btn btn-round btn-secondary">Continuar
+            <i class="fa fa-"></i>
+          </button>
+                </div>
+                <!--
+    <div class="row">
+            <div class="col-md-6">
+              <button type="button" class="btn btn-round btn-primary">Guardar
+                <i class="fa fa-floppy-o"></i>
+              </button>
+            </div>
+            <div class="col-md-6">
+              <button type="button" class="btn btn-round btn-default">Descargar
+                <i class="fa fa-download"></i>
+              </button>
+            </div>
+          </div>
+  -->
+            </div>
+        </div>
+    </div>
+</div>
