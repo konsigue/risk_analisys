@@ -6,6 +6,7 @@ import {
   style,
   state
 } from '@angular/animations';
+import { Item } from './opcion'
 
 @Component({
   selector: 'app-targeta',
@@ -15,6 +16,7 @@ import {
     trigger('clicked', [
       state('inactive', style({
         backgroundColor: '#495057',
+        color: '#fff',
         transform: 'scale(1)'
       })),
       state('active',   style({
@@ -29,27 +31,29 @@ import {
 })
 export class TarjetaComponent implements OnInit {
 
+  constructor() {
+    this.states[0]= new Item('inactive', false);
+    this.states[1]= new Item('active', true);
+   }
 
-
-  constructor() { }
-
-  state='inactive';
-  mostrar= false
+  public states = new Array(2);
 
   toggleState(n:number) {
-    //console.log(this.state)
-    if(n==1){
-      this.state = 'active';
-      this.mostrar=true;
-    }
-    if(n==0){
-      this.state = 'inactive';
-      this.mostrar=false;
-    }
-
+    //console.log(n);
+    this.states[n].state='active';
+    this.states[n].mostrar=true;
+    //console.log(this.states[n]);
+    for(let i = 0;i<2;i++) {
+      if(i!=n){
+        this.states[i].state = 'inactive';
+        this.states[i].mostrar=false;
+      }
+      //console.log(this.states[i]);
+   }
   }
 
   ngOnInit() {
   }
 
 }
+
