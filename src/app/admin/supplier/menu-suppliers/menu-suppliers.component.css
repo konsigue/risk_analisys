@@ -6,6 +6,12 @@ ul{
     background: #fff;
 }
 
+.navbar-expand-lg .navbar-collapse, 
+.navbar-expand-xl .navbar-collapse{
+
+    display: inline-block !important;
+    
+}
 
 .separator {
     border-top: 1px solid #D8D8D8;
