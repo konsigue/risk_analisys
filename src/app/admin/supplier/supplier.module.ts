@@ -13,6 +13,7 @@ import { ShareholdersSuppliersComponent } from './shareholders-suppliers/shareho
 import { ContactsSuppliersComponent } from './contacts-suppliers/contacts-suppliers.component';
 import { AdminRoutingModule } from '../admin.routing';
 import { FormsModule } from '@angular/forms';
+import { RpSuppliersComponent } from './rp-suppliers/rp-suppliers.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { FormsModule } from '@angular/forms';
       SupplierAnalysisComponent,
       MenuSuppliersComponent,
       ShareholdersSuppliersComponent,
-      ContactsSuppliersComponent
+      ContactsSuppliersComponent,
+      RpSuppliersComponent
   ],
   bootstrap: [SupplierListComponent]
 })
