@@ -14,10 +14,10 @@
   <div class="form-group">
     <label for="exampleInputEmail1">¿Eres el titular de una tarjeta de crédito?</label>
     <div class="row form-group justify-content-center">
-      <label class="btn btn-secondary" [@clicked]="state" (click)="toggleState(1)">Si</label> &nbsp;&nbsp;
-      <label class="btn btn-secondary" [@clicked2]="state" (click)="toggleState(0)">No</label>
+      <label class="btn btn-secondary" [@clicked]="states[0].state" (click)="toggleState(0)">Si</label> &nbsp;&nbsp;
+      <label class="btn btn-secondary" [@clicked]="states[1].state" (click)="toggleState(1)">No</label>
       </div>
-    <div  *ngIf="mostrar">
+    <div  *ngIf="states[0].mostrar">
       <label for="exampleInputEmail1" >Últimos dígitos de la tarjeta: </label>
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="xxxx">
     </div>
