@@ -11,6 +11,7 @@ import { MenuSuppliersComponent } from './menu-suppliers/menu-suppliers.componen
 import { SupplierAnalysisComponent } from './supplier-analysis/supplier-analysis.component';
 import { AdminRoutingModule } from '../admin.routing';
 import { FormsModule } from '@angular/forms';
+import { FinancialReasonsComponent } from './financial-reasons/financial-reasons.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
       SupplierDomicileComponent,
       SupplierGeneralInfoComponent,
       SupplierAnalysisComponent,
-      MenuSuppliersComponent
+      MenuSuppliersComponent,
+      FinancialReasonsComponent
   ],
   bootstrap: [SupplierListComponent]
 })

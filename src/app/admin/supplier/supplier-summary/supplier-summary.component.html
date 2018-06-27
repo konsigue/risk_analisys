@@ -1,26 +1,27 @@
 <div>
-  <div class="card text-white bg-k-primary">
-    <img class="card-img-top" src="holder.js/100px180/" alt="">
-    <div class="card-body">
-      <div class="row">
-        <div class="col-md-10">
-          <h4>
-            {{provider_name}}
-          </h4>
-          <span>CDMX</span>
-        </div>
-        <div class="col-md-2">
-          <a name="" id="" class="btn btn-sm btn-light" href="#" role="button">Analisis</a>
-        </div>
-        <div class="col-md-12">
-          <menu-suppliers></menu-suppliers>
-        </div>
-      </div>
+    <div class="card text-white bg-k-primary">
+        <img class="card-img-top" src="holder.js/100px180/" alt="">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-10">
+                    <h4>
+                        {{provider_name}}
+                    </h4>
+                    <span>CDMX</span>
+                </div>
+                <div class="col-md-2">
+                    <a name="" id="" class="btn btn-sm btn-light" href="#" role="button">Analisis</a>
+                </div>
+                <div class="col-md-12">
+                    <menu-suppliers></menu-suppliers>
+                </div>
+            </div>
 
-      <hr class="text-light" />
-      <p class="card-text">{{provider_description}}</p>
+            <hr class="text-light" />
+            <p class="card-text">{{provider_description}}</p>
+        </div>
     </div>
-  </div>
 </div>
 <supplier-general-info></supplier-general-info>
 <supplier-domicile></supplier-domicile>
+<app-financial-reasons></app-financial-reasons>
