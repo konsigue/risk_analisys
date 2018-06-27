@@ -15,7 +15,8 @@ import { AdminRoutingModule } from '../admin.routing';
 import { FormsModule } from '@angular/forms';
 import { RpSuppliersComponent } from './rp-suppliers/rp-suppliers.component';
 import { DocumentsSuppliersComponent } from './documents-suppliers/documents-suppliers.component';
-
+import { FinancialReasonsComponent } from './financial-reasons/financial-reasons.component';
+import { FinancialStatementsComponent } from './financial-statements/financial-statements.component';
 
 @NgModule({
   imports: [
@@ -33,7 +34,9 @@ import { DocumentsSuppliersComponent } from './documents-suppliers/documents-sup
       ShareholdersSuppliersComponent,
       ContactsSuppliersComponent,
       RpSuppliersComponent,
-      DocumentsSuppliersComponent
+      DocumentsSuppliersComponent,
+      FinancialReasonsComponent,
+      FinancialStatementsComponent,
   ],
   bootstrap: [SupplierListComponent]
 })
