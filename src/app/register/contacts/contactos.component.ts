@@ -1,5 +1,5 @@
-import { Component, OnInit} from '@angular/core';
-import {  Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { DataRegisterService } from '../../data-register.service';
 
@@ -13,23 +13,23 @@ import { CONTACTOS } from './contactos';
 export class ContactosComponent implements OnInit {
 
   tipoPersona: any;
-  url="";
+  url = '';
 
-  constructor(private router: Router,private _dataRegisterService: DataRegisterService) {
+  constructor(private router: Router, private _dataRegisterService: DataRegisterService) {
     this._dataRegisterService.dataString$.subscribe(
       data => {
-        if(this.tipoPersona !== data){
+        if (this.tipoPersona !== data) {
           this.tipoPersona = data;
         }
       });
-   }
+  }
 
-   contactos = CONTACTOS;
+  contactos = CONTACTOS;
 
-  tipo(){
-    if(this.tipoPersona==0){
+  tipo() {
+    if (this.tipoPersona === 0) {
       this.router.navigate(['registro/tarjeta']);
-    }else if(this.tipoPersona==1){
+    } else if (this.tipoPersona === 1) {
       this.router.navigate(['registro/ciec']);
     }
   }
