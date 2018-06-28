@@ -1,36 +1,34 @@
-<nav class="navbar navbar-expand-lg navbar-expand-xl navbar-dark" >
+<nav class="navbar navbar-expand-lg navbar-expand-xl navbar-dark">
   <div class="navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav nav-pills nav-fill mr-auto">
-        <li class="nav-item">
-          <a class="nav-link active" [@clicked]="states[0].state" (click)="toggleState(0)" >Resumen</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" [@clicked]="states[1].state" (click)="toggleState(1)" >Contactos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" [@clicked]="states[2].state" (click)="toggleState(2)">Representante legal</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" [@clicked]="states[3].state" (click)="toggleState(3)">Razones financieras</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" [@clicked]="states[4].state" (click)="toggleState(4)">Estados financieras</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" [@clicked]="states[5].state" (click)="toggleState(5)">Accionistas</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" [@clicked]="states[6].state" (click)="toggleState(6)">Documentos</a>
-        </li>
+      <li class="nav-item">
+        <a routerLink="../resumen" class="nav-link active" [@clicked]="states[0].state" (click)="toggleState(0)">
+          Resumen</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="../contactos" class="nav-link active" [@clicked]="states[1].state" (click)="toggleState(1)">
+          Contactos</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="../representante-legal" class="nav-link active" [@clicked]="states[2].state" (click)="toggleState(2)">
+          Representante legal</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="../razones-financieras" class="nav-link active" [@clicked]="states[3].state" (click)="toggleState(3)">
+          Razones financieras</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="../estados-financieros" class="nav-link active" [@clicked]="states[4].state" (click)="toggleState(4)">
+          Estados financieras</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="../accionistas" class="nav-link active" [@clicked]="states[5].state" (click)="toggleState(5)">
+          Accionistas</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="../documentos" class="nav-link active" [@clicked]="states[6].state" (click)="toggleState(6)">
+          Documentos</a>
+      </li>
     </ul>
   </div>
 </nav>
-
-<supplier-general-info *ngIf="states[0].mostrar"></supplier-general-info>
-<supplier-domicile *ngIf="states[0].mostrar"></supplier-domicile>
-<app-contacts-suppliers *ngIf="states[1].mostrar"></app-contacts-suppliers>
-<app-rp-suppliers *ngIf="states[2].mostrar"></app-rp-suppliers>
-<app-financial-reasons *ngIf="states[3].mostrar"></app-financial-reasons>
-<app-financial-statements *ngIf="states[4].mostrar"></app-financial-statements>
-<app-shareholders-suppliers *ngIf="states[5].mostrar"></app-shareholders-suppliers>
-<app-documents-suppliers *ngIf="states[6].mostrar"></app-documents-suppliers>
