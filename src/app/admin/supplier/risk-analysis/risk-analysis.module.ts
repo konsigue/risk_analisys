@@ -5,6 +5,7 @@ import { RiskAnalysisRoutingModule } from './risk-analysis.routing';
 
 /* Components */
 import { SupplierAnalysisComponent } from './supplier-analysis.component';
+import { AnalysisFinancialStatusComponent } from './analysis-financial-status/analysis-financial-status.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { SupplierAnalysisComponent } from './supplier-analysis.component';
     RiskAnalysisRoutingModule
   ],
   declarations: [
-      SupplierAnalysisComponent
+      SupplierAnalysisComponent,
+      AnalysisFinancialStatusComponent
   ],
   bootstrap: [SupplierAnalysisComponent]
 })

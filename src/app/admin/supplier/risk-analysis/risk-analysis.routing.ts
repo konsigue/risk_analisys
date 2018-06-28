@@ -4,7 +4,7 @@ import { SupplierAnalysisComponent } from './supplier-analysis.component';
 
 const routes: Routes = [
   {
-    path: 'admin/proveedores/:name/analisis#estatus', component: SupplierAnalysisComponent, children: [
+    path: 'admin/proveedores/:name/analisis/status', component: SupplierAnalysisComponent, children: [
       { path: '', outlet: 'risk-analysis', component: SupplierAnalysisComponent, pathMatch: 'full' }
     ]
   }
