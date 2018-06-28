@@ -9,6 +9,21 @@ export class ShareholdersSuppliersComponent implements OnInit {
 
   constructor() { }
 
+  mostrar=false;
+
+  toggleShow(mostrar: boolean) {
+    this.mostrar=mostrar;
+  }
+
+  adjustPercentage(){
+    let percentage = document.getElementById("porcentaje");
+    if(percentage.value>=100){
+      percentage.value=100;
+    }else if(percentage.value<=0){
+      percentage.value=0;
+    }
+  }
+
   ngOnInit() {
   }
 

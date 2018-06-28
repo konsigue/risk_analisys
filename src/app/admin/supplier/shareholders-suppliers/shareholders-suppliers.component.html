@@ -97,9 +97,11 @@
                                     </select>
                             </div>
                             <div class="form-group">
-                                <label class="control-label" for="first-name">Firma como apoderado: </label>
-                                    <input type="radio" class="flat" name="firma_apoderado" id="yes" value="M" checked="" required /> Sí
-                                    <input type="radio" class="flat" name="firma_apoderado" id="no" value="F" /> No
+                                <fieldset id="apoderado">
+                                    <label class="control-label" for="first-name">Firma como apoderado: </label>
+                                    <input type="radio" class="flat" name="firma_apoderado" id="yes" value="M" required name="apoderado"/> Sí
+                                    <input type="radio" class="flat" name="firma_apoderado" id="no" value="F" checked="" name="apoderado"/> No
+                                </fieldset>
                             </div>
                             <div class="form-group">
                                 <label class="control-label" for="first-name">Correo electronico: </label>
@@ -107,19 +109,24 @@
                             </div>
                             <div class="form-group">
                                 <label class="control-label" for="first-name" >Porcentaje de participacion: </label>
-                                  <input placeholder="100%" type="text" id="first-name" required="required" class="form-control">
+                                <input placeholder="100%" type="number" max="100" min="0" id="porcentaje" required="required" class="form-control text-center" (focusout)="adjustPercentage()">
                             </div>
                             <br>
                             <div class="separator"></div>
                             <div class="form-group">
                                 <label class="control-label c" style="text-align: justify;" for="first-name"> <p>¿El apoderado legal y/o accionista o algun familiar directo, desempeña o ha desempeñado funciones públicas destacadas en México o en el extranjero, altos puestos ejecutivos en empresas estatales o funciones importanrtes en partidos políticos?</p></label>
-                                <br>
-                                <input type="checkbox" class="flat" name="firma_apoderado" id="no" value="F" /> Sí
-                                <input placeholder="Cargo" type="text" id="first-name" required="required" class="form-control">
+                                <div class="row">
+                                  <div class="col-lg-4 col-xl-4 col-md-4"></div>
+                                  <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12 col-xs-12">
+                                    <fieldset id="apoderado-pregunta">
+                                      <input type="radio" class="flat" name="firma_apoderado" id="yes" value="M" required (click)="toggleShow(true)" name="apoderado-pregunta" required/> Sí
+                                      <input type="radio" class="flat" name="firma_apoderado" id="no" value="F" checked="" (click)="toggleShow(false)" name="apoderado-pregunta"/> No
+                                    </fieldset>
+                                    <input *ngIf="mostrar" placeholder="Cargo" type="text" id="first-name" required="required" class="form-control">
+                                  </div>
+                                  <div class="col-lg-4 col-xl-4 col-md-4"></div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <button type="button" class="btn btn-round btn-info">Guardar <i class="fa fa-save"></i></button>
-                              </div>
                         </form>
                   </div>
                   <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
@@ -173,9 +180,6 @@
                                       <label class="control-label" for="first-name">País: </label>
                                         <input placeholder="México" type="text" id="first-name" required="required" class="form-control" readonly>
                                     </div>
-                                    <div class="form-group">
-                                        <button type="button" class="btn btn-round btn-info">Guardar <i class="fa fa-save"></i></button>
-                                      </div>
                       </form>
                   </div>
                   <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
@@ -186,8 +190,8 @@
                                   <tr class="headings">
                                     <th class="column-title">Ver</th>
                                     <th class="column-title">Documento </th>
-                                    <th class="column-title">Opciones</th>
                                     <th class="bulk-actions">Seleccion de archivo <i class="fa fa-upload"></i></th>
+                                    <th class="column-title">Opciones</th>
                                   </tr>
                                 </thead>
           
@@ -195,22 +199,19 @@
                                   <tr class="even pointer">
                                     <td><button type="button" class="btn btn-round btn-warning"><i class="fa fa-download"></i></button></td>
                                     <td class=" ">Comprobante de domicilio</td>
-                                    <td><button type="button" class="btn btn-round btn-danger"><i class="fa fa-trash"></i></button></td>
                                     <td><input type="file" class="form-control-file" id="exampleFormControlFile1"></td>
+                                    <td><button type="button" class="btn btn-round btn-danger"><i class="fa fa-trash"></i></button></td>
                                   </tr>
           
                                 </tbody>
                               </table>
                           </div>
-                          <div class="form-group">
-                              <button type="button" class="btn btn-round btn-info">Guardar <i class="fa fa-save"></i></button>
-                            </div>
                         </form>
                   </div>
                 </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-primary">Agregar</button>
+              <button type="button" class="btn btn-round btn-info">Guardar <i class="fa fa-save"></i></button>
             </div>
           </div>
         </div>
