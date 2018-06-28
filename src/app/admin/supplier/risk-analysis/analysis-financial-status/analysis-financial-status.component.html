@@ -1,3 +1,50 @@
-<p>
-  analysis-financial-status works!
-</p>
+<h4>Estatus fiscal</h4>
+<div class="card">
+  <div class="card-body">
+    <ul class="nav nav-pills nav-fill">
+      <li class="nav-item">Declaraciones presentadas <b>{{fiscalStatus.PresentedDeclarations}} %</b></li>
+      <li class="nav-item">Presentadas en tiempo <b>{{fiscalStatus.OnTime}} %</b></li>
+      <li class="nav-item">Declaraciones con Pago <b>{{fiscalStatus.WithPayment}} %</b></li>
+    </ul>
+  </div>
+</div>
+
+<h4>Situaci&#243;n financiera</h4>
+<div class="card">
+  <div class="justify-content-center">
+    <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th></th>
+            <th *ngFor="let situation of financialSituation" scope="col">{{situation.Name}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="table-data-type">Liquidez inmediata</td>
+            <td *ngFor="let situation of financialSituation">{{situation.InmediateLiquidity}}</td>
+          </tr>
+          <tr>
+            <td class="table-data-type">Liquidez mediata</td>
+            <td *ngFor="let situation of financialSituation">{{situation.MediateLiquidity}}</td>
+          </tr>
+          <tr>
+            <td class="table-data-type">Apalancamiento financiero</td>
+            <td *ngFor="let situation of financialSituation">{{situation.FinancialAppeceament}}</td>
+          </tr>
+          <tr>
+            <td class="table-data-type">Activos totales</td>
+            <td *ngFor="let situation of financialSituation">{{situation.TotalActives}}</td>
+          </tr>
+          <tr>
+            <td class="table-data-type">Ventas totales</td>
+            <td *ngFor="let situation of financialSituation">{{situation.TotalSales}}</td>
+          </tr>
+          <tr>
+            <td class="table-data-type">Uafirda</td>
+            <td *ngFor="let situation of financialSituation">{{situation.Uafirda}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
