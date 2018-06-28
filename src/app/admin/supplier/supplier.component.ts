@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SupplierComponent implements OnInit {
 
-  provider_name = 'Soluciones Digitales Rubio Haro y asociados.';
-  provider_description = 'Empresa dedicada a la consultoria sobre informatica.';
 
   constructor() { }
 
