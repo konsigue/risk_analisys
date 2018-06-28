@@ -18,6 +18,7 @@ import { TarjetaComponent}  from "./tarjeta/tarjeta.component";
 import { ContactosComponent } from './contacts/contactos.component';
 import { HeaderComponent } from "./header/header.component";
 import { RegistroAccionistasComponent } from './registro-accionistas/registro-accionistas.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { RegistroAccionistasComponent } from './registro-accionistas/registro-ac
         RegisterRoutingModule,
         FormsModule,
         CommonModule,
+        HttpClientModule
     ],
     declarations: [
         RegistroFComponent,

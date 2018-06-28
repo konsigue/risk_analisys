@@ -17,6 +17,7 @@ import { RpSuppliersComponent } from './rp-suppliers/rp-suppliers.component';
 import { DocumentsSuppliersComponent } from './documents-suppliers/documents-suppliers.component';
 import { FinancialReasonsComponent } from './financial-reasons/financial-reasons.component';
 import { FinancialStatementsComponent } from './financial-statements/financial-statements.component';
+import { DomicilioService } from '../../register/domicilio/domicilio.service';
 
 @NgModule({
   imports: [
@@ -38,6 +39,7 @@ import { FinancialStatementsComponent } from './financial-statements/financial-s
       FinancialReasonsComponent,
       FinancialStatementsComponent,
   ],
-  bootstrap: [SupplierListComponent]
+  bootstrap: [SupplierListComponent],
+  providers: [DomicilioService]
 })
 export class SupplierModule { }

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminRoutingModule } from './admin.routing';
 import { SupplierModule } from './supplier/supplier.module';
+import { RegisterModule } from '../register/register.module';
 
 /* Components */
 import { AdminComponent } from './admin.component';
@@ -15,7 +16,8 @@ import { AdminHomeComponent } from './home/admin-home/admin-home.component';
   imports: [
     CommonModule,
     AdminRoutingModule,
-    SupplierModule
+    SupplierModule,
+    RegisterModule
   ],
   declarations: [
     AdminComponent,

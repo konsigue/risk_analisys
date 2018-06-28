@@ -151,31 +151,23 @@
                               <div class="col-3"></div>
                             </div>
                               <div class="form-group">
-                                  <label class="control-label" for="first-name">Código Postal: </label>
-                                    <input placeholder="Código Postal" type="text" id="first-name" required="required" class="form-control">
+                                  <label class="control-label" for="first-name" >Código Postal: </label>
+                                    <input [(ngModel)]="zipCode" name="zipCode" (focusout)="getAddress()" placeholder="Código Postal" type="text" id="first-name" required="required" class="form-control">
                                   </div>
                                 <div class="form-group">
                                     <label class="control-label" for="first-name">Colonia: </label>
-                                      <input placeholder="Colonia" type="text" id="first-name" required="required" class="form-control">
+                                    <select class="form-control">
+                                      <option *ngFor="let c of domicilio.colonias" id="colonia">{{c}}</option>
+                                    </select>
                                     </div>
                                   <div class="form-group">
                                       <label class="control-label" for="first-name">Delegación/Municipio: </label>
-                                        <input placeholder="Delegación/Municipio" type="text" id="first-name" required="required" class="form-control">
+                                        <input placeholder="Delegación/Municipio" type="text" id="first-name" required="required" class="form-control" value="{{domicilio.municipio}}">
                                       </div>
                                   <div class="form-group">
                                       <label class="control-label" for="last-name">Estado:</label>
-                                            <select class="form-control">
-                                            <option>E 1</option>
-                                            <option>E 2</option>
-                                            <option>E 3</option>
-                                            <option>E 4</option>
-                                            <option>E 5</option>
-                                            </select>
+                                      <input type="text" class="form-control" id="estado" placeholder="Estado" value="{{domicilio.estado}}" />
                                     </div>
-                                  <div class="form-group">
-                                      <label class="control-label" for="first-name">Ciudad: </label>
-                                        <input placeholder="Ciudad" type="text" id="first-name" required="required" class="form-control">
-                                      </div>
                                     <div class="form-group">
                                       <label class="control-label" for="first-name">País: </label>
                                         <input placeholder="México" type="text" id="first-name" required="required" class="form-control" readonly>

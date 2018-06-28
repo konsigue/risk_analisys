@@ -16,7 +16,6 @@ export class DomicilioComponent implements OnInit {
 
   ngOnInit() {
     this.address = {
-      ciudad: "",
       municipio: "",
       colonias: [],
       numero_exterior: 0,
@@ -30,7 +29,6 @@ export class DomicilioComponent implements OnInit {
     this.http.get<Domicilio>(this.zipCodeUrl + this.zipCode)
       .subscribe((data) => {
         this.address = {
-          ciudad : data.ciudad,
           municipio : data.municipio,
           colonias : data.colonias,
           estado : data.estado,
