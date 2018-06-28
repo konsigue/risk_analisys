@@ -25,9 +25,9 @@
         <tr *ngFor="let contacto of contactos">
           <td>{{contacto.name}}</td>
           <td>{{contacto.puesto}}</td>
-          <td>{{contacto.email}}</td>
-          <td>{{contacto.telefono+' ext'+contacto.extension}}</td>
-          <td>{{contacto.movil}}</td>
+          <td><a href="mail:{{contacto.email}}" >{{contacto.email}}</a></td>
+          <td><a href="tel:{{contacto.telefono+' ext'+contacto.extension}}">{{contacto.telefono+' ext'+contacto.extension}}</a></td>
+          <td><a href="tel:{{contacto.movil}}">{{contacto.movil}}</a></td>
         </tr>
       </tbody>
     </table>
