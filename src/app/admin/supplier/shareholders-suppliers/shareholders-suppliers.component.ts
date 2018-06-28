@@ -16,11 +16,11 @@ export class ShareholdersSuppliersComponent implements OnInit {
   }
 
   adjustPercentage(){
-    let percentage = document.getElementById("porcentaje");
-    if(percentage.value>=100){
-      percentage.value=100;
-    }else if(percentage.value<=0){
-      percentage.value=0;
+    let percentage = (<HTMLInputElement>document.getElementById("porcentaje"));
+    if(percentage.valueAsNumber>=100){
+      percentage.valueAsNumber=100;
+    }else if(percentage.valueAsNumber<=0){
+      percentage.valueAsNumber=0;
     }
   }
 
