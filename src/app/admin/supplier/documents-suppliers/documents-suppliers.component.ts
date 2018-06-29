@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Item } from './documentState';
 import {
   trigger,
@@ -7,6 +7,7 @@ import {
   style,
   state
 } from '@angular/animations';
+
 
 @Component({
   selector: 'app-documents-suppliers',
@@ -34,7 +35,7 @@ export class DocumentsSuppliersComponent implements OnInit {
   constructor() {
     for (let i = 0; i < 3; i++) {
       // console.log(i);
-      this.states[i] = new Item('inactive', 'Recahazdo');
+      this.states[i] = new Item('inactive', 'Rechazado');
       // console.log(this.states[i]);
     }
   }
@@ -42,7 +43,6 @@ export class DocumentsSuppliersComponent implements OnInit {
   public states = new Array(3);
 
   toggleState(n: number) {
-    // console.log(n);
     if (this.states[n].state === 'active') {
       this.states[n].state = 'inactive';
       this.states[n].status='Rechazado';
