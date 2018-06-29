@@ -33,6 +33,10 @@ td > div {
       display: block;
       clear: both;
     }
+    .first-column{
+        background-color: #f5f5f5;
+        font-weight: bold;
+    }
     td[data-th]:before {
       content: attr(data-th);
       float: left;
