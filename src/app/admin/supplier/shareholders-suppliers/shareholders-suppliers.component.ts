@@ -16,6 +16,7 @@ export class ShareholdersSuppliersComponent implements OnInit {
   constructor(private _dataDomicilioService: DomicilioService) {
     this.domicilio = {
       municipio: "",
+      ciudad : "",
       colonias: [],
       numero_exterior: 0,
       numero_interior: 0,
@@ -33,6 +34,7 @@ export class ShareholdersSuppliersComponent implements OnInit {
     this._dataDomicilioService.getAddress(this.zipCode).subscribe((data) => {
       this.domicilio = {
         municipio : data.municipio,
+        ciudad : "",
         colonias : data.colonias,
         estado : data.estado,
         codigo_postal : data.codigo_postal,

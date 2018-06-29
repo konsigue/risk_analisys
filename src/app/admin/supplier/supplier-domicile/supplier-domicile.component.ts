@@ -18,6 +18,7 @@ export class SupplierDomicileComponent implements OnInit {
     this.address = {
       municipio: "",
       colonias: [],
+      ciudad : "",
       numero_exterior: 0,
       numero_interior: 0,
       estado: "",

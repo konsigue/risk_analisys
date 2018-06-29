@@ -9,7 +9,6 @@ import { SupplierListComponent } from './supplier-list/supplier-list.component';
 import { SupplierGeneralInfoComponent } from './supplier-general-info/supplier-general-info.component';
 import { SupplierSummaryComponent } from './supplier-summary/supplier-summary.component';
 import { SupplierDomicileComponent } from './supplier-domicile/supplier-domicile.component';
-import { MenuSuppliersComponent } from './menu-suppliers/menu-suppliers.component';
 import { ShareholdersSuppliersComponent } from './shareholders-suppliers/shareholders-suppliers.component';
 import { ContactsSuppliersComponent } from './contacts-suppliers/contacts-suppliers.component';
 import { RpSuppliersComponent } from './rp-suppliers/rp-suppliers.component';
@@ -33,7 +32,6 @@ import { DomicilioService } from '../../register/domicilio/domicilio.service';
       SupplierSummaryComponent,
       SupplierDomicileComponent,
       SupplierGeneralInfoComponent,
-      MenuSuppliersComponent,
       ShareholdersSuppliersComponent,
       ContactsSuppliersComponent,
       RpSuppliersComponent,

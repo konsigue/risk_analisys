@@ -17,6 +17,7 @@ export class DomicilioComponent implements OnInit {
   ngOnInit() {
     this.address = {
       municipio: "",
+      ciudad : "",
       colonias: [],
       numero_exterior: 0,
       numero_interior: 0,
@@ -29,6 +30,7 @@ export class DomicilioComponent implements OnInit {
     this.service.getAddress(this.zipCode)
       .subscribe((data) => {
         this.address = {
+          ciudad : "",
           municipio : data.municipio,
           colonias : data.colonias,
           estado : data.estado,
