@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Domicilio } from './domicilio';
+import { DomicilioService } from './domicilio.service';
 
 @Component({
   selector: 'app-domicilio',
@@ -8,11 +9,10 @@ import { Domicilio } from './domicilio';
   styleUrls: ['./domicilio.component.css'],
 })
 export class DomicilioComponent implements OnInit {
-  private zipCodeUrl = "https://api-codigos-postales.herokuapp.com/v2/codigo_postal/"
   public zipCode: string;
   public address: Domicilio;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private service: DomicilioService) { }
 
   ngOnInit() {
     this.address = {
@@ -27,7 +27,7 @@ export class DomicilioComponent implements OnInit {
   }
 
   getAddress(): void {
-    this.http.get<Domicilio>(this.zipCodeUrl + this.zipCode)
+    this.service.getAddress(this.zipCode)
       .subscribe((data) => {
         this.address = {
           ciudad : data.ciudad,

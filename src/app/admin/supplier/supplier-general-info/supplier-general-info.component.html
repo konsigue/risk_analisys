@@ -2,9 +2,9 @@
   <div class="card text-white bg-k-primary">
     <img class="card-img-top" src="holder.js/100px180/" alt="">
     <div class="card-body">
-      <h4 class="card-title d-flex " data-toggle="collapse" data-target="#InformacionGeneral" aria-expanded="false" aria-controls="InformacionGeneral">
+      <h4 class="card-title d-flex" (click)="toggleArrow()" data-toggle="collapse" data-target="#InformacionGeneral" aria-expanded="false" aria-controls="InformacionGeneral">
         Datos generales
-        <i class="fa fa-chevron-down justify-content-end"></i>
+        <i [ngClass]="arrow" class="fa justify-content-end"></i>
       </h4>
       <div class="card-text">
         <div id="InformacionGeneral" class="collapse show" aria-labelledby="headingOne" data-toggle="collapse" data-parent="#accordionExample">

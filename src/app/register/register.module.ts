@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RegisterRoutingModule } from './register.routing';
+import { HttpClientModule } from '@angular/common/http';
 
 /* Components */
 import { RecoverPasswordComponent } from './recover-password/recover-password.component';
@@ -18,6 +19,7 @@ import { TarjetaComponent}  from "./tarjeta/tarjeta.component";
 import { ContactosComponent } from './contacts/contactos.component';
 import { HeaderComponent } from "./header/header.component";
 import { RegistroAccionistasComponent } from './registro-accionistas/registro-accionistas.component';
+import { DomicilioService } from './domicilio/domicilio.service';
 
 
 @NgModule({
@@ -25,6 +27,7 @@ import { RegistroAccionistasComponent } from './registro-accionistas/registro-ac
         RegisterRoutingModule,
         FormsModule,
         CommonModule,
+        HttpClientModule
     ],
     declarations: [
         RegistroFComponent,
@@ -40,6 +43,9 @@ import { RegistroAccionistasComponent } from './registro-accionistas/registro-ac
         ContactosComponent,
         HeaderComponent,
         RegistroAccionistasComponent,
+    ],
+    providers: [
+        DomicilioService
     ]
 })
 export class RegisterModule { }
