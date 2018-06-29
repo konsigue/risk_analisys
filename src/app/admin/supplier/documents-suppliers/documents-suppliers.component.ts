@@ -19,7 +19,7 @@ import {
         color: '#fff',
         transform: 'scale(1)'
       })),
-      state('active',   style({
+      state('active', style({
         backgroundColor: '#34a346',
         color: '#fff',
         transform: 'scale(1.1)'
@@ -32,21 +32,21 @@ import {
 export class DocumentsSuppliersComponent implements OnInit {
 
   constructor() {
-    for(let i = 0;i<3;i++) { 
-      //console.log(i);
-      this.states[i]= new Item('inactive');
-      //console.log(this.states[i]);
-   }
+    for (let i = 0; i < 3; i++) {
+      // console.log(i);
+      this.states[i] = new Item('inactive');
+      // console.log(this.states[i]);
+    }
   }
 
   public states = new Array(3);
 
-  toggleState(n:number) {
-    //console.log(n);
-    if(this.states[n].state=='active'){
-      this.states[n].state='inactive'
-    }else if(this.states[n].state=='inactive'){
-      this.states[n].state='active'
+  toggleState(n: number) {
+    // console.log(n);
+    if (this.states[n].state === 'active') {
+      this.states[n].state = 'inactive';
+    } else if (this.states[n].state === 'inactive') {
+      this.states[n].state = 'active';
     }
   }
 

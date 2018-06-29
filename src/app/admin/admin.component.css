@@ -2,6 +2,11 @@
 Admin pager distributor
 */
 
+.bg-k-primary{
+  background-color: #003D7F !important;
+  color: white;
+}
+
 #sidebar-container {
   min-height: 100vh !important;
 }
@@ -24,4 +29,6 @@ Admin pager distributor
   padding-left: 0px;
   right: 0px;
   width: calc(100% - 230px);
+  background: white !important;
+  color:black !important;
 }

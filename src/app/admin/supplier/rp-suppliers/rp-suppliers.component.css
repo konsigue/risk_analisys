@@ -1,3 +1,7 @@
 .card-body, .card-header{
     color: black;
 }
+
+.card-header{
+    display: block;
+}

@@ -3,14 +3,11 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Domicilio } from './domicilio';
 
-const httpOptions = {
-    
-};
 
 @Injectable()
 export class DomicilioService {
     zipCodeUrl = "https://api-codigos-postales.herokuapp.com/v2/codigo_postal/"
-    
+
     constructor(private http: HttpClient) {
 
     }
@@ -20,6 +17,7 @@ export class DomicilioService {
      * @param zipCode number of the user given zipCode
      */
     getAddress(zipCode: string): Observable<Domicilio> {
-        return this.http.get<Domicilio>(this.zipCodeUrl + zipCode, httpOptions);
+        console.log(this.zipCodeUrl+zipCode);
+        return this.http.get<Domicilio>(this.zipCodeUrl + zipCode);
     }
 }

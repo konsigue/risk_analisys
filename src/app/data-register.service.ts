@@ -18,7 +18,7 @@ export class DataRegisterService {
   constructor() { }
 
   public saveData(value){
-    console.log("save data function called " + value + this.data.tipo);
+    //console.log("save data function called " + value + this.data.tipo);
     this.data.tipo = value;
     this.dataStringSource.next(this.data.tipo);
   }

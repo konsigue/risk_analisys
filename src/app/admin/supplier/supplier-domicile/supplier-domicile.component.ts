@@ -16,7 +16,6 @@ export class SupplierDomicileComponent implements OnInit {
 
   ngOnInit() {
     this.address = {
-      ciudad: "",
       municipio: "",
       colonias: [],
       numero_exterior: 0,

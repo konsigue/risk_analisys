@@ -88,3 +88,7 @@
 li.nav-item {
   cursor: pointer;
 }
+
+.list-group-item {
+  background-color: #003D7F
+}
