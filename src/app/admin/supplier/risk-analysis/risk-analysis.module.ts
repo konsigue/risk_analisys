@@ -1,6 +1,7 @@
 /* Modules */
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ChartsModule } from 'ng2-charts';
 import { RiskAnalysisRoutingModule } from './risk-analysis.routing';
 
 /* Components */
@@ -12,6 +13,7 @@ import { AnalysisInvoicingComponent } from './analysis-invoicing/analysis-invoic
 @NgModule({
   imports: [
     CommonModule,
+    ChartsModule,
     RiskAnalysisRoutingModule
   ],
   declarations: [
