@@ -1,3 +1,14 @@
-<p>
-  analysis-financial works!
-</p>
+<h3>AN&#193;LISIS FINANCIERO</h3>
+
+<div class="row">
+  <table>
+    <tr>
+      <th></th>
+      <th *ngFor="let a of financialAlgorithm">{{a.Time}}</th>
+    </tr>
+    <tr>
+      <td>Algoritmo Salud Financiera</td>
+      <td *ngFor="let a of financialAlgorithm">{{a.Value}}</td>
+    </tr>
+  </table>
+</div>
