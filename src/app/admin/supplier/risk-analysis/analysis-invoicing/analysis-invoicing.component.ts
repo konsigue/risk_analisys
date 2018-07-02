@@ -44,6 +44,14 @@ export class AnalysisInvoicingComponent implements OnInit {
       { Name: "2017", InvoiceRevenue: 107039, InvoiceCredit: 714, NumberRevenue: 2204, NumberCredit: 14 },
       { Name: "2016", InvoiceRevenue: 75199, InvoiceCredit: 4221, NumberRevenue: 2629, NumberCredit: 27 }
     ]
+    this.cancelledInvoices = [
+      { Period: "Últimos 12 meses", CancelledSum : 31891, CancelledSumPercentage: 26.1, 
+        CancelledInvoices: 94, CancelledInvoicesPercentage: 4.2 },
+      { Period: "2017", CancelledSum : 23741, CancelledSumPercentage: 22, CancelledInvoices: 99, 
+        CancelledInvoicesPercentage: 4.5 },
+      { Period: "2016", CancelledSum : 2997, CancelledSumPercentage: 3.7, CancelledInvoices: 33, 
+        CancelledInvoicesPercentage: 1.2 }
+    ]
     /* End mock */
 
     // lineChart
