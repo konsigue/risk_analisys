@@ -86,6 +86,7 @@
       </thead>
       <tbody>
           <tr *ngFor="let issued of cancelledInvoices">
+            <td>{{issued.Period}}</td>
             <td>{{issued.CancelledSum}}</td>
             <td>{{issued.CancelledSumPercentage}}</td>
             <td>{{issued.CancelledInvoices}}</td>
