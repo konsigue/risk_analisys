@@ -1,14 +1,12 @@
 <h3>AN&#193;LISIS FINANCIERO</h3>
 
-<div class="row">
-  <table>
+  <table class="algorithm-table">
     <tr>
       <th></th>
-      <th *ngFor="let a of financialAlgorithm">{{a.Time}}</th>
+      <th class="table-data" *ngFor="let a of financialAlgorithm">{{a.Time}}</th>
     </tr>
     <tr>
       <td>Algoritmo Salud Financiera</td>
-      <td *ngFor="let a of financialAlgorithm">{{a.Value}}</td>
+      <td class="table-data" *ngFor="let a of financialAlgorithm">{{a.Value}}</td>
     </tr>
   </table>
-</div>
