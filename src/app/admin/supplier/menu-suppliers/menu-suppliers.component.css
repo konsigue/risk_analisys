@@ -1,8 +1,8 @@
-li a{
+li a {
     margin: 5px;
 }
 
-ul{
+ul {
     background: #fff;
 }
 
@@ -10,11 +10,14 @@ ul{
 .navbar-expand-xl .navbar-collapse{
 
     display: inline-block !important;
+    padding: 0%;
     
 }
 
 .separator {
     border-top: 1px solid #D8D8D8;
     margin-top: 10px;
-    padding-top: 10px
+    padding-top: 10px;
+    box-shadow: 3px 3px 2px gray;
+    margin: 10px;
 }

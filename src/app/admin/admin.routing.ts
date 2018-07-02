@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './admin.component';
 import { AdminHomeComponent } from './home/admin-home/admin-home.component';
-import { SupplierListComponent } from './supplier/supplier-list.component';
-import { SupplierSummaryComponent } from './supplier/supplier-summary/supplier-summary.component';
-import { SupplierAnalysisComponent } from './supplier/supplier-analysis/supplier-analysis.component';
+import { SupplierListComponent } from './supplier/supplier-list/supplier-list.component';
+import { SupplierAnalysisComponent } from './supplier/risk-analysis/supplier-analysis.component';
+
 
 const routes: Routes = [
   {
@@ -20,11 +20,6 @@ const routes: Routes = [
   {
     path: 'admin/proveedores', component: AdminComponent, children: [
       { path: '', outlet: 'admin', component: SupplierListComponent, pathMatch: 'full' },
-    ]
-  },
-  {
-    path: 'admin/resumen', component: AdminComponent, children: [
-      { path: '', outlet: 'admin', component: SupplierSummaryComponent, pathMatch: 'full' },
     ]
   },
   {

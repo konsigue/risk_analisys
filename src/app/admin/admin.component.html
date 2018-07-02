@@ -1,18 +1,13 @@
 <!-- Admin html component -->
 <div>
-
   <!-- Admin-sidebar-->
   <app-admin-sidebar class="sidebar-container"></app-admin-sidebar>
-  <div class="row" style="margin-right: 0;padding-right:0 !important;padding-left:0px !important" id="body-row">
-    <div class="col" style=" padding-left: 0px;margin-right: 0;padding-right:0 !important;">
-      <div class="page">
-        <app-admin-header></app-admin-header>
-        <div class="container">
-          <div class="p-3">
-            <!-- Admin pages -->
-            <router-outlet class="p-4" name="admin"></router-outlet>
-          </div>
-        </div>
+  <div class="page">
+    <app-admin-header></app-admin-header>
+    <div class="container" style="color: black">
+      <div class="p-3">
+        <!-- Admin pages -->
+        <router-outlet class="p-4" name="admin"></router-outlet>
       </div>
     </div>
   </div>
