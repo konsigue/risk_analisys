@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SupplierRoutingModule } from './supplier.routing';
+import { HttpClientModule } from '@angular/common/http';
+import { MatDialogModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material';
+import { MatCardModule } from '@angular/material';
 
 /* Components */
 import { SupplierListComponent } from './supplier-list/supplier-list.component';
@@ -17,6 +21,8 @@ import { FinancialReasonsComponent } from './financial-reasons/financial-reasons
 import { FinancialStatementsComponent } from './financial-statements/financial-statements.component';
 import { RiskAnalysisModule } from './risk-analysis/risk-analysis.module';
 import { DomicilioService } from '../../register/domicilio/domicilio.service';
+import { ShareholderService } from './shareholders-suppliers/shareholder.service';
+import { VerifyDialogComponent } from './documents-suppliers/verify-dialog/verify-dialog.component';
 
 
 
@@ -25,7 +31,11 @@ import { DomicilioService } from '../../register/domicilio/domicilio.service';
     CommonModule,
     FormsModule,
     SupplierRoutingModule,
-    RiskAnalysisModule
+    RiskAnalysisModule,
+    HttpClientModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatCardModule
   ],
   declarations: [
       SupplierListComponent,
@@ -39,8 +49,12 @@ import { DomicilioService } from '../../register/domicilio/domicilio.service';
       FinancialReasonsComponent,
       FinancialStatementsComponent,
       ContactsSuppliersComponent,
+      VerifyDialogComponent,
   ],
+  entryComponents:[
+    VerifyDialogComponent
+  ],  
   bootstrap: [SupplierListComponent],
-  providers: [DomicilioService]
+  providers: [DomicilioService, ShareholderService]
 })
 export class SupplierModule { }

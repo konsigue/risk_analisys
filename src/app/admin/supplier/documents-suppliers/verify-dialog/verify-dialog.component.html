@@ -1,0 +1,12 @@
+<div class="row justify-content-center">
+    <strong>{{message}}</strong>
+</div>
+<br>
+<div class="row justify-content-center">
+  <div class="col-md-6 col-lg-6 col-xl-6 text-center">
+    <button class="btn btn-round btn-{{typeButton}}" (click)="onCloseConfirm()">{{typeMessage}}</button>
+  </div>
+  <div class="col-md-6 col-lg-6 col-xl-6 text-center">
+    <button class="btn btn-round btn-dark" (click)="onCloseCancel()">Cancelar</button>
+  </div>
+</div>

@@ -17,7 +17,6 @@ export class DomicilioService {
      * @param zipCode number of the user given zipCode
      */
     getAddress(zipCode: string): Observable<Domicilio> {
-        console.log(this.zipCodeUrl+zipCode);
         return this.http.get<Domicilio>(this.zipCodeUrl + zipCode);
     }
 }

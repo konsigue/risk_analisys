@@ -31,7 +31,7 @@
                       </td>
                       <td data-th="Validar" class=" ">
                           <div>
-                            <button class="btn btn-round" [@clicked]="states[0].state" (click)="toggleState(0)"><i class="fa fa-check"></i></button>   
+                            <button class="btn btn-round" [@clicked]="states[0].state" (click)="toggleState(0)"><i class="{{states[0].faType}}"></i></button>   
                           </div>  
                       </td>
                     </tr>                    
@@ -46,7 +46,7 @@
                         </td>
                         <td data-th="Validar" class=" ">
                             <div>
-                              <button class="btn btn-round" [@clicked]="states[1].state" (click)="toggleState(1)"><i class="fa fa-check"></i></button>   
+                              <button class="btn btn-round" [@clicked]="states[1].state" (click)="toggleState(1)"><i class="{{states[1].faType}}"></i></button>   
                             </div>  
                         </td>
                       </tr>
@@ -61,7 +61,7 @@
                           </td>
                           <td data-th="Validar" class=" ">
                               <div>
-                                <button class="btn btn-round" [@clicked]="states[2].state" (click)="toggleState(2)"><i class="fa fa-check"></i></button>   
+                                <button class="btn btn-round" [@clicked]="states[2].state" (click)="toggleState(2)"><i class="{{states[2].faType}}"></i></button>   
                               </div>  
                           </td>
                         </tr>

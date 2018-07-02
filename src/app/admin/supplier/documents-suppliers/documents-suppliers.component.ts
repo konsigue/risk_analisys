@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, SystemJsNgModuleLoader } from '@angular/core';
 import { Item } from './documentState';
 import {
   trigger,
@@ -7,6 +7,8 @@ import {
   style,
   state
 } from '@angular/animations';
+import { MatDialog } from '@angular/material';
+import { VerifyDialogComponent } from './verify-dialog/verify-dialog.component';
 
 
 @Component({
@@ -32,7 +34,9 @@ import {
 })
 export class DocumentsSuppliersComponent implements OnInit {
 
-  constructor() {
+  dialogResult="";
+
+  constructor(public dialog: MatDialog) {
     for (let i = 0; i < 3; i++) {
       // console.log(i);
       this.states[i] = new Item('inactive', 'Rechazado');
@@ -43,13 +47,28 @@ export class DocumentsSuppliersComponent implements OnInit {
   public states = new Array(3);
 
   toggleState(n: number) {
-    if (this.states[n].state === 'active') {
-      this.states[n].state = 'inactive';
-      this.states[n].status='Rechazado';
-    } else if (this.states[n].state === 'inactive') {
-      this.states[n].state = 'active';
-      this.states[n].status='Aceptado';
-    }
+    let dialogRef=this.dialog.open(
+      VerifyDialogComponent, {
+        width:'600px',
+        data: this.states[n].state
+      });
+    
+      dialogRef.afterClosed().subscribe(result=>{
+      this.dialogResult=result;
+      console.log(this.dialogResult);
+      if(this.dialogResult=='yes'){
+        if (this.states[n].state === 'active') {
+          this.states[n].state = 'inactive';
+          this.states[n].status='Rechazado';
+          this.states[n].faType='fa fa-close';
+        } else if (this.states[n].state === 'inactive') {
+          this.states[n].state = 'active';
+          this.states[n].status='Aceptado';
+          this.states[n].faType='fa fa-check';
+        }
+      }
+      });
+
   }
 
   ngOnInit() {
