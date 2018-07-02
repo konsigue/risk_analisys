@@ -1,8 +1,8 @@
 <div class="mt-3">
   <div class="card text-white bg-k-primary">
     <div class="card-body">
-      <h4 class="card-title d-flex" (click)="toggleArrow()" data-toggle="collapse" data-target="#InformacionGeneral" 
-        aria-expanded="false" aria-controls="InformacionGeneral">
+      <h4 class="card-title d-flex" (click)="toggleArrow()" data-toggle="collapse" data-target="#InformacionGeneral" aria-expanded="false"
+        aria-controls="InformacionGeneral">
         Datos generales
         <i [ngClass]="arrow" class="fa justify-content-end"></i>
       </h4>
@@ -11,32 +11,38 @@
           <div class="card-body">
             <form>
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-9">
                   <div class="form-group">
                     <label for="calle">Razon Social</label>
-                    <input disabled type="text" class="form-control" id="calle" placeholder="Calle y número exterior"/>
+                    <input value="{{supplier.legal_name}}" disabled type="text" class="form-control" id="calle" placeholder="Calle y número exterior"
+                    />
                   </div>
                   <div class="form-group">
-                    <label for="numero-interior">Registro Federal del Contribuyente</label>
-                    <input disabled type="text" class="form-control" id="numero-interior" placeholder="RFC"/>
+                    <label for="numero-interior">Registro Federal del Contribuyente (RFC)</label>
+                    <input value="{{supplier.rfc}}" disabled type="text" class="form-control" id="numero-interior" placeholder="RFC" />
                   </div>
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="codigo-postal">Giro comercial</label>
-                        <input disabled type="text" class="form-control" placeholder="Giro comercial" aria-label="Giro comercial" aria-describedby="basic-addon2"/>
+                        <input value="{{supplier.commercial_business}}" disabled type="text" class="form-control" placeholder="Giro comercial" aria-label="Giro comercial"
+                          aria-describedby="basic-addon2" />
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="Colonia">Tipo de empresa</label>
-                        <input disabled type="text" class="form-control" placeholder="Tipo de empresa" aria-label="Tipo de empresa" aria-describedby="basic-addon2"/>
+                        <input value="{{supplier.company_type}}" disabled type="text" class="form-control" placeholder="Tipo de empresa" aria-label="Tipo de empresa"
+                          aria-describedby="basic-addon2" />
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
-                  <img alt="Imagen de la empresa"/>
+                <div class="col-md-3">
+                  <figure class="figure">
+                    <img src="{{img_link}}" class="figure-img img-fluid rounded" alt="Imagen de la empresa" />
+                    <figcaption class="figure-caption text-right">{{supplier.commercial_name}}</figcaption>
+                  </figure>
                 </div>
                 <div class="col-md-12">
                   <a>
