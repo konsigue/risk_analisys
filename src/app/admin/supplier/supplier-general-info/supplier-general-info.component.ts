@@ -13,6 +13,8 @@ export class SupplierGeneralInfoComponent implements OnInit {
   private SupplierFinalURL;
   public img_link;
   public id = 1;
+  public toggle: boolean;
+  public arrow: string;
   supplier: Supplier;
 
   getSupplier(): void {
@@ -38,8 +40,15 @@ export class SupplierGeneralInfoComponent implements OnInit {
   }
 
   constructor(private http: HttpClient) {
+    this.toggle = true;
   }
 
+  
+  toggleArrow() {
+    this.toggle = !this.toggle;
+    this.arrow = this.getArrowClass();
+  }
+  
   ngOnInit() {
     const msj_loading = 'Cargando...';
     this.supplier = {
@@ -51,7 +60,16 @@ export class SupplierGeneralInfoComponent implements OnInit {
       commercial_business: msj_loading,
       domicile: null
     };
-
+    this.arrow = "fa-chevron-down";
     this.getSupplier();
+    
+    getArrowClass() {
+    console.log(this.toggle);
+    if (this.toggle) {
+      return "fa-chevron-down"
+    }
+    else {
+      return "fa-chevron-right"
+    }
   }
 }

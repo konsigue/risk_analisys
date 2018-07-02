@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Item } from './state';
+import { Item } from './documentState';
 import {
   trigger,
   transition,
@@ -34,7 +34,7 @@ export class DocumentsSuppliersComponent implements OnInit {
   constructor() {
     for (let i = 0; i < 3; i++) {
       // console.log(i);
-      this.states[i] = new Item('inactive');
+      this.states[i] = new Item('inactive', 'Recahazdo');
       // console.log(this.states[i]);
     }
   }
@@ -45,8 +45,10 @@ export class DocumentsSuppliersComponent implements OnInit {
     // console.log(n);
     if (this.states[n].state === 'active') {
       this.states[n].state = 'inactive';
+      this.states[n].status='Rechazado';
     } else if (this.states[n].state === 'inactive') {
       this.states[n].state = 'active';
+      this.states[n].status='Aceptado';
     }
   }
 

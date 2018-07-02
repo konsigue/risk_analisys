@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminRoutingModule } from './admin.routing';
 import { SupplierModule } from './supplier/supplier.module';
+import { RegisterModule } from '../register/register.module';
 
 /* Components */
 import { AdminComponent } from './admin.component';
@@ -17,7 +18,8 @@ import { MenuSuppliersComponent } from './supplier/menu-suppliers/menu-suppliers
   imports: [
     CommonModule,
     AdminRoutingModule,
-    SupplierModule
+    SupplierModule,
+    RegisterModule
   ],
   declarations: [
     AdminComponent,

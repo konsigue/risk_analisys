@@ -39,16 +39,13 @@ export class TarjetaComponent implements OnInit {
   public states = new Array(2);
 
   toggleState(n:number) {
-    //console.log(n);
     this.states[n].state='active';
     this.states[n].mostrar=true;
-    //console.log(this.states[n]);
     for(let i = 0;i<2;i++) {
       if(i!=n){
         this.states[i].state = 'inactive';
         this.states[i].mostrar=false;
       }
-      //console.log(this.states[i]);
    }
   }
 

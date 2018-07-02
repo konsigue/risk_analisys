@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './admin.component';
 import { AdminHomeComponent } from './home/admin-home/admin-home.component';
 import { SupplierListComponent } from './supplier/supplier-list/supplier-list.component';
-import { SupplierAnalysisComponent } from './supplier/supplier-analysis/supplier-analysis.component';
+import { SupplierAnalysisComponent } from './supplier/risk-analysis/supplier-analysis.component';
+
 
 const routes: Routes = [
   {
