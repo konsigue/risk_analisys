@@ -22,6 +22,7 @@ export class SupplierDomicileComponent implements OnInit {
       numero_exterior: 0,
       numero_interior: 0,
       estado: "",
+      calle: "",
       codigo_postal: 0
     };
   }
@@ -34,6 +35,7 @@ export class SupplierDomicileComponent implements OnInit {
           municipio : data.municipio,
           colonias : data.colonias,
           estado : data.estado,
+          calle: data.calle,
           codigo_postal : data.codigo_postal,
           numero_exterior : 0,
           numero_interior : 0
