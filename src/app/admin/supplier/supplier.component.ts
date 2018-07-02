@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { Supplier } from './supplier';
-import { DomicilioComponent } from '../../register/domicilio/domicilio.component';
 import { Domicilio } from '../../register/domicilio/domicilio';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-supplier',
   templateUrl: './supplier.component.html',
   styleUrls: ['./supplier.component.css']
 })
+
 export class SupplierComponent implements OnInit {
-  supplier;
+  private SupplierURL = 'http://localhost:3000/summary';
+  private SupplierFinalURL;
+  public id = 1;
+  supplier: Supplier;
   adress = {
     codigo_postal: 7020,
     estado: 'CDMX',
@@ -24,17 +28,44 @@ export class SupplierComponent implements OnInit {
     return <Domicilio>(this.adress);
   }
 
-  getSupplier() {
-    // tslint:disable-next-line:max-line-length
-    return new Supplier(1, 'RHD990710RUB', 'Rubio Haro Digital', 'Servicios Digitales Rubio Haro S.A. de C.V.', 'Empresa que brinda servicios y soluciones digitales con un enfoque de crecimiento para las pymes', 'CDMX', 'Tecnológica', 'Consultorias digitales', this.getAdress());
+  getSupplier(): void {
+    this.SupplierFinalURL = this.SupplierURL + '?id=' + this.id;
+    this.http.get<Supplier>(this.SupplierFinalURL).subscribe(
+      data => {
+        // console.log(data.commercial_name);
+        // console.log(this.SupplierFinalURL);
+        // console.log(data);
+        // console.log(data[0].city);
+        this.supplier = {
+          id_supplier: data.id_supplier,
+          commercial_name: data[0].commercial_name,
+          rfc: null,
+          legal_name: null,
+          company_type: null,
+          commercial_business: null,
+          domicile: null,
+        };
+      }
+    );
   }
 
+  constructor(private http: HttpClient) {
 
-  constructor() {
-    this.supplier = this.getSupplier();
   }
 
   ngOnInit() {
+
+    this.supplier = {
+      id_supplier: null,
+      rfc: '',
+      commercial_name: 'Cargando...',
+      legal_name: '',
+      company_type: '',
+      commercial_business: '',
+      domicile : this.getAdress()
+    };
+
+    this.getSupplier();
   }
 
 }
