@@ -32,14 +32,18 @@ export class SupplierComponent implements OnInit {
     this.SupplierFinalURL = this.SupplierURL + '?id=' + this.id;
     this.http.get<Supplier>(this.SupplierFinalURL).subscribe(
       data => {
+        // console.log(data.commercial_name);
+        // console.log(this.SupplierFinalURL);
+        // console.log(data);
+        // console.log(data[0].city);
         this.supplier = {
           id_supplier: data.id_supplier,
-          rfc: data.rfc,
-          commercial_name: data.commercial_name,
-          legal_name: data.legal_name,
-          company_type: data.company_type,
-          commercial_business: data.commercial_business,
-          domicile: this.getAdress(),
+          commercial_name: data[0].commercial_name,
+          rfc: null,
+          legal_name: null,
+          company_type: null,
+          commercial_business: null,
+          domicile: null,
         };
       }
     );
@@ -54,7 +58,7 @@ export class SupplierComponent implements OnInit {
     this.supplier = {
       id_supplier: null,
       rfc: '',
-      commercial_name: '',
+      commercial_name: 'Cargando...',
       legal_name: '',
       company_type: '',
       commercial_business: '',

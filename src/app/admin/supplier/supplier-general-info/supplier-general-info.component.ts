@@ -9,8 +9,9 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class SupplierGeneralInfoComponent implements OnInit {
-  private SupplierURL = 'http://localhost:3000/summary';
+  private SupplierURL = 'http://localhost:3000/general_supplier_info';
   private SupplierFinalURL;
+  public img_link;
   public id = 1;
   supplier: Supplier;
 
@@ -18,13 +19,18 @@ export class SupplierGeneralInfoComponent implements OnInit {
     this.SupplierFinalURL = this.SupplierURL + '?id=' + this.id;
     this.http.get<Supplier>(this.SupplierFinalURL).subscribe(
       data => {
+        this.img_link = (data[0].img_link);
+        // console.log(data.commercial_name);
+        // console.log(this.SupplierFinalURL);
+        // console.log(data);
+        // console.log(data[0].city);
         this.supplier = {
-          id_supplier: data.id_supplier,
-          rfc: data.rfc,
-          commercial_name: data.commercial_name,
-          legal_name: data.legal_name,
-          company_type: data.company_type,
-          commercial_business: data.commercial_business,
+          id_supplier: data[0].id_supplier,
+          rfc: data[0].rfc,
+          commercial_name: data[0].commercial_name,
+          legal_name: data[0].legal_name,
+          company_type: data[0].company_type,
+          commercial_business: data[0].commercial_business,
           domicile: null,
         };
       }
@@ -35,14 +41,14 @@ export class SupplierGeneralInfoComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    const msj_loading = 'Cargando...';
     this.supplier = {
       id_supplier: null,
-      rfc: '',
-      commercial_name: '',
-      legal_name: '',
-      company_type: '',
-      commercial_business: '',
+      rfc: msj_loading,
+      commercial_name: msj_loading,
+      legal_name: msj_loading,
+      company_type: msj_loading,
+      commercial_business: msj_loading,
       domicile: null
     };
 

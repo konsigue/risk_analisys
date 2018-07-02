@@ -10,7 +10,7 @@
           <div class="card-body">
             <form>
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-9">
                   <div class="form-group">
                     <label for="calle">Razon Social</label>
                     <input value="{{supplier.legal_name}}" disabled type="text" class="form-control" id="calle" placeholder="Calle y número exterior">
@@ -38,8 +38,12 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
-                  <img alt="Imagen de la empresa" />
+                <div class="col-md-3">
+                  <figure class="figure">
+                    <img src="{{img_link}}" class="figure-img img-fluid rounded" alt="Imagen de la empresa" />
+                    <figcaption class="figure-caption text-right">{{supplier.commercial_name}}</figcaption>
+                  </figure>
+
                 </div>
                 <div class="col-md-12">
                   <a>
