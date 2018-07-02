@@ -3,3 +3,8 @@ i {
     margin-left: 8px;
     font-size: .8em;
 }
+
+.btn{
+    word-wrap: break-word;
+    white-space: normal !important;
+}
