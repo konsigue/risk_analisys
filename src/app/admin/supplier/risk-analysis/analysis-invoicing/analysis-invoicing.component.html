@@ -4,7 +4,7 @@
 <div class="card">
   <div class="card-body">
     <div class="row">
-        <canvas baseChart width="700" height="300"
+        <canvas baseChart width="700" height="200"
                     [datasets]="invoiceModel.ChartData"
                     [labels]="invoiceModel.ChartLabels"
                     [options]="lineChartOptions"
@@ -35,5 +35,23 @@
       </table>
     </div>
 
+  </div>
+</div>
+
+<h4>Facturas emitidas</h4>
+<div class="card">
+  <div class="justify-content-center">
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th></th>
+          <th scope="col" colspan="2">Monto facturaci&#243;n</th>
+          <td scope="col" colspan="2">N&#250;mero facturas</td>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
   </div>
 </div>
