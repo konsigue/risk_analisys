@@ -32,13 +32,13 @@
             </thead>
             <tbody>
               <tr class="even pointer">
-                <td class="first-column" >{{shareholder.nombre}}</td>
-                <td data-th="RFC" ><div>{{shareholder.rfc}}</div></td>
-                <td data-th="Domicilio" ><div>{{shareholder.domicilio}}</div></td>
-                <td data-th="Participacion"><div>{{shareholder.participacion}}</div></td>
-                <td data-th="Firma" ><div>{{shareholder.firma}}</div></td>
-                <td data-th="Puesto político" ><div>{{shareholder.puesto_politico}}</div></td>
-                <td data-th="Documentos" ><div>{{shareholder.documentos}}</div></td>
+                <td class="first-column" *ngFor="let s of shareholders">{{s.nombre}}</td>
+                <td data-th="RFC" *ngFor="let s of shareholders"><div>{{s.rfc}}</div></td>
+                <td data-th="Domicilio" *ngFor="let s of shareholders"><div>{{dir}}</div></td>
+                <td data-th="Participacion" *ngFor="let s of shareholders"><div>{{s.participacion}}</div></td>
+                <td data-th="Firma" *ngFor="let s of shareholders" ><div>{{s.firma}}</div></td>
+                <td data-th="Puesto político" *ngFor="let s of shareholders" ><div>{{s.puesto_politico}}</div></td>
+                <td data-th="Documentos" *ngFor="let s of shareholders" ><div>{{s.documentos}}</div></td>
               </tr>
   
             </tbody>
