@@ -1,26 +1,24 @@
 import { Domicilio } from '../../register/domicilio/domicilio';
 
+/* */
 export class Supplier {
-    id: number;
-    RFC: string;
+
+    id_supplier: number;
+    rfc: string;
     commercial_name: string;
     legal_name: string;
-    description: string;
-    city: string;
-    type: string;
-    focus: string;
+    company_type: string;
+    commercial_business: string;
     domicile: Domicilio;
 
     // tslint:disable-next-line:max-line-length
-    constructor(id: number, RFC: string, name: string, razon_social: string, description: string, city: string, type: string, focus: string , domicilio: Domicilio) {
-        this.id = id;
-        this.RFC = RFC;
+    constructor(id_supplier: number, rfc: string, name: string, razon_social: string, company_type: string, commercial_business: string, domicilio: Domicilio) {
+        this.id_supplier = id_supplier;
+        this.rfc = rfc;
         this.commercial_name = name;
         this.legal_name = razon_social;
-        this.description = description;
-        this.city = city;
-        this.type = type;
-        this.focus = focus;
+        this.company_type = company_type;
+        this.commercial_business = commercial_business;
         this.domicile = domicilio;
     }
 }
