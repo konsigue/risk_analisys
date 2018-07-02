@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InvoicingModel, InvoiceDataModel } from '../models/InvoicingModel';
+import { IssuedInvoicesModel } from '../models/IssuedInvoicesModel';
 
 @Component({
   selector: 'analysis-invoicing',
@@ -9,7 +10,8 @@ import { InvoicingModel, InvoiceDataModel } from '../models/InvoicingModel';
 export class AnalysisInvoicingComponent implements OnInit {
 
   public data: InvoiceDataModel[]
-  public invoiceModel: InvoicingModel
+  public totalInvoices: InvoicingModel
+  public issuedInvoices: IssuedInvoicesModel[]
 
   // lineChart
   public lineChartOptions:any
@@ -23,15 +25,23 @@ export class AnalysisInvoicingComponent implements OnInit {
 
   ngOnInit() {
     this.data = new Array<InvoiceDataModel>()
-    this.invoiceModel = new InvoicingModel()
+    this.totalInvoices = new InvoicingModel()
+    this.issuedInvoices = []
 
-    // Mock
-    this.invoiceModel.ChartLabels = ['2017-04','2017-05','2017-06','2017-07','2017-08','2017-09',
+    /* Mock */
+    this.totalInvoices.ChartLabels = ['2017-04','2017-05','2017-06','2017-07','2017-08','2017-09',
       '2017-10','2017-11','2017-12','2018-01','2018-02','2018-03']
-    this.invoiceModel.ChartData = [
-      {label: 'Facturación', data: [90,782,0,974,443,436,518,1460,3399,3433,111,91]}
+    this.totalInvoices.ChartData = [
+      { label: 'Facturación', data: [90,782,0,974,443,436,518,1460,3399,3433,111,91] }
     ]
-    this.invoiceModel.TotalData = 11737
+    this.totalInvoices.TotalData = 11737
+    this.issuedInvoices = [
+      { Name: "Últimos 12 meses", InvoiceRevenue: 121183, InvoiceCredit: 788, NumberRevenue: 2229,
+        NumberCredit: 25 },
+      { Name: "2017", InvoiceRevenue: 107039, InvoiceCredit: 714, NumberRevenue: 2204, NumberCredit: 14 },
+      { Name: "2016", InvoiceRevenue: 75199, InvoiceCredit: 4221, NumberRevenue: 2629, NumberCredit: 27 }
+    ]
+    /* End mock */
 
     // lineChart
     this.lineChartOptions = {
@@ -57,17 +67,6 @@ export class AnalysisInvoicingComponent implements OnInit {
     ];
     this.lineChartLegend = true;
     this.lineChartType = 'line';
-  }
-
-  public randomize():void {
-    let _lineChartData:Array<any> = new Array(this.lineChartData.length);
-    for (let i = 0; i < this.lineChartData.length; i++) {
-      _lineChartData[i] = {data: new Array(this.lineChartData[i].data.length), label: this.lineChartData[i].label};
-      for (let j = 0; j < this.lineChartData[i].data.length; j++) {
-        _lineChartData[i].data[j] = Math.floor((Math.random() * 100) + 1);
-      }
-    }
-    this.lineChartData = _lineChartData;
   }
  
   // events
