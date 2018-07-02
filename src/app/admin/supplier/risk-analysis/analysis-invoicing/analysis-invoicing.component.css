@@ -9,3 +9,7 @@ h4 {
 .row {
     margin-bottom: 15px;
 }
+
+.sub-data {
+    font-weight: bold;
+}

@@ -5,8 +5,8 @@
   <div class="card-body">
     <div class="row">
         <canvas baseChart width="700" height="200"
-                    [datasets]="invoiceModel.ChartData"
-                    [labels]="invoiceModel.ChartLabels"
+                    [datasets]="totalInvoices.ChartData"
+                    [labels]="totalInvoices.ChartLabels"
                     [options]="lineChartOptions"
                     [colors]="lineChartColors"
                     [legend]="lineChartLegend"
@@ -19,17 +19,17 @@
         <thead class="thead-light">
           <tr>
             <th>Periodo</th>
-            <th *ngFor="let label of invoiceModel.ChartLabels">{{label}}</th>
+            <th *ngFor="let label of totalInvoices.ChartLabels">{{label}}</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let d of invoiceModel.ChartData">
+          <tr *ngFor="let d of totalInvoices.ChartData">
             <td>Facturaci&#243;n</td>
-            <td *ngFor="let label of invoiceModel.ChartLabels; let j=index">{{d && d.data[j]}}</td>
+            <td *ngFor="let label of totalInvoices.ChartLabels; let j=index">{{d && d.data[j]}}</td>
           </tr>
           <tr>
             <td>Total</td>
-            <td>{{invoiceModel.TotalData}}</td>
+            <td>{{totalInvoices.TotalData}}</td>
           </tr>
         </tbody>
       </table>
@@ -45,12 +45,27 @@
       <thead class="thead-light">
         <tr>
           <th></th>
-          <th scope="col" colspan="2">Monto facturaci&#243;n</th>
-          <td scope="col" colspan="2">N&#250;mero facturas</td>
+          <th></th>
+          <th scope="col">Monto facturaci&#243;n</th>
+          <th scope="col">N&#250;mero facturas</th>
         </tr>
       </thead>
       <tbody>
-
+          <tr *ngFor="let issued of issuedInvoices">
+            <td>{{issued.Name}}</td>
+            <td class="sub-data">
+              <div>ingreso</div>
+              <div>nota de crédito</div>
+            </td>
+            <td>
+              <div>{{issued.InvoiceRevenue}}</div>
+              <div>{{issued.NumberRevenue}}</div>
+            </td>
+            <td>
+              <div>{{issued.InvoiceCredit}}</div>
+              <div>{{issued.NumberCredit}}</div>
+            </td>
+          </tr>
       </tbody>
     </table>
   </div>
