@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { InvoicingModel, InvoiceDataModel } from '../models/InvoicingModel';
 import { IssuedInvoicesModel } from '../models/IssuedInvoicesModel';
+import { CancelledInvoicesModel } from '../models/CancelledInvoicesModel';
 
 @Component({
   selector: 'analysis-invoicing',
@@ -12,6 +13,7 @@ export class AnalysisInvoicingComponent implements OnInit {
   public data: InvoiceDataModel[]
   public totalInvoices: InvoicingModel
   public issuedInvoices: IssuedInvoicesModel[]
+  public cancelledInvoices: CancelledInvoicesModel[]
 
   // lineChart
   public lineChartOptions:any
@@ -27,6 +29,7 @@ export class AnalysisInvoicingComponent implements OnInit {
     this.data = new Array<InvoiceDataModel>()
     this.totalInvoices = new InvoicingModel()
     this.issuedInvoices = []
+    this.cancelledInvoices = []
 
     /* Mock */
     this.totalInvoices.ChartLabels = ['2017-04','2017-05','2017-06','2017-07','2017-08','2017-09',

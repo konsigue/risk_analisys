@@ -70,3 +70,25 @@
     </table>
   </div>
 </div>
+
+<h4>Facturas canceladas</h4>
+<div class="card">
+  <div class="justify-content-center">
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th>Periodo</th>
+          <th scope="col">Monto de facturaci&#243;n cancelado</th>
+          <th scope="col">% Monto de acturaci&#243;n cancelado</th>
+          <th scope="col">N&#250;mero de facturas canceladas</th>
+          <th scope="col">% N&#250;mero de facturas canceladas</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let issued of cancelledInvoices">
+            <td></td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
