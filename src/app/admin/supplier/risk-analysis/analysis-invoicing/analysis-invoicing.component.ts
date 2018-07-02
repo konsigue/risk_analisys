@@ -12,23 +12,28 @@ export class AnalysisInvoicingComponent implements OnInit {
   public invoiceModel: InvoicingModel
 
   // lineChart
-  public lineChartData:Array<any>;
-  public lineChartLabels:Array<any>;
   public lineChartOptions:any
   public lineChartColors:Array<any>
   public lineChartLegend:boolean;
   public lineChartType:string;
 
   constructor() {
+
   }
 
   ngOnInit() {
     this.data = new Array<InvoiceDataModel>()
     this.invoiceModel = new InvoicingModel()
 
+    // Mock
+    this.invoiceModel.ChartLabels = ['2017-04','2017-05','2017-06','2017-07','2017-08','2017-09',
+      '2017-10','2017-11','2017-12','2018-01','2018-02','2018-03']
+    this.invoiceModel.ChartData = [
+      {label: 'Facturación', data: [90,782,0,974,443,436,518,1460,3399,3433,111,91]}
+    ]
+    this.invoiceModel.TotalData = 11737
+
     // lineChart
-    this.lineChartData = this.invoiceModel.ChartData;
-    this.lineChartLabels = this.invoiceModel.ChartLabels;
     this.lineChartOptions = {
       responsive: true
     };

@@ -1,0 +1,39 @@
+<h3>FACTURACI&#211;N</h3>
+
+<h4>Facturaci&#243;n total</h4>
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+        <canvas baseChart width="700" height="300"
+                    [datasets]="invoiceModel.ChartData"
+                    [labels]="invoiceModel.ChartLabels"
+                    [options]="lineChartOptions"
+                    [colors]="lineChartColors"
+                    [legend]="lineChartLegend"
+                    [chartType]="lineChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+    </div>
+    <div class="row">
+      <table class="table table-responsive table-condensed">
+        <thead class="thead-light">
+          <tr>
+            <th>Periodo</th>
+            <th *ngFor="let label of invoiceModel.ChartLabels">{{label}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let d of invoiceModel.ChartData">
+            <td>Facturaci&#243;n</td>
+            <td *ngFor="let label of invoiceModel.ChartLabels; let j=index">{{d && d.data[j]}}</td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td>{{invoiceModel.TotalData}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>

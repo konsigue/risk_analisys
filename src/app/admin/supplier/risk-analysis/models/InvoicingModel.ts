@@ -1,6 +1,7 @@
 export class InvoicingModel {
     ChartLabels: string[]
     ChartData: InvoiceDataModel[]
+    TotalData: number
 
     InvoicingModel() {
         this.ChartLabels = []
