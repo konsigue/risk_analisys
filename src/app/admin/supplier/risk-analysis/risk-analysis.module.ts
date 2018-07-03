@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChartsModule } from 'ng2-charts';
 import { RiskAnalysisRoutingModule } from './risk-analysis.routing';
-import { ChartsModule } from 'ng2-charts';
 
 /* Components */
 import { SupplierAnalysisComponent } from './supplier-analysis.component';
