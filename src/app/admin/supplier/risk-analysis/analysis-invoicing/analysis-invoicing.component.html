@@ -1,0 +1,98 @@
+<h3>FACTURACI&#211;N</h3>
+
+<h4>Facturaci&#243;n total</h4>
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+        <canvas baseChart width="700" height="200"
+                    [datasets]="totalInvoices.ChartData"
+                    [labels]="totalInvoices.ChartLabels"
+                    [options]="lineChartOptions"
+                    [colors]="lineChartColors"
+                    [legend]="lineChartLegend"
+                    [chartType]="lineChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+    </div>
+    <div class="row">
+      <table class="table table-responsive table-condensed">
+        <thead class="thead-light">
+          <tr>
+            <th>Periodo</th>
+            <th *ngFor="let label of totalInvoices.ChartLabels">{{label}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let d of totalInvoices.ChartData">
+            <td>Facturaci&#243;n</td>
+            <td *ngFor="let label of totalInvoices.ChartLabels; let j=index">{{d && d.data[j]}}</td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td>{{totalInvoices.TotalData}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<h4>Facturas emitidas</h4>
+<div class="card">
+  <div class="justify-content-center">
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th></th>
+          <th></th>
+          <th scope="col">Monto facturaci&#243;n</th>
+          <th scope="col">N&#250;mero facturas</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let issued of issuedInvoices">
+            <td>{{issued.Name}}</td>
+            <td class="sub-data">
+              <div>ingreso</div>
+              <div>nota de crédito</div>
+            </td>
+            <td>
+              <div>{{issued.InvoiceRevenue}}</div>
+              <div>{{issued.NumberRevenue}}</div>
+            </td>
+            <td>
+              <div>{{issued.InvoiceCredit}}</div>
+              <div>{{issued.NumberCredit}}</div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<h4>Facturas canceladas</h4>
+<div class="card">
+  <div class="justify-content-center">
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th>Periodo</th>
+          <th scope="col">Monto de facturaci&#243;n cancelado</th>
+          <th scope="col">% Monto de acturaci&#243;n cancelado</th>
+          <th scope="col">N&#250;mero de facturas canceladas</th>
+          <th scope="col">% N&#250;mero de facturas canceladas</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let issued of cancelledInvoices">
+            <td>{{issued.Period}}</td>
+            <td>{{issued.CancelledSum}}</td>
+            <td>{{issued.CancelledSumPercentage}}</td>
+            <td>{{issued.CancelledInvoices}}</td>
+            <td>{{issued.CancelledInvoicesPercentage}}</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
