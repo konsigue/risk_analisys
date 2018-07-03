@@ -15,22 +15,22 @@
                   <div class="form-group">
                     <label for="calle">Calle y número exterior</label>
                     <div class="input-group">
-                      <input disabled type="text" class="form-control" id="calle" placeholder="Calle">
-                      <input disabled type="text" class="form-control" id="numero_exterior" placeholder="Numero Exterior">
+                      <input value="{{address.street}}" disabled type="text" class="form-control" id="calle" placeholder="Calle">
+                      <input value="{{address.street_number}}" disabled type="text" class="form-control" id="numero_exterior" placeholder="Numero Exterior">
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="numero-interior">Número interior</label>
-                    <input disabled type="text" class="form-control" id="numero-interior" placeholder="Número interior">
+                    <input value="{{address.adress_details}}" disabled type="text" class="form-control" id="numero-interior" placeholder="Número interior">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="codigo-postal">Código Postal</label>
                     <div class="input-group">
-                      <input disabled type="text" class="form-control" placeholder="Codigo Postal" aria-label="Codigo Postal" aria-describedby="Codigo Postal">
+                      <input value="{{address.zip_code}}" disabled type="text" class="form-control" placeholder="Codigo Postal" aria-label="Codigo Postal" aria-describedby="Codigo Postal">
                       <div class="input-group-append">
                         <button disabled type="button" id="search-zipcode" class="btn btn-outline-info">Buscar</button>
                       </div>
@@ -39,35 +39,31 @@
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="Colonia">Colonia</label>
-                    <select disabled class="form-control">
-                      <option>Seleccione</option>
-                      <option *ngFor="let c of address.colonias" id="colonia">{{c}}</option>
-                    </select>
+                    <label for="colonia">Colonia</label>
+                    <input value="{{address.zone}}" disabled type="text" class="form-control" id="colonia" placeholder="Municipio o delegación"/>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="municipio">Municipio o delegación</label>
-                    <input disabled type="text" class="form-control" id="municipio" placeholder="Municipio o delegación" value="{{address.municipio}}"
-                    />
+                    <input value="{{address.town}}" disabled type="text" class="form-control" id="municipio" placeholder="Municipio o delegación"/>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="ciudad">Ciudad</label>
-                    <input disabled type="text" class="form-control" id="ciudad" placeholder="Ciudad" value="{{address.ciudad}}" />
+                    <input value="{{address.city}}" disabled type="text" class="form-control" id="ciudad" placeholder="Ciudad" />
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="estado">Estado</label>
-                    <input disabled type="text" class="form-control" id="estado" placeholder="Estado" value="{{address.estado}}" />
+                    <input value="{{address.state}}" disabled type="text" class="form-control" id="estado" placeholder="Estado" />
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
-                    <button type="button"  class="form-control btn btn-primary btn-md btn-block">
+                    <button type="button"  class="text-truncate btn btn-primary btn-md btn-block">
                       <i class="fa fa-edit"></i> Editar Información
                     </button>
                   </div>
