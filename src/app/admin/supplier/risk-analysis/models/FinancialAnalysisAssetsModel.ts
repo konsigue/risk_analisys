@@ -1,4 +1,4 @@
-export class FinancialAnalysisModel {
+export class FinancialAnalysisAssetsModel {
     public Time: string
     public CashFlow: number
     public AccountingCapital: number

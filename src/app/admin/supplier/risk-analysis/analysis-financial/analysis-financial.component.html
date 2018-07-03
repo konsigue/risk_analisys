@@ -17,25 +17,25 @@
   <thead class="thead-light">
     <tr>
       <th></th>
-      <th *ngFor="let f of financialAnalysis" scope="col">{{f.Time}}</th>
+      <th *ngFor="let f of financialAssets" scope="col">{{f.Time}}</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td class="table-data-type">Flujo de caja</td>
-      <td class="data-number" *ngFor="let f of financialAnalysis">{{f.CashFlow}}</td>
+      <td class="data-number" *ngFor="let f of financialAssets">{{f.CashFlow}}</td>
     </tr>
     <tr>
       <td class="table-data-type">Capital contable</td>
-      <td class="data-number" *ngFor="let f of financialAnalysis">{{f.AccountingCapital}}</td>
+      <td class="data-number" *ngFor="let f of financialAssets">{{f.AccountingCapital}}</td>
     </tr>
     <tr>
       <td class="table-data-type">Ventas netas</td>
-      <td class="data-number" *ngFor="let f of financialAnalysis">{{f.NetSales}}</td>
+      <td class="data-number" *ngFor="let f of financialAssets">{{f.NetSales}}</td>
     </tr>
     <tr>
       <td class="table-data-type">Activos totales</td>
-      <td class="data-number" *ngFor="let f of financialAnalysis">{{f.TotalAssets}}</td>
+      <td class="data-number" *ngFor="let f of financialAssets">{{f.TotalAssets}}</td>
     </tr>
   </tbody>
 </table>
