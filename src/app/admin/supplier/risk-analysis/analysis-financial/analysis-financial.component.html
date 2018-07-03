@@ -39,3 +39,48 @@
     </tr>
   </tbody>
 </table>
+
+<br/>
+
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th></th>
+      <th *ngFor="let f of financialSector" scope="col">{{f.Name}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="table-data-type">Raz&#243;n &#225;cida</td>
+      <td class="data-number" *ngFor="let f of financialSector">{{f.AcidReason}}</td>
+    </tr>
+    <tr>
+      <td class="table-data-type">Ratio corriente</td>
+      <td class="data-number" *ngFor="let f of financialSector">{{f.CurrentRatio}}</td>
+    </tr>
+    <tr>
+      <td class="table-data-type">Raz&#243;n de rotaci&#243;n de inventarios</td>
+      <td class="data-number" *ngFor="let f of financialSector">{{f.InventoryRotationReason}}</td>
+    </tr>
+    <tr>
+      <td class="table-data-type">Retornos sobre ventas</td>
+      <td class="data-number" *ngFor="let f of financialSector">{{f.SalesReturn}}</td>
+    </tr>
+    <tr>
+      <td class="table-data-type">Retorno sobre activo</td>
+      <td class="data-number" *ngFor="let f of financialSector">{{f.AssetReturn}}</td>
+    </tr>
+    <tr>
+      <td class="table-data-type">Retorno sobre valor neto</td>
+      <td class="data-number" *ngFor="let f of financialSector">{{f.NetValueReturn}}</td>
+    </tr>
+    <tr>
+      <td class="table-data-type">Activos: Ventas</td>
+      <td class="data-number" *ngFor="let f of financialSector">{{f.SaleAssets}}</td>
+    </tr>
+    <tr>
+      <td class="table-data-type">Apalancamiento</td>
+      <td class="data-number" *ngFor="let f of financialSector">{{f.Leverage}}</td>
+    </tr>
+  </tbody>
+</table>

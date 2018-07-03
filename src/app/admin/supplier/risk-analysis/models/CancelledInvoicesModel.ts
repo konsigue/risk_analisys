@@ -1,4 +1,4 @@
-export interface CancelledInvoicesModel {
+export class CancelledInvoicesModel {
     public Period: string
     public CancelledSum: number
     public CancelledSumPercentage: number

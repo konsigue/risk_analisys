@@ -19,7 +19,7 @@ h4 {
 }
 
 thead th {
-    text-align: center;
+    text-align: end;
 }
 
 tbody td.data-number {

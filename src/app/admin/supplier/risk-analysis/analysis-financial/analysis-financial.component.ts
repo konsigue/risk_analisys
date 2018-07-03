@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FinancialAlgorithmModel } from '../models/FinancialAlgorithmModel';
 import { FinancialAnalysisAssetsModel } from '../models/FinancialAnalysisAssetsModel';
-import { FinancialSector } from '../models/FinancialSector';
+import { FinancialSectorModel } from '../models/FinancialSectorModel';
 
 @Component({
   selector: 'analysis-financial',
@@ -11,7 +11,7 @@ import { FinancialSector } from '../models/FinancialSector';
 export class AnalysisFinancialComponent implements OnInit {
   public financialAlgorithm: FinancialAlgorithmModel[]
   public financialAssets: FinancialAnalysisAssetsModel[]
-  public financialSector: FinancialSector[]
+  public financialSector: FinancialSectorModel[]
 
   constructor() { }
 
