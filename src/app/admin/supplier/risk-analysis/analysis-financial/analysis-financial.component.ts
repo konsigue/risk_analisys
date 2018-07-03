@@ -13,14 +13,21 @@ export class AnalysisFinancialComponent implements OnInit {
   public financialAssets: FinancialAnalysisAssetsModel[]
   public financialSector: FinancialSectorModel[]
 
-  constructor() { }
+  public acidReasonData: any[]
 
-  ngOnInit() {
+  public chartLabels: string[]
+  public chartOptions:any = {
+    scaleShowVerticalLines: false,
+    responsive: true
+  };
+
+  constructor() {
     this.financialAlgorithm = []
     this.financialAssets = []
     this.financialSector = []
-
+    this.chartLabels = []
     /** mock */
+    this.acidReasonData = []
     this.financialAlgorithm = [
       { Time: "2017", Value: 7.36 },
       { Time: "Últimos 12 meses", Value: 11.55 }
@@ -40,7 +47,27 @@ export class AnalysisFinancialComponent implements OnInit {
       { Name:"Últimos 12 meses", AcidReason:2.77, CurrentRatio:2.92, InventoryRotationReason: 0,
         SalesReturn: 0.13, AssetReturn: 0.34, NetValueReturn: 0.54, SaleAssets: 2.68, Leverage: 1.68 }
     ]
+    this.chartLabels = this.getSectorTimeNames()
+    this.acidReasonData = this.getSectorData('AcidReason')
     /** end mock */
   }
 
+  ngOnInit() {
+  }
+
+  getSectorTimeNames() : string[] {
+    let timeNames = new Array<string>()
+    for (let i = 0; i < this.financialSector.length; i++) {
+      timeNames[i] = this.financialSector[i].Name;
+    }
+    return timeNames
+  }
+
+  getSectorData(property : string) : any[] {
+    let data = new Array<any>()
+    for (let i = 0; i < this.financialSector.length; i++) {
+      data[i] = this.financialSector[i][property];
+    }
+    return data
+  }
 }

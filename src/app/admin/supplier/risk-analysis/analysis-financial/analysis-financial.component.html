@@ -41,6 +41,22 @@
 </table>
 
 <br/>
+<br/>
+
+<div>
+  <div>
+    <label>Raz&#243;n &#225;cida</label>
+    <div style="display: block">
+        <canvas baseChart
+                [datasets]="acidReasonData"
+                [labels]="chartLabels"
+                [options]="chartOptions"
+                [chartType]="'bar'"></canvas>
+      </div>
+  </div>
+</div>
+
+<br>
 
 <table class="table">
   <thead class="thead-light">
