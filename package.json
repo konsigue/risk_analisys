@@ -29,7 +29,6 @@
     "core-js": "^2.5.4",
     "express": "^4.16.3",
     "font-awesome": "^4.7.0",
-    "moment": "^2.22.2",
     "ng2-charts": "^1.6.0",
     "path": "^0.12.7",
     "rxjs": "^6.0.0",
