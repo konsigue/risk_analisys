@@ -1,12 +1,41 @@
 <h3>AN&#193;LISIS FINANCIERO</h3>
 
-  <table class="algorithm-table">
+<table class="algorithm-table">
+  <tr>
+    <th></th>
+    <th class="table-data" *ngFor="let a of financialAlgorithm">{{a.Time}}</th>
+  </tr>
+  <tr>
+    <td>Algoritmo Salud Financiera</td>
+    <td class="table-data" *ngFor="let a of financialAlgorithm">{{a.Value}}</td>
+  </tr>
+</table>
+
+<br/>
+
+<table class="table">
+  <thead class="thead-light">
     <tr>
       <th></th>
-      <th class="table-data" *ngFor="let a of financialAlgorithm">{{a.Time}}</th>
+      <th *ngFor="let f of financialAnalysis" scope="col">{{f.Time}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="table-data-type">Flujo de caja</td>
+      <td class="data-number" *ngFor="let f of financialAnalysis">{{f.CashFlow}}</td>
     </tr>
     <tr>
-      <td>Algoritmo Salud Financiera</td>
-      <td class="table-data" *ngFor="let a of financialAlgorithm">{{a.Value}}</td>
+      <td class="table-data-type">Capital contable</td>
+      <td class="data-number" *ngFor="let f of financialAnalysis">{{f.AccountingCapital}}</td>
     </tr>
-  </table>
+    <tr>
+      <td class="table-data-type">Ventas netas</td>
+      <td class="data-number" *ngFor="let f of financialAnalysis">{{f.NetSales}}</td>
+    </tr>
+    <tr>
+      <td class="table-data-type">Activos totales</td>
+      <td class="data-number" *ngFor="let f of financialAnalysis">{{f.TotalAssets}}</td>
+    </tr>
+  </tbody>
+</table>
