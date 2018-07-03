@@ -1,7 +1,7 @@
 export interface CancelledInvoicesModel {
-    Period: string
-    CancelledSum: number
-    CancelledSumPercentage: number
-    CancelledInvoices: number
-    CancelledInvoicesPercentage: number
+    public Period: string
+    public CancelledSum: number
+    public CancelledSumPercentage: number
+    public CancelledInvoices: number
+    public CancelledInvoicesPercentage: number
 } 
