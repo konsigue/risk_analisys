@@ -9,6 +9,8 @@ import { SupplierAnalysisComponent } from './supplier-analysis.component';
 import { AnalysisFinancialStatusComponent } from './analysis-financial-status/analysis-financial-status.component';
 import { AnalysisInvoicingComponent } from './analysis-invoicing/analysis-invoicing.component';
 import { AnalysisFinancialComponent } from './analysis-financial/analysis-financial.component';
+import { FinanceInsitucionsComponent } from './finance-insitucions/finance-insitucions.component';
+import { FinanceInstitutionsComponent } from './finance-institutions/finance-institutions.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { AnalysisFinancialComponent } from './analysis-financial/analysis-financ
       SupplierAnalysisComponent,
       AnalysisFinancialStatusComponent,
       AnalysisInvoicingComponent,
-      AnalysisFinancialComponent
+      AnalysisFinancialComponent,
+      FinanceInsitucionsComponent,
+      FinanceInstitutionsComponent
   ],
   bootstrap: [SupplierAnalysisComponent]
 })

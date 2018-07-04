@@ -1,0 +1,26 @@
+<div id="insituciones-financieras">
+  <h1>Relación con instituciones financieras</h1>
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <caption>Relación con instituciones financieras [Cantidades en miles de pesos (1000mxn)*]</caption>
+      <thead class="thead-default">
+        <tr>
+          <th>Nombre Institución Financiera</th>
+          <th>Tipo de Institución</th>
+          <th>Facturación por servicios últimos 12 meses</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let institution of InstitutionsList">
+          <td scope="row">{{institution.name}}</td>
+          <td>{{institution.type}}</td>
+          <td>${{institution.last_12_months_amount}}k</td>
+        </tr>
+      </tbody>
+      <tfoot>
+
+      </tfoot>
+    </table>
+  </div>
+
+</div>
