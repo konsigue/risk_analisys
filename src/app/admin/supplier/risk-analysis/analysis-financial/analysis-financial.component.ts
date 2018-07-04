@@ -27,7 +27,7 @@ export class AnalysisFinancialComponent implements OnInit {
     this.financialSector = []
     this.chartLabels = []
     /** mock */
-    this.acidReasonData = []
+    this.acidReasonData = [0]
     this.financialAlgorithm = [
       { Time: "2017", Value: 7.36 },
       { Time: "Últimos 12 meses", Value: 11.55 }
@@ -49,10 +49,12 @@ export class AnalysisFinancialComponent implements OnInit {
     ]
     this.chartLabels = this.getSectorTimeNames()
     this.acidReasonData = this.getSectorData('AcidReason')
+    console.log(this.acidReasonData)
     /** end mock */
   }
 
   ngOnInit() {
+    
   }
 
   getSectorTimeNames() : string[] {
@@ -64,10 +66,13 @@ export class AnalysisFinancialComponent implements OnInit {
   }
 
   getSectorData(property : string) : any[] {
-    let data = new Array<any>()
+    let d = new Array<number>()
     for (let i = 0; i < this.financialSector.length; i++) {
-      data[i] = this.financialSector[i][property];
+      d[i] = this.financialSector[i][property];
     }
+    let data = [
+      { label: property, data: d }
+    ]
     return data
   }
 }
