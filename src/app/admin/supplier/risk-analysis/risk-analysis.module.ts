@@ -33,7 +33,7 @@ import { OperativenessComponent } from './operativeness/operativeness.component'
       AnalysisFinancialStatusComponent,
       AnalysisInvoicingComponent,
       AnalysisFinancialComponent,
-      AnalysisComplianceComponent
+      AnalysisComplianceComponent,
       FinanceInstitutionsComponent,
       OperativenessComponent
   ],
