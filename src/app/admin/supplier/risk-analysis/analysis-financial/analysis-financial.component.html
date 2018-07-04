@@ -1,12 +1,132 @@
 <h3>AN&#193;LISIS FINANCIERO</h3>
 
-  <table class="algorithm-table">
+<table class="algorithm-table">
+  <tr>
+    <th></th>
+    <th class="table-data" *ngFor="let a of financialAlgorithm">{{a.Time}}</th>
+  </tr>
+  <tr>
+    <td>Algoritmo Salud Financiera</td>
+    <td class="table-data" *ngFor="let a of financialAlgorithm">{{a.Value}}</td>
+  </tr>
+</table>
+
+<br/>
+
+<table class="table">
+  <thead class="thead-light">
     <tr>
       <th></th>
-      <th class="table-data" *ngFor="let a of financialAlgorithm">{{a.Time}}</th>
+      <th *ngFor="let f of financialAssets" scope="col">{{f.Time}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="table-data-type">Flujo de caja</td>
+      <td class="data-number" *ngFor="let f of financialAssets">{{f.CashFlow}}</td>
     </tr>
     <tr>
-      <td>Algoritmo Salud Financiera</td>
-      <td class="table-data" *ngFor="let a of financialAlgorithm">{{a.Value}}</td>
+      <td class="table-data-type">Capital contable</td>
+      <td class="data-number" *ngFor="let f of financialAssets">{{f.AccountingCapital}}</td>
     </tr>
-  </table>
+    <tr>
+      <td class="table-data-type">Ventas netas</td>
+      <td class="data-number" *ngFor="let f of financialAssets">{{f.NetSales}}</td>
+    </tr>
+    <tr>
+      <td class="table-data-type">Activos totales</td>
+      <td class="data-number" *ngFor="let f of financialAssets">{{f.TotalAssets}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<br/>
+<br/>
+
+<div #graphsIdentifier>
+  <div class="inline-graphs">
+    <label>Raz&#243;n &#225;cida</label>
+    <div>
+        <canvas baseChart width="200" height="250"
+                [datasets]="acidReasonData"
+                [labels]="chartLabels"
+                [options]="chartOptions"
+                [chartType]="'bar'"></canvas>
+      </div>
+  </div>
+  <div class="inline-graphs">
+    <label>Ratio corriente</label>
+    <div>
+        <canvas baseChart width="200" height="250"
+                [datasets]="currentRatioData"
+                [labels]="chartLabels"
+                [options]="chartOptions"
+                [chartType]="'bar'"></canvas>
+      </div>
+  </div>
+  <div class="inline-graphs">
+    <label>Cobertura</label>
+    <div>
+        <canvas baseChart width="200" height="250"
+                [datasets]="coverageData"
+                [labels]="chartLabels"
+                [options]="chartOptions"
+                [chartType]="'bar'"></canvas>
+      </div>
+  </div>
+  <div class="inline-graphs">
+    <label>Apalancamiento</label>
+    <div>
+        <canvas baseChart width="200" height="250"
+                [datasets]="leverageData"
+                [labels]="chartLabels"
+                [options]="chartOptions"
+                [chartType]="'bar'"></canvas>
+      </div>
+  </div>
+</div>
+
+<br>
+
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th></th>
+      <th *ngFor="let f of financialSector" scope="col">{{f.Name}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="table-data-type">Raz&#243;n &#225;cida</td>
+      <td class="data-number" *ngFor="let f of financialSector">{{f.AcidReason}}</td>
+    </tr>
+    <tr>
+      <td class="table-data-type">Ratio corriente</td>
+      <td class="data-number" *ngFor="let f of financialSector">{{f.CurrentRatio}}</td>
+    </tr>
+    <tr>
+      <td class="table-data-type">Raz&#243;n de rotaci&#243;n de inventarios</td>
+      <td class="data-number" *ngFor="let f of financialSector">{{f.InventoryRotationReason}}</td>
+    </tr>
+    <tr>
+      <td class="table-data-type">Retornos sobre ventas</td>
+      <td class="data-number" *ngFor="let f of financialSector">{{f.SalesReturn}}</td>
+    </tr>
+    <tr>
+      <td class="table-data-type">Retorno sobre activo</td>
+      <td class="data-number" *ngFor="let f of financialSector">{{f.AssetReturn}}</td>
+    </tr>
+    <tr>
+      <td class="table-data-type">Retorno sobre valor neto</td>
+      <td class="data-number" *ngFor="let f of financialSector">{{f.NetValueReturn}}</td>
+    </tr>
+    <tr>
+      <td class="table-data-type">Activos: Ventas</td>
+      <td class="data-number" *ngFor="let f of financialSector">{{f.SaleAssets}}</td>
+    </tr>
+    <tr>
+      <td class="table-data-type">Apalancamiento</td>
+      <td class="data-number" *ngFor="let f of financialSector">{{f.Leverage}}</td>
+    </tr>
+  </tbody>
+</table>

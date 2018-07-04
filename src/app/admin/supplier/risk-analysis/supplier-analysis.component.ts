@@ -31,7 +31,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   ]
 })
 export class SupplierAnalysisComponent implements OnInit {
-  public supplierName: string
+  public supplierName: string;
 
   constructor(private router: Router, private route: ActivatedRoute) {
 
@@ -39,7 +39,7 @@ export class SupplierAnalysisComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
-      this.supplierName = params.get('name')
+      this.supplierName = params.get('name');
     });
   }
 

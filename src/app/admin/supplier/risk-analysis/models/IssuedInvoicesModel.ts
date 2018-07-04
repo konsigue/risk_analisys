@@ -1,7 +1,7 @@
 export class IssuedInvoicesModel {
-    Name: string
-    InvoiceRevenue: number
-    InvoiceCredit: number
-    NumberRevenue: number
-    NumberCredit: number
+    public Name: string
+    public InvoiceRevenue: number
+    public InvoiceCredit: number
+    public NumberRevenue: number
+    public NumberCredit: number
 }

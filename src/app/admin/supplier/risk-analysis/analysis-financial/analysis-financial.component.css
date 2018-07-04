@@ -10,6 +10,22 @@ h4 {
     width: 100%;
 }
 
+.table-data-type {
+    font-weight: bold;
+}
+
 .table-data {
     text-align: center;
+}
+
+thead th {
+    text-align: end;
+}
+
+tbody td.data-number {
+    text-align: end;
+}
+
+.inline-graphs {
+    display: inline-block;
 }

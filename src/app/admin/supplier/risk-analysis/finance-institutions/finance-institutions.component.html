@@ -1,0 +1,83 @@
+<div id="insituciones-financieras">
+  <h3>Relación con instituciones financieras</h3>
+  <div class="card">
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <caption>Relación con instituciones financieras [Cantidades en miles de pesos (1000mxn)*]</caption>
+        <thead class="thead-light">
+          <tr>
+            <th>Nombre Institución Financiera</th>
+            <th>Tipo de Institución</th>
+            <th>Facturación por servicios últimos 12 meses</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let institution of InstitutionsList">
+            <td scope="row">{{institution.name}}</td>
+            <td>{{institution.type}}</td>
+            <td>${{institution.last_12_months_amount}}k</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+<div class="pt-4">
+  <h3>Registro Único de Proveedores y Contratistas SFP: Secretaría de la Función Pública</h3>
+  <div class="card">
+    <div class="table-responsive">
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th>Tipo</th>
+            <th>Fecha Inscripción</th>
+            <th>Núm Contratos</th>
+            <th>Grado Cump</th>
+            <th>Contratista Sancionado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row"></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  </div>
+</div>
+<div class="pt-4">
+  <h3>Referencias de Contacto</h3>
+  <div class="card">
+    <div class="table-responsive">
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th>Nombre del Cliente</th>
+            <th>Nombre contacto</th>
+            <th>Teléfono</th>
+            <th>E−Mail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row"></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td scope="row"></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  </div>
+</div>
