@@ -6,6 +6,7 @@ import { AdminComponent } from '../../admin.component';
 import { AnalysisInvoicingComponent } from './analysis-invoicing/analysis-invoicing.component';
 import { AnalysisFinancialComponent } from './analysis-financial/analysis-financial.component';
 import { FinanceInstitutionsComponent } from './finance-institutions/finance-institutions.component';
+import { OperativenessComponent } from './operativeness/operativeness.component';
 
 const routes: Routes = [
   {
@@ -40,6 +41,15 @@ const routes: Routes = [
       {
         path: '', outlet: 'admin', component: SupplierAnalysisComponent, children: [
           { path: '', outlet: 'risk-analysis', component: FinanceInstitutionsComponent }
+        ]
+      }
+    ]
+  },
+  {
+    path: 'admin/proveedores/:name/analisis/operatividad', component: AdminComponent, children: [
+      {
+        path: '', outlet: 'admin', component: SupplierAnalysisComponent, children: [
+          { path: '', outlet: 'risk-analysis', component: OperativenessComponent }
         ]
       }
     ]
