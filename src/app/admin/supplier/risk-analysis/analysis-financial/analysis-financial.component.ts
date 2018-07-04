@@ -17,6 +17,7 @@ export class AnalysisFinancialComponent implements OnInit {
   public acidReasonData: any[]
   public currentRatioData: any[]
   public coverageData: any[]
+  public leverageData: any[]
 
   public chartLabels: string[]
   public chartOptions:any = {
@@ -66,6 +67,7 @@ export class AnalysisFinancialComponent implements OnInit {
     this.acidReasonData = this.getSectorData('AcidReason')
     this.currentRatioData = this.getSectorData('CurrentRatio')
     this.coverageData = this.getSectorData('Coverage')
+    this.leverageData = this.getSectorData('Leverage')
     console.log(this.acidReasonData)
     /** end mock */
   }
