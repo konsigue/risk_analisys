@@ -39,7 +39,7 @@ export class SupplierAnalysisComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
-      this.supplierName = params.get('name')
+      this.supplierName = params.get('name');
     });
   }
 
