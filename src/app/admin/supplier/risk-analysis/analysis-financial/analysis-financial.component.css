@@ -28,4 +28,10 @@ tbody td.data-number {
 
 .inline-graphs {
     display: inline-block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.inline-graphs label {
+    text-align: center;
 }
