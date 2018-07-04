@@ -10,6 +10,7 @@ import { AnalysisFinancialStatusComponent } from './analysis-financial-status/an
 import { AnalysisInvoicingComponent } from './analysis-invoicing/analysis-invoicing.component';
 import { AnalysisFinancialComponent } from './analysis-financial/analysis-financial.component';
 import { FinanceInstitutionsComponent } from './finance-institutions/finance-institutions.component';
+import { OperativenessComponent } from './operativeness/operativeness.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FinanceInstitutionsComponent } from './finance-institutions/finance-ins
       AnalysisFinancialStatusComponent,
       AnalysisInvoicingComponent,
       AnalysisFinancialComponent,
-      FinanceInstitutionsComponent
+      FinanceInstitutionsComponent,
+      OperativenessComponent
   ],
   bootstrap: [SupplierAnalysisComponent]
 })
