@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FinancialAlgorithmModel } from '../models/FinancialAlgorithmModel';
 import { FinancialAnalysisAssetsModel } from '../models/FinancialAnalysisAssetsModel';
 import { FinancialSectorModel } from '../models/FinancialSectorModel';
@@ -68,13 +68,11 @@ export class AnalysisFinancialComponent implements OnInit {
     this.currentRatioData = this.getSectorData('CurrentRatio')
     this.coverageData = this.getSectorData('Coverage')
     this.leverageData = this.getSectorData('Leverage')
-    console.log(this.acidReasonData)
     /** end mock */
   }
 
   ngOnInit() {
     this.graphsWidth = this.getGraphsWidth()
-    console.log(this.graphsWidth)
   }
 
   getGraphsWidth() : string {
