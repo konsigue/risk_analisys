@@ -31,7 +31,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   ]
 })
 export class SupplierAnalysisComponent implements OnInit {
-  public supplierName: string
+  public supplierName: string;
 
   constructor(private router: Router, private route: ActivatedRoute) {
 
