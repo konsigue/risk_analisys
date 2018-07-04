@@ -12,6 +12,11 @@ export class ContactsSuppliersComponent implements OnInit {
   private SupplierURL = 'http://localhost:3000/contactos_empresa';
   private SupplierFinalURL;
   public id = 1;
+
+
+  public msj_cerrar_form = 'Cerrar formulario';
+  public msj_add_contact = 'Agregar contacto';
+
   contactList: SupplierContact[];
   contactos = CONTACTOS;
 
