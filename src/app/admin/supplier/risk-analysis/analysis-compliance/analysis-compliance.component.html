@@ -1,0 +1,271 @@
+<h3>COMPLIANCE</h3>
+
+<h4>Status Listas Negras</h4>
+<div class="card">
+  <div class="justify-content-center">
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th>SAT: Facturación Fraudulenta </th>
+          <th>SAT: Créditos Fiscales</th>
+          <th>SAT: Créditos Condonados</th>
+          <th>OFAC</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<h4>Status de Declaraciones del SAT</h4>
+<div class="card">
+  <div class="justify-content-center">
+    <table class="table table-bordered table-condensed table-hover">
+      <thead class="thead-light">
+        <tr class="text-center">
+          <th scope="rowgroup" rowspan="2" class="row-span">Periodo</th>
+          <th scope="rowgroup" rowspan="2" class="row-span">Fecha Límite</th>
+          <th scope="colgroup" colspan="2">Estatus de declaración</th>
+          <th scope="colgroup" colspan="2">Estatus de pago</th>
+        </tr>
+        <tr class="text-center">
+          <th scope="col">ISR</th>
+          <th scope="col">IVA</th>
+          <th scope="col">ISR</th>
+          <th scope="col">IVA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr (click)="toogleShow(0)" class="text-center">
+          <td>Abr 2017</td>
+          <td>2017-05-17</td>
+          <td>
+            <i class="fa fa-check"></i>
+          </td>
+          <td>
+            <i class="fa fa-check"></i>
+          </td>
+          <td>
+            <i class="fa fa-check"></i>
+          </td>
+          <td>
+            <i class="fa fa-check"></i>
+          </td>
+        </tr>
+        <tr class="text-center">
+          <td colspan="6" *ngIf="tableDetails[0].mostrar">
+            <div class="row">
+              <div class="col-6">
+                <strong>ISR: </strong>
+                <br>
+                <table class="table">
+                  <tr>
+                    <td>A pagar:</td>
+                    <td>$9</td>
+                  </tr>
+                  <tr>
+                    <td>A pagar periodos anteriores:</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Pagado:</td>
+                    <td>($9)</td>
+                  </tr>
+                  <tr>
+                    <td>Por pagar:</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>A favor:</td>
+                    <td>-</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="col-6">
+                <strong>IVA: </strong>
+                <br>
+                <table class="table">
+                  <tr>
+                    <td>A pagar:</td>
+                    <td>$9</td>
+                  </tr>
+                  <tr>
+                    <td>A pagar periodos anteriores:</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Pagado:</td>
+                    <td>($9)</td>
+                  </tr>
+                  <tr>
+                    <td>Por pagar:</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>A favor:</td>
+                    <td>-</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr (click)="toogleShow(1)" class="text-center">
+          <td>Abr 2017</td>
+          <td>2017-05-17</td>
+          <td>
+            <i class="fa fa-check"></i>
+          </td>
+          <td>
+            <i class="fa fa-check"></i>
+          </td>
+          <td>
+            <i class="fa fa-check"></i>
+          </td>
+          <td>
+            <i class="fa fa-check"></i>
+          </td>
+        </tr>
+        <tr class="text-center">
+          <td colspan="6" *ngIf="tableDetails[1].mostrar">
+            <div class="row">
+              <div class="col-6">
+                <strong>ISR: </strong>
+                <br>
+                <table class="table">
+                  <tr>
+                    <td>A pagar:</td>
+                    <td>$9</td>
+                  </tr>
+                  <tr>
+                    <td>A pagar periodos anteriores:</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Pagado:</td>
+                    <td>($9)</td>
+                  </tr>
+                  <tr>
+                    <td>Por pagar:</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>A favor:</td>
+                    <td>-</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="col-6 justify-content-center">
+                <strong>IVA: </strong>
+                <br>
+                <table class="table">
+                  <tr>
+                    <td>A pagar:</td>
+                    <td>$9</td>
+                  </tr>
+                  <tr>
+                    <td>A pagar periodos anteriores:</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Pagado:</td>
+                    <td>($9)</td>
+                  </tr>
+                  <tr>
+                    <td>Por pagar:</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>A favor:</td>
+                    <td>-</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<br>
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+      <div class=" col-lg-3 col-xl-3 col-md-12 col-sm-12 col-xs-12">
+        <div class="row justify-content-center">
+          <h6>Declaraciones presentadas</h6>
+        </div>
+        <div class="row justify-content-center">
+          <div style="display: block">
+            <canvas baseChart [data]="doughnutChartDataPresentadas" [colors]="doughnutChartColors" [labels]="doughnutChartLabelsPresentadas" [chartType]="doughnutChartType"
+              (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class=" col-lg-3 col-xl-3 col-md-12 col-sm-12 col-xs-12">
+        <div class="row justify-content-center">
+          <h6>Presentadas en tiempo</h6>
+        </div>
+        <div class="row justify-content-center">
+          <div style="display: block">
+            <canvas baseChart [data]="doughnutChartDataTiempo" [colors]="doughnutChartColors" [labels]="doughnutChartLabelsTiempo" [chartType]="doughnutChartType"
+              (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class=" col-lg-3 col-xl-3 col-md-12 col-sm-12 col-xs-12">
+        <div class="row justify-content-center">
+          <h6>Declaraciones con pago</h6>
+        </div>
+        <div class="row justify-content-center">
+          <div style="display: block">
+            <canvas baseChart [data]="doughnutChartDataPago" [colors]="doughnutChartColors" [labels]="doughnutChartLabelsPago" [chartType]="doughnutChartType"
+              (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class=" col-lg-3 col-xl-3 col-md-12 col-sm-12 col-xs-12">
+        <div class="row justify-content-center">
+          <h6>Declaraciones sin saldo en contra</h6>
+        </div>
+        <div class="row justify-content-center">
+          <div style="display: block">
+            <canvas baseChart [data]="doughnutChartDataContra" [colors]="doughnutChartColors" [labels]="doughnutChartLabelsContra" [chartType]="doughnutChartType"
+              (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4>Pagos a IMSS e Infonavit</h4>
+<div class="card">
+  <div class="card-body">
+    <div class="row justify-content-center">
+      <canvas baseChart width="700" height="200" [datasets]="totalInvoices.ChartData" [labels]="totalInvoices.ChartLabels" [options]="lineChartOptions"
+        [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)"></canvas>
+    </div>
+    <div class="row justify-content-center">
+      <table class="table table-responsive table-condensed">
+        <thead class="thead-light">
+          <tr>
+            <th>Periodo</th>
+            <th *ngFor="let label of totalInvoices.ChartLabels">{{label}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let d of totalInvoices.ChartData">
+            <td>{{d.label}}</td>
+            <td *ngFor="let label of totalInvoices.ChartLabels; let j=index">{{d && d.data[j]}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
