@@ -46,13 +46,17 @@ export class AnalysisFinancialComponent implements OnInit {
     ]
     this.financialSector = [
       { Name:"Media en sector", AcidReason:0.94, CurrentRatio:1.28, InventoryRotationReason: 0.01,
-        SalesReturn: 0.10, AssetReturn: 0.14, NetValueReturn: 0.38, SaleAssets: 0.76, Leverage: 1.79 },
+        SalesReturn: 0.10, AssetReturn: 0.14, NetValueReturn: 0.38, SaleAssets: 0.76, 
+        Coverage: 0, Leverage: 1.79 },
       { Name:"2016", AcidReason:1.88, CurrentRatio:2.07, InventoryRotationReason: 0,
-        SalesReturn: 0.00, AssetReturn: 0.00, NetValueReturn: 0.00, SaleAssets: 1.67, Leverage: 1.05 },
+        SalesReturn: 0.00, AssetReturn: 0.00, NetValueReturn: 0.00, SaleAssets: 1.67, 
+        Coverage: 0, Leverage: 1.05 },
       { Name:"2017", AcidReason:2.34, CurrentRatio:2.48, InventoryRotationReason: 0,
-        SalesReturn: 0.02, AssetReturn: 0.04, NetValueReturn: 0.06, SaleAssets: 2.26, Leverage: 0.75 },
+        SalesReturn: 0.02, AssetReturn: 0.04, NetValueReturn: 0.06, SaleAssets: 2.26, 
+        Coverage: 0, Leverage: 0.75 },
       { Name:"Últimos 12 meses", AcidReason:2.77, CurrentRatio:2.92, InventoryRotationReason: 0,
-        SalesReturn: 0.13, AssetReturn: 0.34, NetValueReturn: 0.54, SaleAssets: 2.68, Leverage: 1.68 }
+        SalesReturn: 0.13, AssetReturn: 0.34, NetValueReturn: 0.54, SaleAssets: 2.68, 
+        Coverage: 0, Leverage: 1.68 }
     ]
     this.chartLabels = this.getSectorTimeNames()
     this.acidReasonData = this.getSectorData('AcidReason')

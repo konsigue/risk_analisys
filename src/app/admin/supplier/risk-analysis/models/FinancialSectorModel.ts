@@ -7,5 +7,6 @@ export class FinancialSectorModel {
     public AssetReturn: number
     public NetValueReturn: number
     public SaleAssets: number
+    public Coverage: number
     public Leverage: number
 }
