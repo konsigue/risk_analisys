@@ -15,6 +15,7 @@ export class AnalysisFinancialComponent implements OnInit {
 
   public graphsWidth: string
   public acidReasonData: any[]
+  public currentRatioData: any[]
 
   public chartLabels: string[]
   public chartOptions:any = {
@@ -55,6 +56,7 @@ export class AnalysisFinancialComponent implements OnInit {
     ]
     this.chartLabels = this.getSectorTimeNames()
     this.acidReasonData = this.getSectorData('AcidReason')
+    this.currentRatioData = this.getSectorData('CurrentRatio')
     console.log(this.acidReasonData)
     /** end mock */
   }
