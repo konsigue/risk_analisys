@@ -16,11 +16,15 @@ export class AnalysisFinancialComponent implements OnInit {
   public graphsWidth: string
   public acidReasonData: any[]
   public currentRatioData: any[]
+  public coverageData: any[]
 
   public chartLabels: string[]
   public chartOptions:any = {
     scaleShowVerticalLines: false,
-    responsive: true
+    responsive: true,
+    legend: {
+      display: false
+    }
   };
 
   @ViewChild('graphsIdentifier')
@@ -61,6 +65,7 @@ export class AnalysisFinancialComponent implements OnInit {
     this.chartLabels = this.getSectorTimeNames()
     this.acidReasonData = this.getSectorData('AcidReason')
     this.currentRatioData = this.getSectorData('CurrentRatio')
+    this.coverageData = this.getSectorData('Coverage')
     console.log(this.acidReasonData)
     /** end mock */
   }
