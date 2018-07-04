@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FinancialAlgorithmModel } from '../models/FinancialAlgorithmModel';
 import { FinancialAnalysisAssetsModel } from '../models/FinancialAnalysisAssetsModel';
 import { FinancialSectorModel } from '../models/FinancialSectorModel';
@@ -13,6 +13,7 @@ export class AnalysisFinancialComponent implements OnInit {
   public financialAssets: FinancialAnalysisAssetsModel[]
   public financialSector: FinancialSectorModel[]
 
+  public graphsWidth: string
   public acidReasonData: any[]
 
   public chartLabels: string[]
@@ -21,12 +22,17 @@ export class AnalysisFinancialComponent implements OnInit {
     responsive: true
   };
 
+  @ViewChild('graphsIdentifier')
+  graphsIdentifier: ElementRef
+
   constructor() {
     this.financialAlgorithm = []
     this.financialAssets = []
     this.financialSector = []
     this.chartLabels = []
+
     /** mock */
+    this.graphsWidth = "200px"
     this.acidReasonData = [0]
     this.financialAlgorithm = [
       { Time: "2017", Value: 7.36 },
@@ -54,7 +60,12 @@ export class AnalysisFinancialComponent implements OnInit {
   }
 
   ngOnInit() {
-    
+    this.graphsWidth = this.getGraphsWidth()
+    console.log(this.graphsWidth)
+  }
+
+  getGraphsWidth() : string {
+    return (this.graphsIdentifier.nativeElement.offsetWidth / 5) + 'px'
   }
 
   getSectorTimeNames() : string[] {

@@ -25,3 +25,7 @@ thead th {
 tbody td.data-number {
     text-align: end;
 }
+
+.inline-graphs {
+    display: inline-block;
+}

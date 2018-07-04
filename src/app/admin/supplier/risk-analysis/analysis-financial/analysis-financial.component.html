@@ -43,11 +43,41 @@
 <br/>
 <br/>
 
-<div>
-  <div>
+<div #graphsIdentifier>
+  <div class="inline-graphs">
     <label>Raz&#243;n &#225;cida</label>
-    <div style="display: block">
-        <canvas baseChart
+    <div>
+        <canvas baseChart width="200" height="250"
+                [datasets]="acidReasonData"
+                [labels]="chartLabels"
+                [options]="chartOptions"
+                [chartType]="'bar'"></canvas>
+      </div>
+  </div>
+  <div class="inline-graphs">
+    <label>Raz&#243;n &#225;cida</label>
+    <div>
+        <canvas baseChart width="200" height="250"
+                [datasets]="acidReasonData"
+                [labels]="chartLabels"
+                [options]="chartOptions"
+                [chartType]="'bar'"></canvas>
+      </div>
+  </div>
+  <div class="inline-graphs">
+    <label>Raz&#243;n &#225;cida</label>
+    <div>
+        <canvas baseChart width="200" height="250"
+                [datasets]="acidReasonData"
+                [labels]="chartLabels"
+                [options]="chartOptions"
+                [chartType]="'bar'"></canvas>
+      </div>
+  </div>
+  <div class="inline-graphs">
+    <label>Raz&#243;n &#225;cida</label>
+    <div>
+        <canvas baseChart width="200" height="250"
                 [datasets]="acidReasonData"
                 [labels]="chartLabels"
                 [options]="chartOptions"
