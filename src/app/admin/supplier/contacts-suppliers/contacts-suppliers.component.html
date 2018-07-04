@@ -1,7 +1,7 @@
 <div class="p-3">
   <div class="row ">
     <div class="col-md-8">
-      <h2> Contactos</h2>
+      <h4> Contactos</h4>
     </div>
     <div class="col-md-2 text-right">
       <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
@@ -10,44 +10,46 @@
     </div>
   </div>
   <br>
-  <div class="row justify-content-center">
-    <table class="table table-hover table-responsive">
-      <thead class="thead-light">
-        <tr>
-          <th scope="col">Nombre del contacto</th>
-          <th scope="col">Puesto</th>
-          <th scope="col">Correo electrónico</th>
-          <th scope="col">Telefono oficina</th>
-          <th scope="col">Telefono móvil</th>
-          <th scope="col">Opciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let contact of contactList">
-          <td>{{contact.name}}</td>
-          <td>{{contact.job_title}}</td>
-          <td>
-            <a href="mail:{{contact.email}}">{{contact.email}}</a>
-          </td>
-          <td>
-            <a href="tel:{{contact.phone}}">{{contact.phone}}</a>
-          </td>
-          <td>
-            <a href="tel:{{contact.movil}}">{{contact.movil}}</a>
-          </td>
-          <td>
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-warning">
-                <i class="fa fa-edit"></i>
-              </button>
-              <button type="button" class="btn btn-primary">
-                <i class="fa fa-eye"></i>
-              </button>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="card">
+    <div class="table-responsive justify-content-center">
+      <table class="table table-hover ">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Nombre del contacto</th>
+            <th scope="col">Puesto</th>
+            <th scope="col">Correo electrónico</th>
+            <th scope="col">Telefono oficina</th>
+            <th scope="col">Telefono móvil</th>
+            <th scope="col">Opciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let contact of contactList">
+            <td>{{contact.name}}</td>
+            <td>{{contact.job_title}}</td>
+            <td>
+              <a href="mail:{{contact.email}}">{{contact.email}}</a>
+            </td>
+            <td>
+              <a href="tel:{{contact.phone}}">{{contact.phone}}</a>
+            </td>
+            <td>
+              <a href="tel:{{contact.movil}}">{{contact.movil}}</a>
+            </td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-warning">
+                  <i class="fa fa-edit"></i>
+                </button>
+                <button type="button" class="btn btn-primary">
+                  <i class="fa fa-eye"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   <div class="modal fade registro-contacto" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
