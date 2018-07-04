@@ -5,6 +5,7 @@ import { AnalysisFinancialStatusComponent } from './analysis-financial-status/an
 import { AdminComponent } from '../../admin.component';
 import { AnalysisInvoicingComponent } from './analysis-invoicing/analysis-invoicing.component';
 import { AnalysisFinancialComponent } from './analysis-financial/analysis-financial.component';
+import { AnalysisComplianceComponent } from './analysis-compliance/analysis-compliance.component';
 import { FinanceInstitutionsComponent } from './finance-institutions/finance-institutions.component';
 import { OperativenessComponent } from './operativeness/operativeness.component';
 
@@ -32,6 +33,15 @@ const routes: Routes = [
       {
         path: '', outlet: 'admin', component: SupplierAnalysisComponent, children: [
           { path: '', outlet: 'risk-analysis', component: AnalysisFinancialComponent }
+        ]
+      }
+    ]
+  },
+  {
+    path: 'admin/proveedores/:name/analisis/compliance', component: AdminComponent, children: [
+      { 
+        path: '', outlet: 'admin', component: SupplierAnalysisComponent, children: [
+          { path: '', outlet: 'risk-analysis', component: AnalysisComplianceComponent }
         ]
       }
     ]

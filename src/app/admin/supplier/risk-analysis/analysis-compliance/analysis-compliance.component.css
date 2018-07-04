@@ -1,0 +1,23 @@
+h4 {
+    margin-top: 30px;
+}
+
+.table-data-type {
+    font-weight: bold;
+}
+
+.card {
+    color: black;
+}
+
+.table .thead-light th{
+    color: black;
+}
+
+.row-span{
+    vertical-align: middle;
+}
+
+.detail-cell{
+    align-content: center !important;
+}

@@ -23,17 +23,17 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let contacto of contactos">
-          <td>{{contacto.name}}</td>
-          <td>{{contacto.puesto}}</td>
+        <tr *ngFor="let contact of contactList">
+          <td>{{contact.name}}</td>
+          <td>{{contact.job_title}}</td>
           <td>
-            <a href="mail:{{contacto.email}}">{{contacto.email}}</a>
+            <a href="mail:{{contact.email}}">{{contact.email}}</a>
           </td>
           <td>
-            <a href="tel:{{contacto.telefono+' ext'+contacto.extension}}">{{contacto.telefono+' ext'+contacto.extension}}</a>
+            <a href="tel:{{contact.phone}}">{{contact.phone}}</a>
           </td>
           <td>
-            <a href="tel:{{contacto.movil}}">{{contacto.movil}}</a>
+            <a href="tel:{{contact.movil}}">{{contact.movil}}</a>
           </td>
           <td>
             <div class="btn-group" role="group" aria-label="Basic example">
