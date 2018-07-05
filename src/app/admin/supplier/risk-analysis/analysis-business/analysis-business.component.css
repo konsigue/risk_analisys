@@ -25,13 +25,16 @@ over-specified to win specificity battle */
 
 /*** month headings ***/
 :host ::ng-deep .month ol {
+  margin-left: 110px;
+}
+
+:host ::ng-deep .month ol {
   display: block;
   height: 30px;
 }
 
 :host ::ng-deep .month li {
-  float: right;
-  margin-left: 39px;
+  float: left;
   font-size: 0.75em;
 }
 
@@ -82,7 +85,7 @@ over-specified to win specificity battle */
 :host ::ng-deep .days ol .client-data {
   position: relative;
   display: inline-block;
-  width: 80px;
+  width: 60px;
   height: 30px;
 }
 
