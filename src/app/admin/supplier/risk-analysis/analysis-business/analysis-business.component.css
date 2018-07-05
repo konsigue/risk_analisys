@@ -79,6 +79,20 @@ over-specified to win specificity battle */
   right: 0px;
 }
 
+:host ::ng-deep .days ol .client-data {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+}
+
+:host ::ng-deep .days ol .client-data label {
+  position: absolute;
+  top: 30%;
+  text-align: end;
+  right: 0px;
+}
+
 /* create vertical weeks */
 :host ::ng-deep .week {
   display: inline-block;

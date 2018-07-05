@@ -79,7 +79,14 @@ export class AnalysisBusinessComponent implements OnInit {
       for (const invoice of client.Invoices) {
         this.daysChart += '<li><span class="tooltip">'+ invoice.month + '</span></li>'
       }
-      this.daysChart += "</div></ol>"
+      this.daysChart += "</div>" // End week
+
+      this.daysChart +=
+        "<div class='client-data'><label>"+client.Amount+"</label></div>" + 
+        "<div class='client-data'><label>"+client.Weight+"</label></div>" + 
+        "<div class='client-data'><label>"+client.Score+"</label></div>" + 
+        "</ol>"
+
     }
     
     document.getElementById("days").innerHTML = this.daysChart
