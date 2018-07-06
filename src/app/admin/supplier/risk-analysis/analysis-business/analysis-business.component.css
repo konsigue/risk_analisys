@@ -4,11 +4,6 @@
   list-style: none;
 }
 
-h1 { 
-  font-size: 1.5em;
-  margin: 70px 42px;
-}
-
 :host ::ng-deep .activity-chart, h1 { color: #525252; }
 :host ::ng-deep .days li, .day-key { background: #eee; }
 :host ::ng-deep .activity-chart {
@@ -25,12 +20,9 @@ over-specified to win specificity battle */
 
 /*** month headings ***/
 :host ::ng-deep .month ol {
-  margin-left: 110px;
-}
-
-:host ::ng-deep .month ol {
   display: block;
   height: 30px;
+  margin-left: 110px;
 }
 
 :host ::ng-deep .month li {
@@ -59,6 +51,7 @@ over-specified to win specificity battle */
 
 /*** draw days ***/
 :host ::ng-deep .days {
+  margin-left: 110px;
   font-size: 0.75em;
   margin-top: 15px;
 }

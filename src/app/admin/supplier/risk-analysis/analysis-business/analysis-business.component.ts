@@ -10,6 +10,7 @@ import * as moment from 'moment';
 export class AnalysisBusinessComponent implements OnInit {
   public month: any
   public monthChart: string
+  public monthPeriod: string[]
   public daysChart: string
 
   public clientsInvoicing: any[]
@@ -18,6 +19,9 @@ export class AnalysisBusinessComponent implements OnInit {
     this.month = moment()
 
     /* mocks */
+    this.monthPeriod = [
+        "2017-04", "2017-05", "2017-06","2017-07","2017-08"
+    ]
     this.clientsInvoicing = [
       { Name: "pegaso", Invoices: [
         { month: "2017-04", quantity: 0},
@@ -55,12 +59,8 @@ export class AnalysisBusinessComponent implements OnInit {
 
   drawMonths() : void {
     this.monthChart = "<ol class='month'>"
-    for (let i=0; i<=12; i++) {
-      let durationMonth = moment.duration({'months':1})
-      this.monthChart += "<li>"
-      this.monthChart += moment(this.month).format('MMM')
-      this.monthChart += "</li>"
-      this.month = moment(this.month).subtract(durationMonth)
+    for (const month of this.monthPeriod) {
+      this.monthChart += "<li>" + month + "</li>"
     }
     this.monthChart += "</ol>"
 
@@ -86,7 +86,6 @@ export class AnalysisBusinessComponent implements OnInit {
         "<div class='client-data'><label>"+client.Weight+"</label></div>" + 
         "<div class='client-data'><label>"+client.Score+"</label></div>" + 
         "</ol>"
-
     }
     
     document.getElementById("days").innerHTML = this.daysChart
