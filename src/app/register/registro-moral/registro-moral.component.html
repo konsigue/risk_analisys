@@ -1,37 +1,91 @@
-<div class="row justify-content-center ">
-  <div class="columna col-4">
-    <h1>Datos de la empresa</h1>
+<div class="container registro_container">
+  <div>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card-text">
+          <div id="InformacionGeneral" class="collapse show" aria-labelledby="headingOne" data-toggle="collapse" data-parent="#accordionExample">
+            <div class="card-body">
+              <form (ngSubmit)="onSubmit()">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="legal_name">Razon Social</label>
+                      <input value="{{supplier.legal_name}}" ngModel required type="text" class="form-control" name="legal_name" id="legal_name"
+                        placeholder="Razón Social" />
+                    </div>
+                    <div class="form-group">
+                      <label for="rfc">Registro Federal del Contribuyente (RFC)</label>
+                      <div class="input-group">
+                        <input value="{{supplier.rfc}}" type="text" minlength="12" maxlength="12" name="rfc" [(ngModel)]="model.rfc" #rfc="ngModel"
+                          class="form-control" id="rfc" autocomplete="rfc" placeholder="RFC" pattern="^([A-ZÑ\x26]{3,4}([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1]))((-)?([A-Z\d]{3}))?$">
+                        <div *ngIf="rfc.invalid && (rfc.dirty || rfc.touched)" class="alert alert-danger ">
+                          <div class="small-text">
+                            <div *ngIf="rfc.errors.required">
+                              Es necesario que ingreses el RFC
+                            </div>
+                            <div *ngIf="rfc.errors.minlength">
+                              Por favor completa el RFC (12 caracteres para personas morales)
+                            </div>
+                            <div *ngIf="rfc.errors.pattern">
+                              La estructura no coincide con el formato del RFC, por favor revisa tu RFC
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <small id="RFCHelp" class="form-text white-text">Posteriormente se validarar el RFC con el SAT</small>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="supplier-focus">Giro comercial</label>
+                          <input ngModel name="supplier-focus" id="supplier-focus" value="{{supplier.commercial_business}}" type="text" class="form-control"
+                            placeholder="Giro comercial" aria-label="Giro comercial" aria-describedby="basic-addon2" />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="supplier-type">Tipo de empresa</label>
+                          <select aria-placeholder="seleccionar una opcion" class="form-control" name="supplier-type" id="supplier-type">
+                            <option *ngFor="let c of types" id="{{c.id}}">{{c.type}}</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="size">Número de Empleados</label>
+                          <select ngModel class="form-control" name="size" id="size" aria-label="Cantidad de empleados" aria-describedby="Cantidad de empleados">
+                            <option selected>De 0 a 10 empleados</option>
+                            <option>De 11 a 50 empleados</option>
+                            <option>De 21 a 250 empleados</option>
+                            <option>250 o más empleados</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="web">Sitio Web</label>
+                          <input ngModel name="web" id="web" value="{{supplier.company_type}}" type="url" class="form-control" placeholder="Ingresa aqui el sitio web"
+                            aria-label="Ingresa aqui el sitio web" aria-describedby="Ingresa aqui el sitio web" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-md-5 justify-content-center center-text">
+                    <button type="submit" class="btn btn-primary btn-md btn-block">
+                      Continuar
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
-</div><br>
-<form>
-  <div class="form-group row ">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Razón Social</label>
-    <div class="col-sm-8">
-      <input type="text" class="form-control" id="razonSocial" placeholder="Razón Social">
-    </div>
-  </div>
-  <div class="form-group row ">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">RFC:</label>
-    <div class="col-sm-3">
-      <input type="text" class="form-control" id="razonSocial" placeholder="RFC">
-    </div>
-    <label for="inputEmail3" class=" col-sm-2 col-form-label">Giro Comercial</label>
-    <div class=" col-sm-3">
-      <input type="text" class="form-control" id="razonSocial" placeholder="Giro Comercial">
-    </div>
-  </div>
-  <div class="form-group row ">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">No. Empleados:</label>
-    <div class="col-sm-3">
-      <input type="text" class="form-control" id="razonSocial" placeholder="No. Empleados">
-    </div>
-    <label for="inputEmail3" class=" col-sm-2 col-form-label">Sitio Web</label>
-    <div class=" col-sm-3">
-      <input type="text" class="form-control" id="razonSocial" placeholder="Sitio Web">
-    </div>
-  </div>
-  <div class="row justify-content-center">
-    <div class="columna offset-5 col-3">
-    <a routerLink="/registro/Representante"><button type="button" class="btn btn-primary btn-md btn-block">Continuar</button></a>
-    </div>
-  </div>
+</div>
