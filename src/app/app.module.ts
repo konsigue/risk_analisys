@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app.routing';
 import { RegisterModule } from './register/register.module';
-import { AdminModule } from './admin/admin.module';
+import { AdminModule } from './admin/admin.module'
 
 /* Components */
 import { LoginFormComponent } from './login/login-form/login-form.component';
