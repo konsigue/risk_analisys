@@ -1,3 +1,7 @@
 .recuadros {
     width: 80px;
 }
+
+.card-body {
+    padding: 0px;
+}
