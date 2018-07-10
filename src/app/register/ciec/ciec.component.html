@@ -9,20 +9,23 @@
 
 <div class="row justify-content-center">
     <div class="columna col-3">
-        <form>
+        <form class="needs-validation" novalidate>
             <div class="form-group">
-                <label for="exampleInputEmail1">RFC con el que facturas:</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tu RFC">
+                <label for="exampleInputEmail1 validationCustom01">RFC con el que facturas:</label>
+                <input type="email" class="form-control" id="exampleInputEmail1 validationCustom01" placeholder="Tu RFC" required>
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Contraseña del SAT (CIEC):</label>
-                <input type="password" class="form-control" placeholder="Tu CIEC">
+                <label for="exampleInputEmail1 validationCustom02">Contraseña del SAT (CIEC):</label>
+                <input type="password" class="form-control" id="validationCustom02" placeholder="Tu CIEC">
             </div>
             <div class="form-group form-check">
-                <input type="checkbox" id="myInput" onchange="document.getElementById('sendNewSms').disabled = !this.checked;" class="form-check-input" required>
-                <a class="terminos" type="checkbox" data-toggle="modal" data-target="#exampleModalLong">
+                <input type="checkbox" id="myInput invalidCheck" onchange="document.getElementById('sendNewSms').disabled = !this.checked;" class="form-check-input" required>
+                <a class="terminos" type="checkbox" data-toggle="modal" for="invalidCheck" data-target="#exampleModalLong">
       Terminos & Condiciones
     </a>
+                <div class="invalid-feedback">
+                    You must agree before submitting.
+                </div>
 
                 <!-- Modal -->
                 <form class="modal fade" id="exampleModalLong" method="post" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -75,19 +78,73 @@ Términos y Condiciones para el uso, regulación y acceso de la PÁGINA WEB www.
                     </div>
                 </form>
             </div>
-            <a routerLink="/registro/Estado-Financiero"><button  name="sendNewSms" value=" Send " class="btn btn-primary btn-lg btn-block inputButton" id="sendNewSms" disabled>Envíar</button></a>
+            <a routerLink="/registro/Estado-Financiero"><button name="sendNewSms" value=" Send " class="btn btn-primary btn-lg btn-block inputButton" id="sendNewSms" type="submit" disabled>Envíar</button></a>
         </form>
     </div>
 </div>
-<!-- <h2>ngIf</h2>
-<button (click)="show=!show">{{show ? 'hide' : 'show'}}</button>
 
-<div *ngIf="show">
-    <p>
-        <label><input #big type="checkbox" name="size" (change)="0" checked>Big</label>
-        <label><input #small type="checkbox" name="size" (change)="0">Small</label>
-    </p>
-
-    <h3 *ngIf="big.checked">Big heading</h3>
-    <p *ngIf="small.checked">Small paragraph</p>
-</div> -->
+<!-- <form class="needs-validation" novalidate>
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label for="validationCustom01">First name</label>
+            <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationCustom02">Last name</label>
+            <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationCustomUsername">Username</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                </div>
+                <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                    Please choose a username.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <label for="validationCustom03">City</label>
+            <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+            <div class="invalid-feedback">
+                Please provide a valid city.
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationCustom04">State</label>
+            <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+            <div class="invalid-feedback">
+                Please provide a valid state.
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationCustom05">Zip</label>
+            <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+            <div class="invalid-feedback">
+                Please provide a valid zip.
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+          Agree to terms and conditions
+        </label>
+            <div class="invalid-feedback">
+                You must agree before submitting.
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit form</button>
+</form> -->
