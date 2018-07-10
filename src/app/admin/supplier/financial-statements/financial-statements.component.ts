@@ -10,7 +10,6 @@ import { Component, OnInit } from '@angular/core';
 export class FinancialStatementsComponent implements OnInit {
 
   constructor() { }
-<<<<<<< HEAD
 
   estadosFinancieros = [
 
@@ -57,9 +56,6 @@ export class FinancialStatementsComponent implements OnInit {
 
   
 
-=======
-  
->>>>>>> 70ab938a25345fd62cecca8198f0933965aeae6d
   ngOnInit() {
   }
 
